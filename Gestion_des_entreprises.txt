@@ -1,0 +1,72 @@
+*** Settings ***
+Library           SeleniumLibrary
+
+*** Variables ***
+${BROWSER}        chrome
+${URL_DOLIBARR}    http://192.168.200.50:8000/dolibarr/index.php
+
+*** Test Cases ***
+Acces au site
+    [Tags]    acces
+    Open Browser    http://192.168.200.50:8000/dolibarr/index.php    ${BROWSER}
+    Location Should Be    ${URL_DOLIBARR}
+
+Authentification
+    Input Text    id=username    admin
+    Input Text    id=password    root
+    Click Button    xpath=//*[@id="login_line2"]/input
+    Location Should Be    http://192.168.200.50:8000/dolibarr/index.php?mainmenu=home
+
+2.1_CT_NM_Creation_nouveau_prospect
+    [Tags]    1
+    Click Element    xpath://*[@id="mainmenutd_home"]/div
+    Location Should Contain    mainmenu=home
+    Click Element    //*[@id="mainmenutd_companies"]/div/a[1]/div
+    Location Should Contain    mainmenu=companies
+    Click Element    //*[@id="id-left"]/div/div[3]/div[6]/a
+    Input Text    id:name    prospect1
+    Input Text    id:address    Pace
+    Input Text    id:zipcode    35700
+    Input Text    id:town    Pace
+    Click Button    name:create
+    Page Should Contain    Open
+
+2.2_CT_NM_Suppression_prospect
+    [Tags]    2
+    Click Element    xpath://*[@id="mainmenutd_home"]/div
+    Location Should Contain    mainmenu=home
+    Click Element    //*[@id="mainmenutd_companies"]/div/a[1]/div
+    Location Should Contain    mainmenu=companies
+    Click Element    //*[@id="id-left"]/div/div[3]/div[5]/a
+    Click Element    xpath=//*[contains(text(),'prospect1')]
+    Page Should Contain    Open
+    Page Should Contain    prospect1
+    Click Element    id=action-delete
+    Click Element    //*[@id="mainbody"]/div[14]/div[3]/div/button[1]
+    Page Should Contain    deleted
+
+2.3_CT_NM_CreerUnClient_admin
+    [Documentation]    CT création de client, exigence 3.3
+    [Tags]    client
+    Click Element    xpath://*[@id="mainmenutd_home"]/div
+    Location Should Contain    mainmenu=home
+    Click Element    //*[@id="mainmenutd_companies"]/div/a[1]/div
+    Location Should Contain    mainmenu=companies
+    Click Element    xpath=//*[@id="id-left"]/div/div[3]/div[8]/a
+    Select From List By Index    id=customerprospect    1
+    Input Text    id=name    client
+    Click Button    xpath=//*[@id="id-right"]/div/form/div[3]/input[1]
+    Page Should Contain    Open
+
+2.4_CT_NM_SupprimerUnClient_admin
+    [Documentation]    CT suppression de client, exigence 3.4
+    [Tags]    client
+    Click Element    xpath://*[@id="mainmenutd_home"]/div
+    Location Should Contain    mainmenu=home
+    Click Element    //*[@id="mainmenutd_companies"]/div/a[1]/div
+    Location Should Contain    mainmenu=companies
+    Click Element    xpath=//*[@id="id-left"]/div/div[3]/div[7]/a
+    Click Element    xpath=//*[@id="id-right"]/div/form/div[2]/table/tbody/tr[3]/td[1]/a
+    Click Element    id=action-delete
+    Click Element    xpath=//*[@id="mainbody"]/div[14]/div[3]/div/button[1]
+    Page Should Contain    deleted

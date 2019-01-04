@@ -1,0 +1,26 @@
+*** Settings ***
+Library           SeleniumLibrary
+
+*** Variables ***
+${BROWSER}        chrome
+${URL_DOLIBARR}    http://192.168.200.50:8000/dolibarr/index.php
+
+*** Test Cases ***
+Acces au site
+    [Tags]    acces
+    Open Browser    http://192.168.200.50:8000/dolibarr/index.php    ${BROWSER}
+    Location Should Be    ${URL_DOLIBARR}
+
+Authentification
+    Input Text    id=username    admin
+    Input Text    id=password    root
+    Click Button    xpath=//*[@id="login_line2"]/input
+    Location Should Be    http://192.168.200.50:8000/dolibarr/index.php?mainmenu=home
+
+6_CT_NM_GestionDesReglements_admin
+    [Documentation]    CT de la gestion des réglements, exigence 6
+    [Tags]    reglement
+    Click Element    id=mainmenutd_billing
+    Click Element    xpath=//*[@id="id-left"]/div/div[3]/div[6]/a
+    Select From List By Index    id=selectsearch_paymenttype    1
+    Click Element    xpath=//*[@id="id-right"]/div/form/div/table/tbody/tr[1]/td[8]/div/input[1]
