@@ -2,7 +2,7 @@
 Library           SeleniumLibrary
 
 *** Variables ***
-${BROWSER}        %BROWSER
+${BROWSER}        %{BROWSER}
 ${URL_DOLIBARR}    http://192.168.200.50:8000/dolibarr/index.php
 
 *** Test Cases ***
@@ -11,7 +11,7 @@ Acces au site
     Location Should Be    ${URL_DOLIBARR}
 
 Authentification
-    Input Text    xpath=//*[@id="username"]    admin4
+    Input Text    xpath=//*[@id="username"]    admin
     Input Text    xpath=//*[@id="password"]    root
     Click Button    xpath=//*[@id="login_line2"]/input
     Location Should Be    http://192.168.200.50:8000/dolibarr/index.php?mainmenu=home
