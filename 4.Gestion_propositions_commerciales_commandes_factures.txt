@@ -27,7 +27,7 @@ Authentification
     Click Element    xpath=//*[@id="mainmenua_commercial"]/span
     Click Element    //*[@id="id-left"]/div/div[3]/div[3]/a
     Click Button    xpath=//*[@id="id-right"]/div/form/div[3]/input[1]
-    Page Should Contain    Le champ 'Client' est obligatoire
+    Page Should Contain    Field 'Customer' is required
 
 4_2_CT_NM_pdf_proposition
     Go To    http://192.168.200.50:8000/dolibarr/comm/propal/list.php?leftmenu=propals
@@ -45,7 +45,7 @@ Authentification
     Click Element    xpath=//*[@id="mainmenua_commercial"]/span
     Click Element    xpath=//*[@id="id-left"]/div/div[4]/div[3]/a
     Click Button    xpath=//*[@id="id-right"]/div/form/div[3]/input[1]
-    Page Should Contain    Le champ 'Client' est obligatoire
+    Page Should Contain    Field 'Customer' is required
 
 4_4_CT_NM_pdf_commande
     Go To    http://192.168.200.50:8000/dolibarr/commande/list.php?leftmenu=orders
@@ -64,5 +64,5 @@ Authentification
     Click Element    xpath=//*[@id="id-left"]/div/div[3]/div[3]/a
     Click Element    id=reButtonNow
     Click Button    xpath=//*[@id="id-right"]/div/form/div[3]/input[1]
-    Page Should Contain    Le champ 'Client' est obligatoire
+    Page Should Contain    Field 'Customer' is required
 
