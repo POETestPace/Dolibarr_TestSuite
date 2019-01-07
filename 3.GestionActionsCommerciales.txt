@@ -1,0 +1,51 @@
+*** Settings ***
+Library           SeleniumLibrary
+
+*** Variables ***
+${BROWSER}        %{BROWSER}
+${URL_DOLIBARR}    http://192.168.200.50:8000/dolibarr/index.php
+
+*** Test Cases ***
+AccesAuSite
+    [Timeout]
+    Open Browser    http://192.168.200.50:8000/dolibarr/   ${BROWSER} 
+    Location Should Be    http://192.168.200.50:8000/dolibarr/
+
+Authentification
+    Input Text    xpath=//*[@id="username"]    admin
+    Input Text    xpath=//*[@id="password"]    root
+    Click Button    xpath=//*[@id="login_line2"]/input
+    Location Should Be    http://192.168.200.50:8000/dolibarr/index.php?mainmenu=home
+
+3_1_CT_NM_CreationEvenement_Admin
+    Element Should Be Visible    id=mainmenutd_commercial
+    Click Element    id=mainmenutd_commercial
+    Go To    http://192.168.200.50:8000/dolibarr/comm/action/list.php?status=todo
+    Wait Until Element Is Visible    id=searchFormList    5
+    Click Element    id=searchFormList
+    Go To    http://192.168.200.50:8000/dolibarr/comm/action/card.php?action=create&datep=20190107100000&backtopage=%2Fdolibarr%2Fcomm%2Faction%2Flist.php%3F%26month%3D00%26year%3D2019
+    Input Text    xpath=//*[@id="label"]    EVENEMENT1
+    Wait Until Element Is Visible    xpath=//*[@id="id-right"]/div/form/div[3]/input[1]
+    Click Element    xpath=//*[@id="id-right"]/div/form/div[3]/input[1]
+
+3_1_CT_EX_CreationEvenement_Admin
+    Element Should Be Visible    id=mainmenutd_commercial
+    Click Element    id=mainmenutd_commercial
+    Go To    http://192.168.200.50:8000/dolibarr/comm/action/list.php?status=todo
+    Wait Until Element Is Visible    id=searchFormList    5
+    Click Element    id=searchFormList
+    Go To    http://192.168.200.50:8000/dolibarr/comm/action/card.php?action=create&datep=20190107100000&backtopage=%2Fdolibarr%2Fcomm%2Faction%2Flist.php%3F%26month%3D00%26year%3D2019
+    Wait Until Element Is Visible    xpath=//*[@id="id-right"]/div/form/div[3]/input[1]
+    Click Element    xpath=//*[@id="id-right"]/div/form/div[3]/input[1]
+    Page Should Contain    Le champ 'Titre' est obligatoire
+
+3_2_CT_NM_SuppressionEvenement_Admin
+    Go To    http://192.168.200.50:8000/dolibarr/comm/action/list.php?&month=00&year=2019
+    Sleep    10
+    Click Element    xpath=//*[@id="searchFormList"]/div[3]/table/tbody/tr[3]/td[1]/a
+    Wait Until Element Is Visible    xpath=//*[@id="id-right"]/div/div[3]/div[3]/a
+    Click Element    xpath=//*[@id="id-right"]/div/div[3]/div[3]/a
+    Wait Until Element Is Visible    xpath=//*[@id="mainbody"]/div[11]/div[3]/div/button[1]
+    Click Element    xpath=//*[@id="mainbody"]/div[11]/div[3]/div/button[1]
+    Wait Until Page Contains    Calendrier interne
+    Page Should Not Contain    EVENEMENT1
