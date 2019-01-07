@@ -50,6 +50,7 @@ Authentification
 4_4_CT_NM_pdf_commande
     Go To    http://192.168.200.50:8000/dolibarr/commande/list.php?leftmenu=orders
     Click Element    xpath=//*[@id="searchFormList"]/div[2]/table/tbody/tr[3]/td[1]/table/tbody/tr/td[1]
+	Click Button    id=builddoc_generatebutton
     Click Element    xpath=//*[@id="builddoc_form"]/div/table/tbody/tr[2]/td[1]/a[1]
 
 4_5_CT_NM_creation_facture
