@@ -37,7 +37,7 @@ Authentification
     Go To    http://192.168.200.50:8000/dolibarr/comm/action/card.php?action=create&datep=20190107100000&backtopage=%2Fdolibarr%2Fcomm%2Faction%2Flist.php%3F%26month%3D00%26year%3D2019
     Wait Until Element Is Visible    xpath=//*[@id="id-right"]/div/form/div[3]/input[1]
     Click Element    xpath=//*[@id="id-right"]/div/form/div[3]/input[1]
-    Page Should Contain    Le champ 'Titre' est obligatoire
+    Page Should Contain    Field 'Title' is required
 
 3_2_CT_NM_SuppressionEvenement_Admin
     Go To    http://192.168.200.50:8000/dolibarr/comm/action/list.php?&month=00&year=2019
