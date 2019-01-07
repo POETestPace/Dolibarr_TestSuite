@@ -6,24 +6,24 @@ ${BROWSER}		%{BROWSER}
 ${URL_DOLIBARR}        http://192.168.200.61:8000/dolibarr/index.php
 
 *** Test Cases ***
-CTNM - Acces au site
+Acces au site
 	[Tags]    critique
 	Open Browser			http://192.168.200.61:8000/dolibarr/index.php		${BROWSER}
 	Location Should Be		${URL_DOLIBARR}
 	
-CTNM - Authentification
+Authentification
 	[Tags]    critique
 	Input Text    xpath=//*[@id="username"]    admin
 	Input Text    xpath=//*[@id="password"]    root
 	Click Button  xpath=//*[@id="login_line2"]/input
 	Location Should Be		http://192.168.200.61:8000/dolibarr/index.php?mainmenu=home
 	
-CTNM - Gestion de contrat
+Gestion de contrat
 	[Tags]    critique
 	Click Element		  id=mainmenua_commercial
 	Location Should Be		http://192.168.200.61:8000/dolibarr/comm/index.php?mainmenu=commercial&leftmenu=
 	
-CTNM - Creation d'un nouveau contrat
+5_1_CT_NM_CreationD'unNouveauContrat_Administrateur
 	[Tags]    critique
 	
 	Comment 		Click Button	xpath=//*[@id="id-left"]/div/div[5]/div[3]/a
@@ -45,12 +45,12 @@ CTNM - Creation d'un nouveau contrat
 	Click Button 	xpath=//*[@id="id-right"]/div/form/div[3]/input[1]
 	Location Should Contain		http://192.168.200.61:8000/dolibarr/contrat/card.php?id=
 	
-CTNM - Gestion de contrat - retour
+Gestion de contrat - retour
 	[Tags]    critique
 	Click Element		  id=mainmenua_commercial
 	Location Should Be		http://192.168.200.61:8000/dolibarr/comm/index.php?mainmenu=commercial&leftmenu=
 
-CTNM - Suppression d'un contrat
+5_2_CT_NM_SuppressionD'unContrat_Administrateur
 	Click Link		xpath=//*[@id="id-right"]/div/div/div[1]/div[1]/table/tbody/tr[2]/td[1]/a
 
 
