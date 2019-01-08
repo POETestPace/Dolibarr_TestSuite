@@ -1,0 +1,3 @@
+[ WARN ] Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: invalid session id
+  (Driver info: chromedriver=2.41,platform=Linux 4.9.125-linuxkit x86_64)
+

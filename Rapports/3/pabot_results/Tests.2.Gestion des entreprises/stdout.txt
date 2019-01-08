@@ -1,0 +1,30 @@
+==============================================================================
+Tests                                                                         
+==============================================================================
+Tests.2.Gestion des entreprises                                               
+==============================================================================
+Acces au site                                                         | PASS |
+------------------------------------------------------------------------------
+Authentification                                                      | PASS |
+------------------------------------------------------------------------------
+2.1_CT_NM_Creation_nouveau_prospect                                   | PASS |
+------------------------------------------------------------------------------
+2.2_CT_NM_Suppression_prospect                                        | PASS |
+------------------------------------------------------------------------------
+2.3_CT_NM_CreerUnClient_admin :: CT cr?ation de client, exigence 3.3  | PASS |
+------------------------------------------------------------------------------
+2.4_CT_NM_SupprimerUnClient_admin :: CT suppression de client, exi... | FAIL |
+WebDriverException: Message: unknown error: session deleted because of page crash
+from tab crashed
+  (Session info: chrome=70.0.3538.110)
+  (Driver info: chromedriver=2.41,platform=Linux 4.9.125-linuxkit x86_64)
+------------------------------------------------------------------------------
+Tests.2.Gestion des entreprises                                       | FAIL |
+6 critical tests, 5 passed, 1 failed
+6 tests total, 5 passed, 1 failed
+==============================================================================
+Tests                                                                 | FAIL |
+6 critical tests, 5 passed, 1 failed
+6 tests total, 5 passed, 1 failed
+==============================================================================
+Output:  /opt/robotframework/reports/pabot_results/Tests.2.Gestion des entreprises/output.xml

@@ -1,0 +1,20 @@
+==============================================================================
+Tests                                                                         
+==============================================================================
+Tests.6.Gestion des reglements                                                
+==============================================================================
+Acces au site                                                         | PASS |
+------------------------------------------------------------------------------
+Authentification                                                      | PASS |
+------------------------------------------------------------------------------
+6_CT_NM_GestionDesReglements_admin :: CT de la gestion des r?gleme... | PASS |
+------------------------------------------------------------------------------
+Tests.6.Gestion des reglements                                        | PASS |
+3 critical tests, 3 passed, 0 failed
+3 tests total, 3 passed, 0 failed
+==============================================================================
+Tests                                                                 | PASS |
+3 critical tests, 3 passed, 0 failed
+3 tests total, 3 passed, 0 failed
+==============================================================================
+Output:  /opt/robotframework/reports/pabot_results/Tests.6.Gestion des reglements/output.xml
