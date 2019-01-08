@@ -47,5 +47,5 @@ Authentification
     Click Element    xpath=//*[@id="id-right"]/div/div[3]/div[3]/a
     Wait Until Element Is Visible    xpath=//*[@id="mainbody"]/div[11]/div[3]/div/button[1]
     Click Element    xpath=//*[@id="mainbody"]/div[11]/div[3]/div/button[1]
-    Wait Until Page Contains    Calendrier interne
+    Wait Until Page Contains    Internal calendar
     Page Should Not Contain    EVENEMENT1
