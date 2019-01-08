@@ -1,0 +1,27 @@
+==============================================================================
+Tests                                                                         
+==============================================================================
+Tests.6.Gestion des reglements                                                
+==============================================================================
+Acces au site                                                         | PASS |
+------------------------------------------------------------------------------
+Authentification                                                      | FAIL |
+WebDriverException: Message: unknown error: session deleted because of page crash
+from unknown error: cannot determine loading status
+from tab crashed
+  (Session info: chrome=70.0.3538.110)
+  (Driver info: chromedriver=2.41,platform=Linux 4.9.125-linuxkit x86_64)
+------------------------------------------------------------------------------
+6_CT_NM_GestionDesReglements_admin :: CT de la gestion des r?gleme... | FAIL |
+WebDriverException: Message: invalid session id
+  (Driver info: chromedriver=2.41,platform=Linux 4.9.125-linuxkit x86_64)
+------------------------------------------------------------------------------
+Tests.6.Gestion des reglements                                        | FAIL |
+3 critical tests, 1 passed, 2 failed
+3 tests total, 1 passed, 2 failed
+==============================================================================
+Tests                                                                 | FAIL |
+3 critical tests, 1 passed, 2 failed
+3 tests total, 1 passed, 2 failed
+==============================================================================
+Output:  /opt/robotframework/reports/pabot_results/Tests.6.Gestion des reglements/output.xml

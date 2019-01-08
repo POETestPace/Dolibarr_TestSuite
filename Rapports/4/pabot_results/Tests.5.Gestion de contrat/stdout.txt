@@ -1,0 +1,27 @@
+==============================================================================
+Tests                                                                         
+==============================================================================
+Tests.5.Gestion de contrat                                                    
+==============================================================================
+Acces au site                                                         | PASS |
+------------------------------------------------------------------------------
+Authentification                                                      | PASS |
+------------------------------------------------------------------------------
+Gestion de contrat                                                    | PASS |
+------------------------------------------------------------------------------
+5_1_CT_NM_CreationD'unNouveauContrat_Administrateur                   | PASS |
+------------------------------------------------------------------------------
+Gestion de contrat - retour                                           | PASS |
+------------------------------------------------------------------------------
+5_2_CT_NM_SuppressionD'unContrat_Administrateur                       | FAIL |
+Location should have contained 'http://192.168.200.50:8001/dolibarr/commande/card.php?id=' but it was 'http://192.168.200.50:8001/dolibarr/comm/propal/card.php?id=1'.
+------------------------------------------------------------------------------
+Tests.5.Gestion de contrat                                            | FAIL |
+6 critical tests, 5 passed, 1 failed
+6 tests total, 5 passed, 1 failed
+==============================================================================
+Tests                                                                 | FAIL |
+6 critical tests, 5 passed, 1 failed
+6 tests total, 5 passed, 1 failed
+==============================================================================
+Output:  /opt/robotframework/reports/pabot_results/Tests.5.Gestion de contrat/output.xml
