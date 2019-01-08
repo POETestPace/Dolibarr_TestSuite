@@ -58,7 +58,7 @@ Gestion de contrat - retour
 	Comment		Click Element 		xpath=//*[@id="id-right"]/div/div/div[1]/div[1]/table/tbody/tr[2]/td[1]/a
 	
 	
-	Location Should Contain		http://192.168.200.50:8001/dolibarr/commande/card.php?id=
+	Location Should Contain		http://192.168.200.50:8001/dolibarr/comm/propal/card.php?id=
 	
 	
 	
