@@ -13,7 +13,7 @@ Acces au site
 
 Authentification
     [Tags]    tag1
-    Input Text    xpath=//*[@id="username"]    admin2
+    Input Text    xpath=//*[@id="username"]    admin
     Input Text    xpath=//*[@id="password"]    root
     Click Button    xpath=//*[@id="login_line2"]/input
     Location Should Be    http://192.168.200.50:8001/dolibarr/index.php?mainmenu=home
