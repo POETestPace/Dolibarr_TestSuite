@@ -1,0 +1,25 @@
+==============================================================================
+Tests                                                                         
+==============================================================================
+Tests.3.GestionActionsCommerciales                                            
+==============================================================================
+AccesAuSite                                                           | PASS |
+------------------------------------------------------------------------------
+Authentification                                                      | PASS |
+------------------------------------------------------------------------------
+3_1_CT_NM_CreationEvenement_Admin                                     | PASS |
+------------------------------------------------------------------------------
+3_1_CT_EX_CreationEvenement_Admin                                     | PASS |
+------------------------------------------------------------------------------
+3_2_CT_NM_SuppressionEvenement_Admin                                  | FAIL |
+Element 'xpath=//*[@id="id-right"]/div/div[3]/div[3]/a' not visible after 5 seconds.
+------------------------------------------------------------------------------
+Tests.3.GestionActionsCommerciales                                    | FAIL |
+5 critical tests, 4 passed, 1 failed
+5 tests total, 4 passed, 1 failed
+==============================================================================
+Tests                                                                 | FAIL |
+5 critical tests, 4 passed, 1 failed
+5 tests total, 4 passed, 1 failed
+==============================================================================
+Output:  /opt/robotframework/reports/pabot_results/Tests.3.GestionActionsCommerciales/output.xml

@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20190108 14:57:01.298" generator="Robot 3.0.4 (Python 2.7.15 on linux2)">
+<suite source="/opt/robotframework/tests" id="s1" name="Tests">
+<suite source="/opt/robotframework/tests/5.Gestion_de_contrat.txt" id="s1-s1" name="5.Gestion de contrat">
+<test id="s1-s1-t1" name="Acces au site">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>http://192.168.200.50:8001/dolibarr/index.php</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20190108 14:57:01.443" level="INFO">Opening browser 'chrome' to base url 'http://192.168.200.50:8001/dolibarr/index.php'.</msg>
+<status status="PASS" endtime="20190108 14:57:10.790" starttime="20190108 14:57:01.443"></status>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<doc>Verifies that current URL is exactly ``url`.</doc>
+<arguments>
+<arg>${URL_DOLIBARR}</arg>
+</arguments>
+<msg timestamp="20190108 14:57:10.816" level="INFO">Current location is 'http://192.168.200.50:8001/dolibarr/index.php'.</msg>
+<status status="PASS" endtime="20190108 14:57:10.817" starttime="20190108 14:57:10.790"></status>
+</kw>
+<tags>
+<tag>critique</tag>
+</tags>
+<status status="PASS" endtime="20190108 14:57:10.817" critical="yes" starttime="20190108 14:57:01.442"></status>
+</test>
+<test id="s1-s1-t2" name="Authentification">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="username"]</arg>
+<arg>admin</arg>
+</arguments>
+<msg timestamp="20190108 14:57:10.818" level="INFO">Typing text 'admin' into text field 'xpath=//*[@id="username"]'.</msg>
+<status status="PASS" endtime="20190108 14:57:10.952" starttime="20190108 14:57:10.818"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="password"]</arg>
+<arg>root</arg>
+</arguments>
+<msg timestamp="20190108 14:57:10.953" level="INFO">Typing text 'root' into text field 'xpath=//*[@id="password"]'.</msg>
+<status status="PASS" endtime="20190108 14:57:11.070" starttime="20190108 14:57:10.952"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="login_line2"]/input</arg>
+</arguments>
+<msg timestamp="20190108 14:57:11.071" level="INFO">Clicking button 'xpath=//*[@id="login_line2"]/input'.</msg>
+<status status="PASS" endtime="20190108 14:57:15.733" starttime="20190108 14:57:11.070"></status>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<doc>Verifies that current URL is exactly ``url`.</doc>
+<arguments>
+<arg>http://192.168.200.50:8001/dolibarr/index.php?mainmenu=home</arg>
+</arguments>
+<msg timestamp="20190108 14:57:15.759" level="INFO">Current location is 'http://192.168.200.50:8001/dolibarr/index.php?mainmenu=home'.</msg>
+<status status="PASS" endtime="20190108 14:57:15.759" starttime="20190108 14:57:15.733"></status>
+</kw>
+<tags>
+<tag>critique</tag>
+</tags>
+<status status="PASS" endtime="20190108 14:57:15.760" critical="yes" starttime="20190108 14:57:10.818"></status>
+</test>
+<test id="s1-s1-t3" name="Gestion de contrat">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=mainmenua_commercial</arg>
+</arguments>
+<msg timestamp="20190108 14:57:15.762" level="INFO">Clicking element 'id=mainmenua_commercial'.</msg>
+<status status="PASS" endtime="20190108 14:57:17.449" starttime="20190108 14:57:15.761"></status>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<doc>Verifies that current URL is exactly ``url`.</doc>
+<arguments>
+<arg>http://192.168.200.50:8001/dolibarr/comm/index.php?mainmenu=commercial&amp;leftmenu=</arg>
+</arguments>
+<msg timestamp="20190108 14:57:17.466" level="INFO">Current location is 'http://192.168.200.50:8001/dolibarr/comm/index.php?mainmenu=commercial&amp;leftmenu='.</msg>
+<status status="PASS" endtime="20190108 14:57:17.466" starttime="20190108 14:57:17.449"></status>
+</kw>
+<tags>
+<tag>critique</tag>
+</tags>
+<status status="PASS" endtime="20190108 14:57:17.467" critical="yes" starttime="20190108 14:57:15.761"></status>
+</test>
+<test id="s1-s1-t4" name="5_1_CT_NM_CreationD'unNouveauContrat_Administrateur">
+<kw name="Comment" library="BuiltIn">
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<arguments>
+<arg>Click Button</arg>
+<arg>xpath=//*[@id="id-left"]/div/div[5]/div[3]/a</arg>
+</arguments>
+<status status="PASS" endtime="20190108 14:57:17.468" starttime="20190108 14:57:17.468"></status>
+</kw>
+<kw name="Comment" library="BuiltIn">
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<arguments>
+<arg>Click Element</arg>
+<arg>xpath=//*[@id="id-left"]/div/div[5]/div[3]</arg>
+</arguments>
+<status status="PASS" endtime="20190108 14:57:17.469" starttime="20190108 14:57:17.468"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>http://192.168.200.50:8001/dolibarr/contrat/card.php?action=create&amp;leftmenu=contracts</arg>
+</arguments>
+<msg timestamp="20190108 14:57:17.469" level="INFO">Opening url 'http://192.168.200.50:8001/dolibarr/contrat/card.php?action=create&amp;leftmenu=contracts'</msg>
+<status status="PASS" endtime="20190108 14:57:19.470" starttime="20190108 14:57:17.469"></status>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<doc>Verifies that current URL is exactly ``url`.</doc>
+<arguments>
+<arg>http://192.168.200.50:8001/dolibarr/contrat/card.php?action=create&amp;leftmenu=contracts</arg>
+</arguments>
+<msg timestamp="20190108 14:57:19.494" level="INFO">Current location is 'http://192.168.200.50:8001/dolibarr/contrat/card.php?action=create&amp;leftmenu=contracts'.</msg>
+<status status="PASS" endtime="20190108 14:57:19.495" starttime="20190108 14:57:19.470"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="id-right"]/div/form/div[2]/table/tbody/tr[4]/td[2]/span/span[1]/span</arg>
+</arguments>
+<msg timestamp="20190108 14:57:19.496" level="INFO">Clicking element 'xpath=//*[@id="id-right"]/div/form/div[2]/table/tbody/tr[4]/td[2]/span/span[1]/span'.</msg>
+<status status="PASS" endtime="20190108 14:57:19.675" starttime="20190108 14:57:19.495"></status>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<arguments>
+<arg>id=socid</arg>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20190108 14:57:19.676" level="INFO">Selecting options from selection list 'id=socid' by index 1.</msg>
+<status status="PASS" endtime="20190108 14:57:19.872" starttime="20190108 14:57:19.676"></status>
+</kw>
+<kw name="Comment" library="BuiltIn">
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<arguments>
+<arg>Click Element</arg>
+<arg>xpath=//*[@id="mainbody"]/div[11]</arg>
+</arguments>
+<status status="PASS" endtime="20190108 14:57:19.873" starttime="20190108 14:57:19.872"></status>
+</kw>
+<kw name="Comment" library="BuiltIn">
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<arguments>
+<arg>Click Element</arg>
+<arg>id=select2-socid-result-1mzf-5</arg>
+</arguments>
+<status status="PASS" endtime="20190108 14:57:19.873" starttime="20190108 14:57:19.873"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="id-right"]/div/form/div[3]/input[1]</arg>
+</arguments>
+<msg timestamp="20190108 14:57:19.873" level="INFO">Clicking button 'xpath=//*[@id="id-right"]/div/form/div[3]/input[1]'.</msg>
+<status status="PASS" endtime="20190108 14:57:23.099" starttime="20190108 14:57:19.873"></status>
+</kw>
+<kw name="Location Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current URL contains ``expected``.</doc>
+<arguments>
+<arg>http://192.168.200.50:8001/dolibarr/contrat/card.php?id=</arg>
+</arguments>
+<msg timestamp="20190108 14:57:23.148" level="INFO">Current location contains 'http://192.168.200.50:8001/dolibarr/contrat/card.php?id='.</msg>
+<status status="PASS" endtime="20190108 14:57:23.149" starttime="20190108 14:57:23.099"></status>
+</kw>
+<tags>
+<tag>critique</tag>
+</tags>
+<status status="PASS" endtime="20190108 14:57:23.149" critical="yes" starttime="20190108 14:57:17.467"></status>
+</test>
+<test id="s1-s1-t5" name="Gestion de contrat - retour">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=mainmenua_commercial</arg>
+</arguments>
+<msg timestamp="20190108 14:57:23.151" level="INFO">Clicking element 'id=mainmenua_commercial'.</msg>
+<status status="PASS" endtime="20190108 14:57:24.848" starttime="20190108 14:57:23.150"></status>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<doc>Verifies that current URL is exactly ``url`.</doc>
+<arguments>
+<arg>http://192.168.200.50:8001/dolibarr/comm/index.php?mainmenu=commercial&amp;leftmenu=</arg>
+</arguments>
+<msg timestamp="20190108 14:57:24.863" level="INFO">Current location is 'http://192.168.200.50:8001/dolibarr/comm/index.php?mainmenu=commercial&amp;leftmenu='.</msg>
+<status status="PASS" endtime="20190108 14:57:24.863" starttime="20190108 14:57:24.849"></status>
+</kw>
+<tags>
+<tag>critique</tag>
+</tags>
+<status status="PASS" endtime="20190108 14:57:24.863" critical="yes" starttime="20190108 14:57:23.150"></status>
+</test>
+<test id="s1-s1-t6" name="5_2_CT_NM_SuppressionD'unContrat_Administrateur">
+<kw name="Comment" library="BuiltIn">
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<arguments>
+<arg>Click Element</arg>
+<arg>xpath=//*[@id="id-right"]/div/div/div[1]/div[1]/table/tbody/tr[2]/td[1]/a</arg>
+</arguments>
+<status status="PASS" endtime="20190108 14:57:24.865" starttime="20190108 14:57:24.865"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath: //*[contains(text(), "(PROV")]</arg>
+</arguments>
+<msg timestamp="20190108 14:57:24.866" level="INFO">Clicking element 'xpath: //*[contains(text(), "(PROV")]'.</msg>
+<status status="PASS" endtime="20190108 14:57:26.726" starttime="20190108 14:57:24.865"></status>
+</kw>
+<kw name="Comment" library="BuiltIn">
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<arguments>
+<arg>Click Element</arg>
+<arg>xpath=//*[@id="id-right"]/div/div/div[1]/div[1]/table/tbody/tr[2]/td[1]/a</arg>
+</arguments>
+<status status="PASS" endtime="20190108 14:57:26.726" starttime="20190108 14:57:26.726"></status>
+</kw>
+<kw name="Location Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current URL contains ``expected``.</doc>
+<arguments>
+<arg>http://192.168.200.50:8001/dolibarr/commande/card.php?id=</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190108 14:57:26.882" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20190108 14:57:26.883" starttime="20190108 14:57:26.741"></status>
+</kw>
+<msg timestamp="20190108 14:57:26.884" level="FAIL">Location should have contained 'http://192.168.200.50:8001/dolibarr/commande/card.php?id=' but it was 'http://192.168.200.50:8001/dolibarr/comm/propal/card.php?id=1'.</msg>
+<status status="FAIL" endtime="20190108 14:57:26.884" starttime="20190108 14:57:26.726"></status>
+</kw>
+<status status="FAIL" endtime="20190108 14:57:26.884" critical="yes" starttime="20190108 14:57:24.864">Location should have contained 'http://192.168.200.50:8001/dolibarr/commande/card.php?id=' but it was 'http://192.168.200.50:8001/dolibarr/comm/propal/card.php?id=1'.</status>
+</test>
+<status status="FAIL" endtime="20190108 14:57:26.885" starttime="20190108 14:57:01.334"></status>
+</suite>
+<status status="FAIL" endtime="20190108 14:57:26.890" starttime="20190108 14:57:01.300"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="5">Critical Tests</stat>
+<stat fail="1" pass="5">All Tests</stat>
+</total>
+<tag>
+<stat fail="0" pass="5">critique</stat>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="Tests" pass="5">Tests</stat>
+<stat fail="1" id="s1-s1" name="5.Gestion de contrat" pass="5">Tests.5.Gestion de contrat</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

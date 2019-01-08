@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20190108 14:57:27.409" generator="Robot 3.0.4 (Python 2.7.15 on linux2)">
+<suite source="/opt/robotframework/tests" id="s1" name="Tests">
+<suite source="/opt/robotframework/tests/6.Gestion_des_reglements.txt" id="s1-s1" name="6.Gestion des reglements">
+<test id="s1-s1-t1" name="Acces au site">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>http://192.168.200.50:8001/dolibarr/index.php</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20190108 14:57:27.543" level="INFO">Opening browser 'chrome' to base url 'http://192.168.200.50:8001/dolibarr/index.php'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190108 14:57:31.668" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<status status="PASS" endtime="20190108 14:57:31.668" starttime="20190108 14:57:31.666"></status>
+</kw>
+<msg timestamp="20190108 14:57:31.705" level="FAIL">SessionNotCreatedException: Message: session not created
+from disconnected: Unable to receive message from renderer
+  (Session info: chrome=70.0.3538.110)
+  (Driver info: chromedriver=2.41,platform=Linux 4.9.125-linuxkit x86_64)
+</msg>
+<status status="FAIL" endtime="20190108 14:57:31.705" starttime="20190108 14:57:27.542"></status>
+</kw>
+<tags>
+<tag>acces</tag>
+</tags>
+<status status="FAIL" endtime="20190108 14:57:31.705" critical="yes" starttime="20190108 14:57:27.541">SessionNotCreatedException: Message: session not created
+from disconnected: Unable to receive message from renderer
+  (Session info: chrome=70.0.3538.110)
+  (Driver info: chromedriver=2.41,platform=Linux 4.9.125-linuxkit x86_64)
+</status>
+</test>
+<test id="s1-s1-t2" name="Authentification">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=username</arg>
+<arg>admin</arg>
+</arguments>
+<msg timestamp="20190108 14:57:31.708" level="INFO">Typing text 'admin' into text field 'id=username'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190108 14:57:31.708" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<status status="PASS" endtime="20190108 14:57:31.709" starttime="20190108 14:57:31.708"></status>
+</kw>
+<msg timestamp="20190108 14:57:31.709" level="FAIL">No browser is open.</msg>
+<status status="FAIL" endtime="20190108 14:57:31.709" starttime="20190108 14:57:31.708"></status>
+</kw>
+<status status="FAIL" endtime="20190108 14:57:31.709" critical="yes" starttime="20190108 14:57:31.706">No browser is open.</status>
+</test>
+<test id="s1-s1-t3" name="6_CT_NM_GestionDesReglements_admin">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=mainmenutd_billing</arg>
+</arguments>
+<msg timestamp="20190108 14:57:31.711" level="INFO">Clicking element 'id=mainmenutd_billing'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190108 14:57:31.711" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<status status="PASS" endtime="20190108 14:57:31.711" starttime="20190108 14:57:31.711"></status>
+</kw>
+<msg timestamp="20190108 14:57:31.712" level="FAIL">No browser is open.</msg>
+<status status="FAIL" endtime="20190108 14:57:31.712" starttime="20190108 14:57:31.710"></status>
+</kw>
+<doc>CT de la gestion des réglements, exigence 6</doc>
+<tags>
+<tag>reglement</tag>
+</tags>
+<status status="FAIL" endtime="20190108 14:57:31.712" critical="yes" starttime="20190108 14:57:31.710">No browser is open.</status>
+</test>
+<status status="FAIL" endtime="20190108 14:57:31.719" starttime="20190108 14:57:27.430"></status>
+</suite>
+<status status="FAIL" endtime="20190108 14:57:31.721" starttime="20190108 14:57:27.411"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="3" pass="0">Critical Tests</stat>
+<stat fail="3" pass="0">All Tests</stat>
+</total>
+<tag>
+<stat fail="1" pass="0">acces</stat>
+<stat fail="1" pass="0">reglement</stat>
+</tag>
+<suite>
+<stat fail="3" id="s1" name="Tests" pass="0">Tests</stat>
+<stat fail="3" id="s1-s1" name="6.Gestion des reglements" pass="0">Tests.6.Gestion des reglements</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

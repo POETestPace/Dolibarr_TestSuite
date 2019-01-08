@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20190108 14:55:27.938" generator="Robot 3.0.4 (Python 2.7.15 on linux2)">
+<suite source="/opt/robotframework/tests" id="s1" name="Tests">
+<suite source="/opt/robotframework/tests/0.Gestion_du_stock.txt" id="s1-s1" name="0.Gestion du stock">
+<test id="s1-s1-t1" name="Acces au site">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" endtime="20190108 14:55:28.049" starttime="20190108 14:55:28.049"></status>
+</kw>
+<status status="PASS" endtime="20190108 14:55:28.049" critical="yes" starttime="20190108 14:55:28.048"></status>
+</test>
+<test id="s1-s1-t2" name="Authentification">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" endtime="20190108 14:55:28.050" starttime="20190108 14:55:28.050"></status>
+</kw>
+<status status="PASS" endtime="20190108 14:55:28.050" critical="yes" starttime="20190108 14:55:28.050"></status>
+</test>
+<test id="s1-s1-t3" name="Gestion de Stock">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" endtime="20190108 14:55:28.051" starttime="20190108 14:55:28.051"></status>
+</kw>
+<status status="PASS" endtime="20190108 14:55:28.051" critical="yes" starttime="20190108 14:55:28.050"></status>
+</test>
+<test id="s1-s1-t4" name="0_1_CT_NM_CreationD'UnNouveauProduit_Administrateur">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" endtime="20190108 14:55:28.052" starttime="20190108 14:55:28.052"></status>
+</kw>
+<status status="PASS" endtime="20190108 14:55:28.052" critical="yes" starttime="20190108 14:55:28.052"></status>
+</test>
+<test id="s1-s1-t5" name="0_1_CT_EX_Creation d'un produit deja existant_Administrateur">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" endtime="20190108 14:55:28.053" starttime="20190108 14:55:28.053"></status>
+</kw>
+<status status="PASS" endtime="20190108 14:55:28.053" critical="yes" starttime="20190108 14:55:28.053"></status>
+</test>
+<test id="s1-s1-t6" name="0_1_CT_NM_SuppressionD'UnProduit_Adminsitrateur">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" endtime="20190108 14:55:28.054" starttime="20190108 14:55:28.054"></status>
+</kw>
+<status status="PASS" endtime="20190108 14:55:28.054" critical="yes" starttime="20190108 14:55:28.053"></status>
+</test>
+<status status="PASS" endtime="20190108 14:55:28.054" starttime="20190108 14:55:27.963"></status>
+</suite>
+<suite source="/opt/robotframework/tests/1.Gestion_De_Compte_Bancaire.txt" id="s1-s2" name="1.Gestion De Compte Bancaire">
+<test id="s1-s2-t1" name="Acces au site">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" endtime="20190108 14:55:28.063" starttime="20190108 14:55:28.062"></status>
+</kw>
+<status status="PASS" endtime="20190108 14:55:28.063" critical="yes" starttime="20190108 14:55:28.062"></status>
+</test>
+<test id="s1-s2-t2" name="Authentification">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" endtime="20190108 14:55:28.063" starttime="20190108 14:55:28.063"></status>
+</kw>
+<tags>
+<tag>tag1</tag>
+</tags>
+<status status="PASS" endtime="20190108 14:55:28.064" critical="yes" starttime="20190108 14:55:28.063"></status>
+</test>
+<test id="s1-s2-t3" name="CreationUnCompte">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" endtime="20190108 14:55:28.065" starttime="20190108 14:55:28.065"></status>
+</kw>
+<tags>
+<tag>1</tag>
+</tags>
+<status status="PASS" endtime="20190108 14:55:28.065" critical="yes" starttime="20190108 14:55:28.064"></status>
+</test>
+<test id="s1-s2-t4" name="ModifierUnCompte">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" endtime="20190108 14:55:28.066" starttime="20190108 14:55:28.066"></status>
+</kw>
+<status status="PASS" endtime="20190108 14:55:28.066" critical="yes" starttime="20190108 14:55:28.065"></status>
+</test>
+<test id="s1-s2-t5" name="CreationUnCompteException">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" endtime="20190108 14:55:28.066" starttime="20190108 14:55:28.066"></status>
+</kw>
+<status status="PASS" endtime="20190108 14:55:28.067" critical="yes" starttime="20190108 14:55:28.066"></status>
+</test>
+<status status="PASS" endtime="20190108 14:55:28.067" starttime="20190108 14:55:28.055"></status>
+</suite>
+<suite source="/opt/robotframework/tests/2.Gestion_des_entreprises.txt" id="s1-s3" name="2.Gestion des entreprises">
+<test id="s1-s3-t1" name="Acces au site">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" endtime="20190108 14:55:28.071" starttime="20190108 14:55:28.071"></status>
+</kw>
+<tags>
+<tag>acces</tag>
+</tags>
+<status status="PASS" endtime="20190108 14:55:28.071" critical="yes" starttime="20190108 14:55:28.070"></status>
+</test>
+<test id="s1-s3-t2" name="Authentification">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" endtime="20190108 14:55:28.072" starttime="20190108 14:55:28.072"></status>
+</kw>
+<status status="PASS" endtime="20190108 14:55:28.072" critical="yes" starttime="20190108 14:55:28.071"></status>
+</test>
+<test id="s1-s3-t3" name="2.1_CT_NM_Creation_nouveau_prospect">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" endtime="20190108 14:55:28.073" starttime="20190108 14:55:28.073"></status>
+</kw>
+<tags>
+<tag>1</tag>
+</tags>
+<status status="PASS" endtime="20190108 14:55:28.073" critical="yes" starttime="20190108 14:55:28.072"></status>
+</test>
+<test id="s1-s3-t4" name="2.2_CT_NM_Suppression_prospect">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" endtime="20190108 14:55:28.074" starttime="20190108 14:55:28.073"></status>
+</kw>
+<tags>
+<tag>2</tag>
+</tags>
+<status status="PASS" endtime="20190108 14:55:28.074" critical="yes" starttime="20190108 14:55:28.073"></status>
+</test>
+<test id="s1-s3-t5" name="2.3_CT_NM_CreerUnClient_admin">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" endtime="20190108 14:55:28.074" starttime="20190108 14:55:28.074"></status>
+</kw>
+<doc>CT création de client, exigence 3.3</doc>
+<tags>
+<tag>client</tag>
+</tags>
+<status status="PASS" endtime="20190108 14:55:28.075" critical="yes" starttime="20190108 14:55:28.074"></status>
+</test>
+<test id="s1-s3-t6" name="2.4_CT_NM_SupprimerUnClient_admin">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" endtime="20190108 14:55:28.075" starttime="20190108 14:55:28.075"></status>
+</kw>
+<doc>CT suppression de client, exigence 3.4</doc>
+<tags>
+<tag>client</tag>
+</tags>
+<status status="PASS" endtime="20190108 14:55:28.076" critical="yes" starttime="20190108 14:55:28.075"></status>
+</test>
+<status status="PASS" endtime="20190108 14:55:28.076" starttime="20190108 14:55:28.068"></status>
+</suite>
+<suite source="/opt/robotframework/tests/3.GestionActionsCommerciales.txt" id="s1-s4" name="3.GestionActionsCommerciales">
+<test id="s1-s4-t1" name="AccesAuSite">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" endtime="20190108 14:55:28.080" starttime="20190108 14:55:28.080"></status>
+</kw>
+<status status="PASS" endtime="20190108 14:55:28.080" critical="yes" starttime="20190108 14:55:28.079"></status>
+</test>
+<test id="s1-s4-t2" name="Authentification">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" endtime="20190108 14:55:28.082" starttime="20190108 14:55:28.081"></status>
+</kw>
+<status status="PASS" endtime="20190108 14:55:28.082" critical="yes" starttime="20190108 14:55:28.080"></status>
+</test>
+<test id="s1-s4-t3" name="3_1_CT_NM_CreationEvenement_Admin">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" endtime="20190108 14:55:28.083" starttime="20190108 14:55:28.083"></status>
+</kw>
+<status status="PASS" endtime="20190108 14:55:28.083" critical="yes" starttime="20190108 14:55:28.082"></status>
+</test>
+<test id="s1-s4-t4" name="3_1_CT_EX_CreationEvenement_Admin">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" endtime="20190108 14:55:28.084" starttime="20190108 14:55:28.084"></status>
+</kw>
+<status status="PASS" endtime="20190108 14:55:28.085" critical="yes" starttime="20190108 14:55:28.084"></status>
+</test>
+<test id="s1-s4-t5" name="3_2_CT_NM_SuppressionEvenement_Admin">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" endtime="20190108 14:55:28.085" starttime="20190108 14:55:28.085"></status>
+</kw>
+<status status="PASS" endtime="20190108 14:55:28.085" critical="yes" starttime="20190108 14:55:28.085"></status>
+</test>
+<status status="PASS" endtime="20190108 14:55:28.086" starttime="20190108 14:55:28.077"></status>
+</suite>
+<suite source="/opt/robotframework/tests/4.Gestion_propositions_commerciales_commandes_factures.txt" id="s1-s5" name="4.Gestion propositions commerciales commandes factures">
+<test id="s1-s5-t1" name="Acces au site">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" endtime="20190108 14:55:28.089" starttime="20190108 14:55:28.089"></status>
+</kw>
+<status status="PASS" endtime="20190108 14:55:28.090" critical="yes" starttime="20190108 14:55:28.089"></status>
+</test>
+<test id="s1-s5-t2" name="Authentification">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" endtime="20190108 14:55:28.090" starttime="20190108 14:55:28.090"></status>
+</kw>
+<status status="PASS" endtime="20190108 14:55:28.090" critical="yes" starttime="20190108 14:55:28.090"></status>
+</test>
+<test id="s1-s5-t3" name="4_1_CT_NM_creation_prop_commerciales">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" endtime="20190108 14:55:28.091" starttime="20190108 14:55:28.091"></status>
+</kw>
+<status status="PASS" endtime="20190108 14:55:28.091" critical="yes" starttime="20190108 14:55:28.091"></status>
+</test>
+<test id="s1-s5-t4" name="4_1_CT_EX_creation_prop_commerciales">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" endtime="20190108 14:55:28.092" starttime="20190108 14:55:28.092"></status>
+</kw>
+<status status="PASS" endtime="20190108 14:55:28.092" critical="yes" starttime="20190108 14:55:28.091"></status>
+</test>
+<test id="s1-s5-t5" name="4_2_CT_NM_pdf_proposition">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" endtime="20190108 14:55:28.093" starttime="20190108 14:55:28.093"></status>
+</kw>
+<status status="PASS" endtime="20190108 14:55:28.093" critical="yes" starttime="20190108 14:55:28.092"></status>
+</test>
+<test id="s1-s5-t6" name="4_3_CT_NM_creation_commande">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" endtime="20190108 14:55:28.093" starttime="20190108 14:55:28.093"></status>
+</kw>
+<status status="PASS" endtime="20190108 14:55:28.094" critical="yes" starttime="20190108 14:55:28.093"></status>
+</test>
+<test id="s1-s5-t7" name="4_3_CT_EX_creation_commande">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" endtime="20190108 14:55:28.094" starttime="20190108 14:55:28.094"></status>
+</kw>
+<status status="PASS" endtime="20190108 14:55:28.094" critical="yes" starttime="20190108 14:55:28.094"></status>
+</test>
+<test id="s1-s5-t8" name="4_4_CT_NM_pdf_commande">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" endtime="20190108 14:55:28.095" starttime="20190108 14:55:28.095"></status>
+</kw>
+<status status="PASS" endtime="20190108 14:55:28.095" critical="yes" starttime="20190108 14:55:28.095"></status>
+</test>
+<test id="s1-s5-t9" name="4_5_CT_NM_creation_facture">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" endtime="20190108 14:55:28.096" starttime="20190108 14:55:28.096"></status>
+</kw>
+<status status="PASS" endtime="20190108 14:55:28.096" critical="yes" starttime="20190108 14:55:28.095"></status>
+</test>
+<test id="s1-s5-t10" name="4_5_CT_EX_creation_facture">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" endtime="20190108 14:55:28.098" starttime="20190108 14:55:28.098"></status>
+</kw>
+<status status="PASS" endtime="20190108 14:55:28.098" critical="yes" starttime="20190108 14:55:28.097"></status>
+</test>
+<status status="PASS" endtime="20190108 14:55:28.099" starttime="20190108 14:55:28.087"></status>
+</suite>
+<suite source="/opt/robotframework/tests/5.Gestion_de_contrat.txt" id="s1-s6" name="5.Gestion de contrat">
+<test id="s1-s6-t1" name="Acces au site">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" endtime="20190108 14:55:28.103" starttime="20190108 14:55:28.103"></status>
+</kw>
+<tags>
+<tag>critique</tag>
+</tags>
+<status status="PASS" endtime="20190108 14:55:28.103" critical="yes" starttime="20190108 14:55:28.103"></status>
+</test>
+<test id="s1-s6-t2" name="Authentification">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" endtime="20190108 14:55:28.104" starttime="20190108 14:55:28.104"></status>
+</kw>
+<tags>
+<tag>critique</tag>
+</tags>
+<status status="PASS" endtime="20190108 14:55:28.104" critical="yes" starttime="20190108 14:55:28.104"></status>
+</test>
+<test id="s1-s6-t3" name="Gestion de contrat">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" endtime="20190108 14:55:28.105" starttime="20190108 14:55:28.105"></status>
+</kw>
+<tags>
+<tag>critique</tag>
+</tags>
+<status status="PASS" endtime="20190108 14:55:28.105" critical="yes" starttime="20190108 14:55:28.105"></status>
+</test>
+<test id="s1-s6-t4" name="5_1_CT_NM_CreationD'unNouveauContrat_Administrateur">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" endtime="20190108 14:55:28.106" starttime="20190108 14:55:28.106"></status>
+</kw>
+<tags>
+<tag>critique</tag>
+</tags>
+<status status="PASS" endtime="20190108 14:55:28.106" critical="yes" starttime="20190108 14:55:28.105"></status>
+</test>
+<test id="s1-s6-t5" name="Gestion de contrat - retour">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" endtime="20190108 14:55:28.107" starttime="20190108 14:55:28.107"></status>
+</kw>
+<tags>
+<tag>critique</tag>
+</tags>
+<status status="PASS" endtime="20190108 14:55:28.107" critical="yes" starttime="20190108 14:55:28.106"></status>
+</test>
+<test id="s1-s6-t6" name="5_2_CT_NM_SuppressionD'unContrat_Administrateur">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" endtime="20190108 14:55:28.108" starttime="20190108 14:55:28.108"></status>
+</kw>
+<status status="PASS" endtime="20190108 14:55:28.108" critical="yes" starttime="20190108 14:55:28.108"></status>
+</test>
+<status status="PASS" endtime="20190108 14:55:28.109" starttime="20190108 14:55:28.100"></status>
+</suite>
+<suite source="/opt/robotframework/tests/6.Gestion_des_reglements.txt" id="s1-s7" name="6.Gestion des reglements">
+<test id="s1-s7-t1" name="Acces au site">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" endtime="20190108 14:55:28.113" starttime="20190108 14:55:28.113"></status>
+</kw>
+<tags>
+<tag>acces</tag>
+</tags>
+<status status="PASS" endtime="20190108 14:55:28.113" critical="yes" starttime="20190108 14:55:28.112"></status>
+</test>
+<test id="s1-s7-t2" name="Authentification">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" endtime="20190108 14:55:28.114" starttime="20190108 14:55:28.114"></status>
+</kw>
+<status status="PASS" endtime="20190108 14:55:28.114" critical="yes" starttime="20190108 14:55:28.113"></status>
+</test>
+<test id="s1-s7-t3" name="6_CT_NM_GestionDesReglements_admin">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" endtime="20190108 14:55:28.115" starttime="20190108 14:55:28.115"></status>
+</kw>
+<doc>CT de la gestion des réglements, exigence 6</doc>
+<tags>
+<tag>reglement</tag>
+</tags>
+<status status="PASS" endtime="20190108 14:55:28.115" critical="yes" starttime="20190108 14:55:28.114"></status>
+</test>
+<status status="PASS" endtime="20190108 14:55:28.115" starttime="20190108 14:55:28.110"></status>
+</suite>
+<status status="PASS" endtime="20190108 14:55:28.117" starttime="20190108 14:55:27.940"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="41">Critical Tests</stat>
+<stat fail="0" pass="41">All Tests</stat>
+</total>
+<tag>
+<stat fail="0" pass="2">1</stat>
+<stat fail="0" pass="1">2</stat>
+<stat fail="0" pass="2">acces</stat>
+<stat fail="0" pass="2">client</stat>
+<stat fail="0" pass="5">critique</stat>
+<stat fail="0" pass="1">reglement</stat>
+<stat fail="0" pass="1">tag1</stat>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Tests" pass="41">Tests</stat>
+<stat fail="0" id="s1-s1" name="0.Gestion du stock" pass="6">Tests.0.Gestion du stock</stat>
+<stat fail="0" id="s1-s2" name="1.Gestion De Compte Bancaire" pass="5">Tests.1.Gestion De Compte Bancaire</stat>
+<stat fail="0" id="s1-s3" name="2.Gestion des entreprises" pass="6">Tests.2.Gestion des entreprises</stat>
+<stat fail="0" id="s1-s4" name="3.GestionActionsCommerciales" pass="5">Tests.3.GestionActionsCommerciales</stat>
+<stat fail="0" id="s1-s5" name="4.Gestion propositions commerciales commandes factures" pass="10">Tests.4.Gestion propositions commerciales commandes factures</stat>
+<stat fail="0" id="s1-s6" name="5.Gestion de contrat" pass="6">Tests.5.Gestion de contrat</stat>
+<stat fail="0" id="s1-s7" name="6.Gestion des reglements" pass="3">Tests.6.Gestion des reglements</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20190108 14:55:25.008" level="ERROR">Error in file '/opt/robotframework/tests/0.Gestion_du_stock.txt': Non-existing setting ''.</msg>
+<msg timestamp="20190108 14:55:25.011" level="ERROR">Error in file '/opt/robotframework/tests/1.Gestion_De_Compte_Bancaire.txt': Non-existing setting ''.</msg>
+<msg timestamp="20190108 14:55:25.015" level="ERROR">Error in file '/opt/robotframework/tests/2.Gestion_des_entreprises.txt': Non-existing setting ''.</msg>
+<msg timestamp="20190108 14:55:25.020" level="ERROR">Error in file '/opt/robotframework/tests/3.GestionActionsCommerciales.txt': Non-existing setting ''.</msg>
+<msg timestamp="20190108 14:55:25.024" level="ERROR">Error in file '/opt/robotframework/tests/4.Gestion_propositions_commerciales_commandes_factures.txt': Non-existing setting ''.</msg>
+<msg timestamp="20190108 14:55:25.028" level="ERROR">Error in file '/opt/robotframework/tests/5.Gestion_de_contrat.txt': Non-existing setting ''.</msg>
+<msg timestamp="20190108 14:55:25.032" level="ERROR">Error in file '/opt/robotframework/tests/6.Gestion_des_reglements.txt': Non-existing setting ''.</msg>
+<msg timestamp="20190108 14:55:27.964" level="ERROR">Error in file '/opt/robotframework/tests/0.Gestion_du_stock.txt': Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20190108 14:55:28.056" level="ERROR">Error in file '/opt/robotframework/tests/1.Gestion_De_Compte_Bancaire.txt': Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20190108 14:55:28.069" level="ERROR">Error in file '/opt/robotframework/tests/2.Gestion_des_entreprises.txt': Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20190108 14:55:28.077" level="ERROR">Error in file '/opt/robotframework/tests/3.GestionActionsCommerciales.txt': Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20190108 14:55:28.087" level="ERROR">Error in file '/opt/robotframework/tests/4.Gestion_propositions_commerciales_commandes_factures.txt': Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20190108 14:55:28.101" level="ERROR">Error in file '/opt/robotframework/tests/5.Gestion_de_contrat.txt': Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20190108 14:55:28.110" level="ERROR">Error in file '/opt/robotframework/tests/6.Gestion_des_reglements.txt': Setting variable '' failed: Invalid variable name ''.</msg>
+</errors>
+</robot>

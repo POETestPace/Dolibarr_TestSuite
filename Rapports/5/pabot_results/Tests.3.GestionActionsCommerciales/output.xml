@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20190108 14:56:06.589" generator="Robot 3.0.4 (Python 2.7.15 on linux2)">
+<suite source="/opt/robotframework/tests" id="s1" name="Tests">
+<suite source="/opt/robotframework/tests/3.GestionActionsCommerciales.txt" id="s1-s1" name="3.GestionActionsCommerciales">
+<test id="s1-s1-t1" name="AccesAuSite">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>http://192.168.200.50:8001/dolibarr/</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20190108 14:56:06.875" level="INFO">Opening browser 'chrome' to base url 'http://192.168.200.50:8001/dolibarr/'.</msg>
+<status status="PASS" endtime="20190108 14:56:16.122" starttime="20190108 14:56:06.875"></status>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<doc>Verifies that current URL is exactly ``url`.</doc>
+<arguments>
+<arg>http://192.168.200.50:8001/dolibarr/</arg>
+</arguments>
+<msg timestamp="20190108 14:56:16.160" level="INFO">Current location is 'http://192.168.200.50:8001/dolibarr/'.</msg>
+<status status="PASS" endtime="20190108 14:56:16.160" starttime="20190108 14:56:16.122"></status>
+</kw>
+<status status="PASS" endtime="20190108 14:56:16.161" critical="yes" starttime="20190108 14:56:06.874"></status>
+</test>
+<test id="s1-s1-t2" name="Authentification">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="username"]</arg>
+<arg>admin</arg>
+</arguments>
+<msg timestamp="20190108 14:56:16.162" level="INFO">Typing text 'admin' into text field 'xpath=//*[@id="username"]'.</msg>
+<status status="PASS" endtime="20190108 14:56:16.300" starttime="20190108 14:56:16.162"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="password"]</arg>
+<arg>root</arg>
+</arguments>
+<msg timestamp="20190108 14:56:16.300" level="INFO">Typing text 'root' into text field 'xpath=//*[@id="password"]'.</msg>
+<status status="PASS" endtime="20190108 14:56:16.411" starttime="20190108 14:56:16.300"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="login_line2"]/input</arg>
+</arguments>
+<msg timestamp="20190108 14:56:16.412" level="INFO">Clicking button 'xpath=//*[@id="login_line2"]/input'.</msg>
+<status status="PASS" endtime="20190108 14:56:20.945" starttime="20190108 14:56:16.412"></status>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<doc>Verifies that current URL is exactly ``url`.</doc>
+<arguments>
+<arg>http://192.168.200.50:8001/dolibarr/index.php?mainmenu=home</arg>
+</arguments>
+<msg timestamp="20190108 14:56:21.086" level="INFO">Current location is 'http://192.168.200.50:8001/dolibarr/index.php?mainmenu=home'.</msg>
+<status status="PASS" endtime="20190108 14:56:21.086" starttime="20190108 14:56:20.945"></status>
+</kw>
+<status status="PASS" endtime="20190108 14:56:21.086" critical="yes" starttime="20190108 14:56:16.161"></status>
+</test>
+<test id="s1-s1-t3" name="3_1_CT_NM_CreationEvenement_Admin">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>id=mainmenutd_commercial</arg>
+</arguments>
+<msg timestamp="20190108 14:56:21.143" level="INFO">Element 'id=mainmenutd_commercial' is displayed.</msg>
+<status status="PASS" endtime="20190108 14:56:21.143" starttime="20190108 14:56:21.087"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=mainmenutd_commercial</arg>
+</arguments>
+<msg timestamp="20190108 14:56:21.143" level="INFO">Clicking element 'id=mainmenutd_commercial'.</msg>
+<status status="PASS" endtime="20190108 14:56:22.844" starttime="20190108 14:56:21.143"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>http://192.168.200.50:8001/dolibarr/comm/action/list.php?status=todo</arg>
+</arguments>
+<msg timestamp="20190108 14:56:22.845" level="INFO">Opening url 'http://192.168.200.50:8001/dolibarr/comm/action/list.php?status=todo'</msg>
+<status status="PASS" endtime="20190108 14:56:24.474" starttime="20190108 14:56:22.845"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>id=searchFormList</arg>
+<arg>5</arg>
+</arguments>
+<status status="PASS" endtime="20190108 14:56:24.561" starttime="20190108 14:56:24.474"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=searchFormList</arg>
+</arguments>
+<msg timestamp="20190108 14:56:24.561" level="INFO">Clicking element 'id=searchFormList'.</msg>
+<status status="PASS" endtime="20190108 14:56:24.646" starttime="20190108 14:56:24.561"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>http://192.168.200.50:8001/dolibarr/comm/action/card.php?action=create&amp;datep=20190107100000&amp;backtopage=%2Fdolibarr%2Fcomm%2Faction%2Flist.php%3F%26month%3D00%26year%3D2019</arg>
+</arguments>
+<msg timestamp="20190108 14:56:24.646" level="INFO">Opening url 'http://192.168.200.50:8001/dolibarr/comm/action/card.php?action=create&amp;datep=20190107100000&amp;backtopage=%2Fdolibarr%2Fcomm%2Faction%2Flist.php%3F%26month%3D00%26year%3D2019'</msg>
+<status status="PASS" endtime="20190108 14:56:26.404" starttime="20190108 14:56:24.646"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="label"]</arg>
+<arg>EVENEMENT1</arg>
+</arguments>
+<msg timestamp="20190108 14:56:26.405" level="INFO">Typing text 'EVENEMENT1' into text field 'xpath=//*[@id="label"]'.</msg>
+<status status="PASS" endtime="20190108 14:56:26.768" starttime="20190108 14:56:26.405"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=//*[@id="id-right"]/div/form/div[3]/input[1]</arg>
+</arguments>
+<status status="PASS" endtime="20190108 14:56:26.833" starttime="20190108 14:56:26.768"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="id-right"]/div/form/div[3]/input[1]</arg>
+</arguments>
+<msg timestamp="20190108 14:56:26.833" level="INFO">Clicking element 'xpath=//*[@id="id-right"]/div/form/div[3]/input[1]'.</msg>
+<status status="PASS" endtime="20190108 14:56:30.070" starttime="20190108 14:56:26.833"></status>
+</kw>
+<status status="PASS" endtime="20190108 14:56:30.071" critical="yes" starttime="20190108 14:56:21.087"></status>
+</test>
+<test id="s1-s1-t4" name="3_1_CT_EX_CreationEvenement_Admin">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>id=mainmenutd_commercial</arg>
+</arguments>
+<msg timestamp="20190108 14:56:30.144" level="INFO">Element 'id=mainmenutd_commercial' is displayed.</msg>
+<status status="PASS" endtime="20190108 14:56:30.144" starttime="20190108 14:56:30.073"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=mainmenutd_commercial</arg>
+</arguments>
+<msg timestamp="20190108 14:56:30.144" level="INFO">Clicking element 'id=mainmenutd_commercial'.</msg>
+<status status="PASS" endtime="20190108 14:56:31.854" starttime="20190108 14:56:30.144"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>http://192.168.200.50:8001/dolibarr/comm/action/list.php?status=todo</arg>
+</arguments>
+<msg timestamp="20190108 14:56:31.855" level="INFO">Opening url 'http://192.168.200.50:8001/dolibarr/comm/action/list.php?status=todo'</msg>
+<status status="PASS" endtime="20190108 14:56:33.416" starttime="20190108 14:56:31.854"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>id=searchFormList</arg>
+<arg>5</arg>
+</arguments>
+<status status="PASS" endtime="20190108 14:56:33.510" starttime="20190108 14:56:33.416"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=searchFormList</arg>
+</arguments>
+<msg timestamp="20190108 14:56:33.510" level="INFO">Clicking element 'id=searchFormList'.</msg>
+<status status="PASS" endtime="20190108 14:56:33.595" starttime="20190108 14:56:33.510"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>http://192.168.200.50:8001/dolibarr/comm/action/card.php?action=create&amp;datep=20190107100000&amp;backtopage=%2Fdolibarr%2Fcomm%2Faction%2Flist.php%3F%26month%3D00%26year%3D2019</arg>
+</arguments>
+<msg timestamp="20190108 14:56:33.596" level="INFO">Opening url 'http://192.168.200.50:8001/dolibarr/comm/action/card.php?action=create&amp;datep=20190107100000&amp;backtopage=%2Fdolibarr%2Fcomm%2Faction%2Flist.php%3F%26month%3D00%26year%3D2019'</msg>
+<status status="PASS" endtime="20190108 14:56:35.124" starttime="20190108 14:56:33.596"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=//*[@id="id-right"]/div/form/div[3]/input[1]</arg>
+</arguments>
+<status status="PASS" endtime="20190108 14:56:35.195" starttime="20190108 14:56:35.124"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="id-right"]/div/form/div[3]/input[1]</arg>
+</arguments>
+<msg timestamp="20190108 14:56:35.195" level="INFO">Clicking element 'xpath=//*[@id="id-right"]/div/form/div[3]/input[1]'.</msg>
+<status status="PASS" endtime="20190108 14:56:36.801" starttime="20190108 14:56:35.195"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Field 'Title' is required</arg>
+</arguments>
+<msg timestamp="20190108 14:56:36.865" level="INFO">Current page contains text 'Field 'Title' is required'.</msg>
+<status status="PASS" endtime="20190108 14:56:36.865" starttime="20190108 14:56:36.801"></status>
+</kw>
+<status status="PASS" endtime="20190108 14:56:36.866" critical="yes" starttime="20190108 14:56:30.072"></status>
+</test>
+<test id="s1-s1-t5" name="3_2_CT_NM_SuppressionEvenement_Admin">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>http://192.168.200.50:8001/dolibarr/comm/action/list.php?&amp;month=00&amp;year=2019</arg>
+</arguments>
+<msg timestamp="20190108 14:56:36.867" level="INFO">Opening url 'http://192.168.200.50:8001/dolibarr/comm/action/list.php?&amp;month=00&amp;year=2019'</msg>
+<status status="PASS" endtime="20190108 14:56:38.437" starttime="20190108 14:56:36.867"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>10</arg>
+</arguments>
+<msg timestamp="20190108 14:56:48.438" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" endtime="20190108 14:56:48.438" starttime="20190108 14:56:38.437"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="searchFormList"]/div[3]/table/tbody/tr[3]/td[1]/a</arg>
+</arguments>
+<msg timestamp="20190108 14:56:48.439" level="INFO">Clicking element 'xpath=//*[@id="searchFormList"]/div[3]/table/tbody/tr[3]/td[1]/a'.</msg>
+<status status="PASS" endtime="20190108 14:56:50.171" starttime="20190108 14:56:48.438"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=//*[@id="id-right"]/div/div[3]/div[3]/a</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190108 14:56:55.471" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20190108 14:56:55.471" starttime="20190108 14:56:55.325"></status>
+</kw>
+<msg timestamp="20190108 14:56:55.471" level="FAIL">Element 'xpath=//*[@id="id-right"]/div/div[3]/div[3]/a' not visible after 5 seconds.</msg>
+<status status="FAIL" endtime="20190108 14:56:55.471" starttime="20190108 14:56:50.172"></status>
+</kw>
+<status status="FAIL" endtime="20190108 14:56:55.472" critical="yes" starttime="20190108 14:56:36.866">Element 'xpath=//*[@id="id-right"]/div/div[3]/div[3]/a' not visible after 5 seconds.</status>
+</test>
+<status status="FAIL" endtime="20190108 14:56:55.473" starttime="20190108 14:56:06.677"></status>
+</suite>
+<status status="FAIL" endtime="20190108 14:56:55.477" starttime="20190108 14:56:06.591"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="4">Critical Tests</stat>
+<stat fail="1" pass="4">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="Tests" pass="4">Tests</stat>
+<stat fail="1" id="s1-s1" name="3.GestionActionsCommerciales" pass="4">Tests.3.GestionActionsCommerciales</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
