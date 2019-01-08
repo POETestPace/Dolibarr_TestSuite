@@ -51,19 +51,23 @@ Gestion de contrat - retour
 	Location Should Be		http://192.168.200.61:8000/dolibarr/comm/index.php?mainmenu=commercial&leftmenu=
 
 5_2_CT_NM_SuppressionD'unContrat_Administrateur
-	Click Link		xpath=//*[@id="id-right"]/div/div/div[1]/div[1]/table/tbody/tr[2]/td[1]/a
 
+	Comment 		Click Element		xpath=//*[@id="id-right"]/div/div/div[1]/div[1]/table/tbody/tr[2]/td[1]/a
+	Click Element		xpath: //*[contains(text(), "(PROV")]
 
 	Comment		Click Element 		xpath=//*[@id="id-right"]/div/div/div[1]/div[1]/table/tbody/tr[2]/td[1]/a
 	
 	
-	Location Should Contain		http://192.168.200.61:8000/dolibarr/comm/propal/card.php?id=
+	Location Should Contain		http://192.168.200.61:8000/dolibarr/commande/card.php?id=
+	
 	
 	
 	Click Element 	xpath=//*[@id="id-right"]/div/div[3]/div[2]
 	
 	
 	Click Button 	xpath=//*[@id="mainbody"]/div[12]/div[3]/div/button[1]
+	
+	Comment 		Click Button		xpath: //*[contains(text(), "Yes")]
 	
 	
 	
