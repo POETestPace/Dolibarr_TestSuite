@@ -1,0 +1,25 @@
+==============================================================================
+Tests                                                                         
+==============================================================================
+Tests.1.Gestion De Compte Bancaire                                            
+==============================================================================
+Acces au site                                                         | PASS |
+------------------------------------------------------------------------------
+Authentification                                                      | PASS |
+------------------------------------------------------------------------------
+CreationUnCompte                                                      | PASS |
+------------------------------------------------------------------------------
+ModifierUnCompte                                                      | FAIL |
+Element with locator 'xpath=//*[contains(text(),'ref1')]' not found.
+------------------------------------------------------------------------------
+CreationUnCompteException                                             | PASS |
+------------------------------------------------------------------------------
+Tests.1.Gestion De Compte Bancaire                                    | FAIL |
+5 critical tests, 4 passed, 1 failed
+5 tests total, 4 passed, 1 failed
+==============================================================================
+Tests                                                                 | FAIL |
+5 critical tests, 4 passed, 1 failed
+5 tests total, 4 passed, 1 failed
+==============================================================================
+Output:  /opt/robotframework/reports/pabot_results/Tests.1.Gestion De Compte Bancaire/output.xml

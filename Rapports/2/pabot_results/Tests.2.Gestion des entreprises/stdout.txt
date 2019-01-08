@@ -1,0 +1,26 @@
+==============================================================================
+Tests                                                                         
+==============================================================================
+Tests.2.Gestion des entreprises                                               
+==============================================================================
+Acces au site                                                         | PASS |
+------------------------------------------------------------------------------
+Authentification                                                      | PASS |
+------------------------------------------------------------------------------
+2.1_CT_NM_Creation_nouveau_prospect                                   | PASS |
+------------------------------------------------------------------------------
+2.2_CT_NM_Suppression_prospect                                        | PASS |
+------------------------------------------------------------------------------
+2.3_CT_NM_CreerUnClient_admin :: CT cr?ation de client, exigence 3.3  | PASS |
+------------------------------------------------------------------------------
+2.4_CT_NM_SupprimerUnClient_admin :: CT suppression de client, exi... | PASS |
+------------------------------------------------------------------------------
+Tests.2.Gestion des entreprises                                       | PASS |
+6 critical tests, 6 passed, 0 failed
+6 tests total, 6 passed, 0 failed
+==============================================================================
+Tests                                                                 | PASS |
+6 critical tests, 6 passed, 0 failed
+6 tests total, 6 passed, 0 failed
+==============================================================================
+Output:  /opt/robotframework/reports/pabot_results/Tests.2.Gestion des entreprises/output.xml

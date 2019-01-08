@@ -1,0 +1,51 @@
+==============================================================================
+Tests                                                                         
+==============================================================================
+Tests.4.Gestion propositions commerciales commandes factures                  
+==============================================================================
+Acces au site                                                         | PASS |
+------------------------------------------------------------------------------
+Authentification                                                      | PASS |
+------------------------------------------------------------------------------
+4_1_CT_NM_creation_prop_commerciales                                  | PASS |
+------------------------------------------------------------------------------
+4_1_CT_EX_creation_prop_commerciales                                  | FAIL |
+WebDriverException: Message: unknown error: session deleted because of page crash
+from unknown error: cannot determine loading status
+from tab crashed
+  (Session info: chrome=70.0.3538.110)
+  (Driver info: chromedriver=2.41,platform=Linux 4.9.125-linuxkit x86_64)
+------------------------------------------------------------------------------
+4_2_CT_NM_pdf_proposition                                             | FAIL |
+WebDriverException: Message: invalid session id
+  (Driver info: chromedriver=2.41,platform=Linux 4.9.125-linuxkit x86_64)
+------------------------------------------------------------------------------
+4_3_CT_NM_creation_commande                                           | FAIL |
+WebDriverException: Message: invalid session id
+  (Driver info: chromedriver=2.41,platform=Linux 4.9.125-linuxkit x86_64)
+------------------------------------------------------------------------------
+4_3_CT_EX_creation_commande                                           | FAIL |
+WebDriverException: Message: invalid session id
+  (Driver info: chromedriver=2.41,platform=Linux 4.9.125-linuxkit x86_64)
+------------------------------------------------------------------------------
+4_4_CT_NM_pdf_commande                                                | FAIL |
+WebDriverException: Message: invalid session id
+  (Driver info: chromedriver=2.41,platform=Linux 4.9.125-linuxkit x86_64)
+------------------------------------------------------------------------------
+4_5_CT_NM_creation_facture                                            | FAIL |
+WebDriverException: Message: invalid session id
+  (Driver info: chromedriver=2.41,platform=Linux 4.9.125-linuxkit x86_64)
+------------------------------------------------------------------------------
+4_5_CT_EX_creation_facture                                            | FAIL |
+WebDriverException: Message: invalid session id
+  (Driver info: chromedriver=2.41,platform=Linux 4.9.125-linuxkit x86_64)
+------------------------------------------------------------------------------
+Tests.4.Gestion propositions commerciales commandes factures          | FAIL |
+10 critical tests, 3 passed, 7 failed
+10 tests total, 3 passed, 7 failed
+==============================================================================
+Tests                                                                 | FAIL |
+10 critical tests, 3 passed, 7 failed
+10 tests total, 3 passed, 7 failed
+==============================================================================
+Output:  /opt/robotframework/reports/pabot_results/Tests.4.Gestion propositions commerciales commandes factures/output.xml
