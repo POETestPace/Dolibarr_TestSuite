@@ -1,0 +1,611 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20190108 09:53:21.629" generator="Robot 3.0.4 (Python 2.7.15 on linux2)">
+<suite source="/opt/robotframework/tests" id="s1" name="Tests">
+<suite source="/opt/robotframework/tests/0.Gestion_du_stock.txt" id="s1-s1" name="0.Gestion du stock">
+<test id="s1-s1-t1" name="Acces au site">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>http://192.168.200.50:8000/dolibarr/index.php</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20190108 09:53:21.742" level="INFO">Opening browser 'chrome' to base url 'http://192.168.200.50:8000/dolibarr/index.php'.</msg>
+<status status="PASS" endtime="20190108 09:53:26.655" starttime="20190108 09:53:21.741"></status>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<doc>Verifies that current URL is exactly ``url`.</doc>
+<arguments>
+<arg>${URL_DOLIBARR}</arg>
+</arguments>
+<msg timestamp="20190108 09:53:26.663" level="INFO">Current location is 'http://192.168.200.50:8000/dolibarr/index.php'.</msg>
+<status status="PASS" endtime="20190108 09:53:26.664" starttime="20190108 09:53:26.656"></status>
+</kw>
+<status status="PASS" endtime="20190108 09:53:26.664" critical="yes" starttime="20190108 09:53:21.740"></status>
+</test>
+<test id="s1-s1-t2" name="Authentification">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="username"]</arg>
+<arg>admin</arg>
+</arguments>
+<msg timestamp="20190108 09:53:26.666" level="INFO">Typing text 'admin' into text field 'xpath=//*[@id="username"]'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190108 09:53:26.797" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20190108 09:53:26.797" starttime="20190108 09:53:26.691"></status>
+</kw>
+<msg timestamp="20190108 09:53:26.798" level="FAIL">Element with locator 'xpath=//*[@id="username"]' not found.</msg>
+<status status="FAIL" endtime="20190108 09:53:26.798" starttime="20190108 09:53:26.666"></status>
+</kw>
+<status status="FAIL" endtime="20190108 09:53:26.798" critical="yes" starttime="20190108 09:53:26.665">Element with locator 'xpath=//*[@id="username"]' not found.</status>
+</test>
+<test id="s1-s1-t3" name="Gestion de Stock">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=mainmenua_products</arg>
+</arguments>
+<msg timestamp="20190108 09:53:26.800" level="INFO">Clicking element 'id=mainmenua_products'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190108 09:53:26.917" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20190108 09:53:26.917" starttime="20190108 09:53:26.819"></status>
+</kw>
+<msg timestamp="20190108 09:53:26.918" level="FAIL">Element with locator 'id=mainmenua_products' not found.</msg>
+<status status="FAIL" endtime="20190108 09:53:26.918" starttime="20190108 09:53:26.799"></status>
+</kw>
+<status status="FAIL" endtime="20190108 09:53:26.918" critical="yes" starttime="20190108 09:53:26.798">Element with locator 'id=mainmenua_products' not found.</status>
+</test>
+<test id="s1-s1-t4" name="0_1_CT_NM_CreationD'UnNouveauProduit_Administrateur">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="id-left"]/div/div[3]/div[3]/a</arg>
+</arguments>
+<msg timestamp="20190108 09:53:26.920" level="INFO">Clicking element 'xpath=//*[@id="id-left"]/div/div[3]/div[3]/a'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190108 09:53:27.039" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20190108 09:53:27.039" starttime="20190108 09:53:26.941"></status>
+</kw>
+<msg timestamp="20190108 09:53:27.039" level="FAIL">Element with locator 'xpath=//*[@id="id-left"]/div/div[3]/div[3]/a' not found.</msg>
+<status status="FAIL" endtime="20190108 09:53:27.039" starttime="20190108 09:53:26.920"></status>
+</kw>
+<status status="FAIL" endtime="20190108 09:53:27.040" critical="yes" starttime="20190108 09:53:26.919">Element with locator 'xpath=//*[@id="id-left"]/div/div[3]/div[3]/a' not found.</status>
+</test>
+<test id="s1-s1-t5" name="0_1_CT_EX_Creation d'un produit deja existant_Administrateur">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="id-left"]/div/div[3]/div[3]/a</arg>
+</arguments>
+<msg timestamp="20190108 09:53:27.042" level="INFO">Clicking element 'xpath=//*[@id="id-left"]/div/div[3]/div[3]/a'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190108 09:53:27.159" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20190108 09:53:27.159" starttime="20190108 09:53:27.056"></status>
+</kw>
+<msg timestamp="20190108 09:53:27.161" level="FAIL">Element with locator 'xpath=//*[@id="id-left"]/div/div[3]/div[3]/a' not found.</msg>
+<status status="FAIL" endtime="20190108 09:53:27.162" starttime="20190108 09:53:27.041"></status>
+</kw>
+<status status="FAIL" endtime="20190108 09:53:27.163" critical="yes" starttime="20190108 09:53:27.040">Element with locator 'xpath=//*[@id="id-left"]/div/div[3]/div[3]/a' not found.</status>
+</test>
+<test id="s1-s1-t6" name="0_1_CT_NM_SuppressionD'UnProduit_Adminsitrateur">
+<kw name="Comment" library="BuiltIn">
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<arguments>
+<arg>Retour sur la page produit</arg>
+</arguments>
+<status status="PASS" endtime="20190108 09:53:27.168" starttime="20190108 09:53:27.168"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=mainmenua_products</arg>
+</arguments>
+<msg timestamp="20190108 09:53:27.168" level="INFO">Clicking element 'id=mainmenua_products'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190108 09:53:27.321" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20190108 09:53:27.321" starttime="20190108 09:53:27.190"></status>
+</kw>
+<msg timestamp="20190108 09:53:27.321" level="FAIL">Element with locator 'id=mainmenua_products' not found.</msg>
+<status status="FAIL" endtime="20190108 09:53:27.321" starttime="20190108 09:53:27.168"></status>
+</kw>
+<status status="FAIL" endtime="20190108 09:53:27.322" critical="yes" starttime="20190108 09:53:27.165">Element with locator 'id=mainmenua_products' not found.</status>
+</test>
+<status status="FAIL" endtime="20190108 09:53:27.327" starttime="20190108 09:53:21.650"></status>
+</suite>
+<suite source="/opt/robotframework/tests/1.Gestion_De_Compte_Bancaire.txt" id="s1-s2" name="1.Gestion De Compte Bancaire">
+<test id="s1-s2-t1" name="Acces au site">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>http://192.168.200.50:8000/dolibarr/index.php</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20190108 09:53:27.357" level="INFO">Opening browser 'chrome' to base url 'http://192.168.200.50:8000/dolibarr/index.php'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190108 09:58:31.634" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20190108 09:58:31.634" starttime="20190108 09:58:31.523"></status>
+</kw>
+<msg timestamp="20190108 09:58:31.635" level="FAIL">TimeoutException: Message: timeout
+  (Session info: chrome=70.0.3538.110)
+  (Driver info: chromedriver=2.41,platform=Linux 4.9.125-linuxkit x86_64)
+</msg>
+<status status="FAIL" endtime="20190108 09:58:31.635" starttime="20190108 09:53:27.356"></status>
+</kw>
+<status status="FAIL" endtime="20190108 09:58:31.635" critical="yes" starttime="20190108 09:53:27.355">TimeoutException: Message: timeout
+  (Session info: chrome=70.0.3538.110)
+  (Driver info: chromedriver=2.41,platform=Linux 4.9.125-linuxkit x86_64)
+</status>
+</test>
+<test id="s1-s2-t2" name="Authentification">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="username"]</arg>
+<arg>admin2</arg>
+</arguments>
+<msg timestamp="20190108 09:58:31.637" level="INFO">Typing text 'admin2' into text field 'xpath=//*[@id="username"]'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190108 09:58:31.753" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20190108 09:58:31.753" starttime="20190108 09:58:31.660"></status>
+</kw>
+<msg timestamp="20190108 09:58:31.754" level="FAIL">Element with locator 'xpath=//*[@id="username"]' not found.</msg>
+<status status="FAIL" endtime="20190108 09:58:31.754" starttime="20190108 09:58:31.637"></status>
+</kw>
+<tags>
+<tag>tag1</tag>
+</tags>
+<status status="FAIL" endtime="20190108 09:58:31.754" critical="yes" starttime="20190108 09:58:31.636">Element with locator 'xpath=//*[@id="username"]' not found.</status>
+</test>
+<test id="s1-s2-t3" name="CreationUnCompte">
+<kw name="Double Click Element" library="SeleniumLibrary">
+<doc>Double click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="mainmenua_bank"]/span</arg>
+</arguments>
+<msg timestamp="20190108 09:58:31.756" level="INFO">Double clicking element 'xpath=//*[@id="mainmenua_bank"]/span'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190108 09:58:31.868" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20190108 09:58:31.868" starttime="20190108 09:58:31.775"></status>
+</kw>
+<msg timestamp="20190108 09:58:31.869" level="FAIL">Element with locator 'xpath=//*[@id="mainmenua_bank"]/span' not found.</msg>
+<status status="FAIL" endtime="20190108 09:58:31.869" starttime="20190108 09:58:31.755"></status>
+</kw>
+<tags>
+<tag>1</tag>
+</tags>
+<status status="FAIL" endtime="20190108 09:58:31.869" critical="yes" starttime="20190108 09:58:31.754">Element with locator 'xpath=//*[@id="mainmenua_bank"]/span' not found.</status>
+</test>
+<test id="s1-s2-t4" name="ModifierUnCompte">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="mainmenutd_bank"]/div/a[1]/div</arg>
+</arguments>
+<msg timestamp="20190108 09:58:31.871" level="INFO">Clicking element 'xpath=//*[@id="mainmenutd_bank"]/div/a[1]/div'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190108 09:58:31.989" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-9.png"&gt;&lt;img src="selenium-screenshot-9.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20190108 09:58:31.989" starttime="20190108 09:58:31.894"></status>
+</kw>
+<msg timestamp="20190108 09:58:31.989" level="FAIL">Element with locator 'xpath=//*[@id="mainmenutd_bank"]/div/a[1]/div' not found.</msg>
+<status status="FAIL" endtime="20190108 09:58:31.989" starttime="20190108 09:58:31.871"></status>
+</kw>
+<status status="FAIL" endtime="20190108 09:58:31.990" critical="yes" starttime="20190108 09:58:31.870">Element with locator 'xpath=//*[@id="mainmenutd_bank"]/div/a[1]/div' not found.</status>
+</test>
+<test id="s1-s2-t5" name="CreationUnCompteException">
+<kw name="Double Click Element" library="SeleniumLibrary">
+<doc>Double click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="mainmenua_bank"]/span</arg>
+</arguments>
+<msg timestamp="20190108 09:58:31.992" level="INFO">Double clicking element 'xpath=//*[@id="mainmenua_bank"]/span'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190108 09:58:32.149" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-10.png"&gt;&lt;img src="selenium-screenshot-10.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20190108 09:58:32.149" starttime="20190108 09:58:32.006"></status>
+</kw>
+<msg timestamp="20190108 09:58:32.149" level="FAIL">Element with locator 'xpath=//*[@id="mainmenua_bank"]/span' not found.</msg>
+<status status="FAIL" endtime="20190108 09:58:32.150" starttime="20190108 09:58:31.992"></status>
+</kw>
+<status status="FAIL" endtime="20190108 09:58:32.151" critical="yes" starttime="20190108 09:58:31.991">Element with locator 'xpath=//*[@id="mainmenua_bank"]/span' not found.</status>
+</test>
+<status status="FAIL" endtime="20190108 09:58:32.155" starttime="20190108 09:53:27.332"></status>
+</suite>
+<suite source="/opt/robotframework/tests/2.Gestion_des_entreprises.txt" id="s1-s3" name="2.Gestion des entreprises">
+<test id="s1-s3-t1" name="Acces au site">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>http://192.168.200.50:8000/dolibarr/index.php</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20190108 09:58:32.167" level="INFO">Opening browser 'chrome' to base url 'http://192.168.200.50:8000/dolibarr/index.php'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190108 10:03:35.924" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-11.png"&gt;&lt;img src="selenium-screenshot-11.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20190108 10:03:35.924" starttime="20190108 10:03:35.817"></status>
+</kw>
+<msg timestamp="20190108 10:03:35.925" level="FAIL">TimeoutException: Message: timeout
+  (Session info: chrome=70.0.3538.110)
+  (Driver info: chromedriver=2.41,platform=Linux 4.9.125-linuxkit x86_64)
+</msg>
+<status status="FAIL" endtime="20190108 10:03:35.925" starttime="20190108 09:58:32.167"></status>
+</kw>
+<tags>
+<tag>acces</tag>
+</tags>
+<status status="FAIL" endtime="20190108 10:03:35.926" critical="yes" starttime="20190108 09:58:32.166">TimeoutException: Message: timeout
+  (Session info: chrome=70.0.3538.110)
+  (Driver info: chromedriver=2.41,platform=Linux 4.9.125-linuxkit x86_64)
+</status>
+</test>
+<test id="s1-s3-t2" name="Authentification">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=username</arg>
+<arg>admin</arg>
+</arguments>
+<msg timestamp="20190108 10:03:35.928" level="INFO">Typing text 'admin' into text field 'id=username'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190108 10:03:36.039" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-12.png"&gt;&lt;img src="selenium-screenshot-12.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20190108 10:03:36.039" starttime="20190108 10:03:35.951"></status>
+</kw>
+<msg timestamp="20190108 10:03:36.039" level="FAIL">Element with locator 'id=username' not found.</msg>
+<status status="FAIL" endtime="20190108 10:03:36.039" starttime="20190108 10:03:35.928"></status>
+</kw>
+<status status="FAIL" endtime="20190108 10:03:36.040" critical="yes" starttime="20190108 10:03:35.927">Element with locator 'id=username' not found.</status>
+</test>
+<test id="s1-s3-t3" name="2.1_CT_NM_Creation_nouveau_prospect">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="mainmenutd_home"]/div</arg>
+</arguments>
+<msg timestamp="20190108 10:03:36.042" level="INFO">Clicking element 'xpath://*[@id="mainmenutd_home"]/div'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190108 10:03:36.156" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-13.png"&gt;&lt;img src="selenium-screenshot-13.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20190108 10:03:36.156" starttime="20190108 10:03:36.068"></status>
+</kw>
+<msg timestamp="20190108 10:03:36.156" level="FAIL">Element with locator 'xpath://*[@id="mainmenutd_home"]/div' not found.</msg>
+<status status="FAIL" endtime="20190108 10:03:36.156" starttime="20190108 10:03:36.041"></status>
+</kw>
+<tags>
+<tag>1</tag>
+</tags>
+<status status="FAIL" endtime="20190108 10:03:36.157" critical="yes" starttime="20190108 10:03:36.040">Element with locator 'xpath://*[@id="mainmenutd_home"]/div' not found.</status>
+</test>
+<test id="s1-s3-t4" name="2.2_CT_NM_Suppression_prospect">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="mainmenutd_home"]/div</arg>
+</arguments>
+<msg timestamp="20190108 10:03:36.161" level="INFO">Clicking element 'xpath://*[@id="mainmenutd_home"]/div'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190108 10:03:36.276" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-14.png"&gt;&lt;img src="selenium-screenshot-14.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20190108 10:03:36.276" starttime="20190108 10:03:36.175"></status>
+</kw>
+<msg timestamp="20190108 10:03:36.277" level="FAIL">Element with locator 'xpath://*[@id="mainmenutd_home"]/div' not found.</msg>
+<status status="FAIL" endtime="20190108 10:03:36.277" starttime="20190108 10:03:36.161"></status>
+</kw>
+<tags>
+<tag>2</tag>
+</tags>
+<status status="FAIL" endtime="20190108 10:03:36.277" critical="yes" starttime="20190108 10:03:36.158">Element with locator 'xpath://*[@id="mainmenutd_home"]/div' not found.</status>
+</test>
+<test id="s1-s3-t5" name="2.3_CT_NM_CreerUnClient_admin">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="mainmenutd_home"]/div</arg>
+</arguments>
+<msg timestamp="20190108 10:03:36.279" level="INFO">Clicking element 'xpath://*[@id="mainmenutd_home"]/div'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190108 10:03:36.394" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-15.png"&gt;&lt;img src="selenium-screenshot-15.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20190108 10:03:36.394" starttime="20190108 10:03:36.293"></status>
+</kw>
+<msg timestamp="20190108 10:03:36.394" level="FAIL">Element with locator 'xpath://*[@id="mainmenutd_home"]/div' not found.</msg>
+<status status="FAIL" endtime="20190108 10:03:36.395" starttime="20190108 10:03:36.279"></status>
+</kw>
+<doc>CT création de client, exigence 3.3</doc>
+<tags>
+<tag>client</tag>
+</tags>
+<status status="FAIL" endtime="20190108 10:03:36.395" critical="yes" starttime="20190108 10:03:36.277">Element with locator 'xpath://*[@id="mainmenutd_home"]/div' not found.</status>
+</test>
+<test id="s1-s3-t6" name="2.4_CT_NM_SupprimerUnClient_admin">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="mainmenutd_home"]/div</arg>
+</arguments>
+<msg timestamp="20190108 10:03:36.397" level="INFO">Clicking element 'xpath://*[@id="mainmenutd_home"]/div'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190108 10:03:36.513" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-16.png"&gt;&lt;img src="selenium-screenshot-16.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20190108 10:03:36.513" starttime="20190108 10:03:36.412"></status>
+</kw>
+<msg timestamp="20190108 10:03:36.513" level="FAIL">Element with locator 'xpath://*[@id="mainmenutd_home"]/div' not found.</msg>
+<status status="FAIL" endtime="20190108 10:03:36.513" starttime="20190108 10:03:36.397"></status>
+</kw>
+<doc>CT suppression de client, exigence 3.4</doc>
+<tags>
+<tag>client</tag>
+</tags>
+<status status="FAIL" endtime="20190108 10:03:36.513" critical="yes" starttime="20190108 10:03:36.395">Element with locator 'xpath://*[@id="mainmenutd_home"]/div' not found.</status>
+</test>
+<status status="FAIL" endtime="20190108 10:03:36.515" starttime="20190108 09:58:32.159"></status>
+</suite>
+<suite source="/opt/robotframework/tests/3.GestionActionsCommerciales.txt" id="s1-s4" name="3.GestionActionsCommerciales">
+<test id="s1-s4-t1" name="AccesAuSite">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>http://192.168.200.50:8000/dolibarr/</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20190108 10:03:36.522" level="INFO">Opening browser 'chrome' to base url 'http://192.168.200.50:8000/dolibarr/'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190108 10:08:40.147" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-17.png"&gt;&lt;img src="selenium-screenshot-17.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20190108 10:08:40.147" starttime="20190108 10:08:40.026"></status>
+</kw>
+<msg timestamp="20190108 10:08:40.147" level="FAIL">TimeoutException: Message: timeout
+  (Session info: chrome=70.0.3538.110)
+  (Driver info: chromedriver=2.41,platform=Linux 4.9.125-linuxkit x86_64)
+</msg>
+<status status="FAIL" endtime="20190108 10:08:40.148" starttime="20190108 10:03:36.522"></status>
+</kw>
+<status status="FAIL" endtime="20190108 10:08:40.148" critical="yes" starttime="20190108 10:03:36.521">TimeoutException: Message: timeout
+  (Session info: chrome=70.0.3538.110)
+  (Driver info: chromedriver=2.41,platform=Linux 4.9.125-linuxkit x86_64)
+</status>
+</test>
+<test id="s1-s4-t2" name="Authentification">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="username"]</arg>
+<arg>admin</arg>
+</arguments>
+<msg timestamp="20190108 10:08:40.150" level="INFO">Typing text 'admin' into text field 'xpath=//*[@id="username"]'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190108 10:08:40.282" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-18.png"&gt;&lt;img src="selenium-screenshot-18.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20190108 10:08:40.282" starttime="20190108 10:08:40.174"></status>
+</kw>
+<msg timestamp="20190108 10:08:40.282" level="FAIL">Element with locator 'xpath=//*[@id="username"]' not found.</msg>
+<status status="FAIL" endtime="20190108 10:08:40.282" starttime="20190108 10:08:40.150"></status>
+</kw>
+<status status="FAIL" endtime="20190108 10:08:40.282" critical="yes" starttime="20190108 10:08:40.149">Element with locator 'xpath=//*[@id="username"]' not found.</status>
+</test>
+<test id="s1-s4-t3" name="3_1_CT_NM_CreationEvenement_Admin">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>id=mainmenutd_commercial</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190108 10:08:40.398" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-19.png"&gt;&lt;img src="selenium-screenshot-19.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20190108 10:08:40.398" starttime="20190108 10:08:40.306"></status>
+</kw>
+<msg timestamp="20190108 10:08:40.398" level="FAIL">Element with locator 'id=mainmenutd_commercial' not found.</msg>
+<status status="FAIL" endtime="20190108 10:08:40.398" starttime="20190108 10:08:40.284"></status>
+</kw>
+<status status="FAIL" endtime="20190108 10:08:40.399" critical="yes" starttime="20190108 10:08:40.283">Element with locator 'id=mainmenutd_commercial' not found.</status>
+</test>
+<test id="s1-s4-t4" name="3_1_CT_EX_CreationEvenement_Admin">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>id=mainmenutd_commercial</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190108 10:08:40.511" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-20.png"&gt;&lt;img src="selenium-screenshot-20.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20190108 10:08:40.511" starttime="20190108 10:08:40.415"></status>
+</kw>
+<msg timestamp="20190108 10:08:40.511" level="FAIL">Element with locator 'id=mainmenutd_commercial' not found.</msg>
+<status status="FAIL" endtime="20190108 10:08:40.511" starttime="20190108 10:08:40.401"></status>
+</kw>
+<status status="FAIL" endtime="20190108 10:08:40.512" critical="yes" starttime="20190108 10:08:40.400">Element with locator 'id=mainmenutd_commercial' not found.</status>
+</test>
+<test id="s1-s4-t5" name="3_2_CT_NM_SuppressionEvenement_Admin">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>http://192.168.200.50:8000/dolibarr/comm/action/list.php?&amp;month=00&amp;year=2019</arg>
+</arguments>
+<msg timestamp="20190108 10:08:40.513" level="INFO">Opening url 'http://192.168.200.50:8000/dolibarr/comm/action/list.php?&amp;month=00&amp;year=2019'</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190108 10:13:40.785" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-21.png"&gt;&lt;img src="selenium-screenshot-21.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20190108 10:13:40.785" starttime="20190108 10:13:40.665"></status>
+</kw>
+<msg timestamp="20190108 10:13:40.785" level="FAIL">TimeoutException: Message: timeout
+  (Session info: chrome=70.0.3538.110)
+  (Driver info: chromedriver=2.41,platform=Linux 4.9.125-linuxkit x86_64)
+</msg>
+<status status="FAIL" endtime="20190108 10:13:40.785" starttime="20190108 10:08:40.513"></status>
+</kw>
+<status status="FAIL" endtime="20190108 10:13:40.785" critical="yes" starttime="20190108 10:08:40.512">TimeoutException: Message: timeout
+  (Session info: chrome=70.0.3538.110)
+  (Driver info: chromedriver=2.41,platform=Linux 4.9.125-linuxkit x86_64)
+</status>
+</test>
+<status status="FAIL" endtime="20190108 10:13:40.787" starttime="20190108 10:03:36.518"></status>
+</suite>
+<suite source="/opt/robotframework/tests/4.Gestion_propositions_commerciales_commandes_factures.txt" id="s1-s5" name="4.Gestion propositions commerciales commandes factures">
+<test id="s1-s5-t1" name="Acces au site">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>http://192.168.200.50:8000/dolibarr/index.php</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20190108 10:13:40.795" level="INFO">Opening browser 'chrome' to base url 'http://192.168.200.50:8000/dolibarr/index.php'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190108 10:18:44.296" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-22.png"&gt;&lt;img src="selenium-screenshot-22.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20190108 10:18:44.296" starttime="20190108 10:18:44.160"></status>
+</kw>
+<msg timestamp="20190108 10:18:44.297" level="FAIL">TimeoutException: Message: timeout
+  (Session info: chrome=70.0.3538.110)
+  (Driver info: chromedriver=2.41,platform=Linux 4.9.125-linuxkit x86_64)
+</msg>
+<status status="FAIL" endtime="20190108 10:18:44.297" starttime="20190108 10:13:40.794"></status>
+</kw>
+<status status="FAIL" endtime="20190108 10:18:44.297" critical="yes" starttime="20190108 10:13:40.793">TimeoutException: Message: timeout
+  (Session info: chrome=70.0.3538.110)
+  (Driver info: chromedriver=2.41,platform=Linux 4.9.125-linuxkit x86_64)
+</status>
+</test>
+<test id="s1-s5-t2" name="Authentification">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="username"]</arg>
+<arg>admin</arg>
+</arguments>
+<msg timestamp="20190108 10:18:44.299" level="INFO">Typing text 'admin' into text field 'xpath=//*[@id="username"]'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190108 10:18:44.420" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-23.png"&gt;&lt;img src="selenium-screenshot-23.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20190108 10:18:44.420" starttime="20190108 10:18:44.322"></status>
+</kw>
+<msg timestamp="20190108 10:18:44.420" level="FAIL">Element with locator 'xpath=//*[@id="username"]' not found.</msg>
+<status status="FAIL" endtime="20190108 10:18:44.420" starttime="20190108 10:18:44.299"></status>
+</kw>
+<status status="FAIL" endtime="20190108 10:18:44.421" critical="yes" starttime="20190108 10:18:44.298">Element with locator 'xpath=//*[@id="username"]' not found.</status>
+</test>
+<test id="s1-s5-t3" name="4_1_CT_NM_creation_prop_commerciales">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="mainmenua_commercial"]/span</arg>
+</arguments>
+<msg timestamp="20190108 10:18:44.423" level="INFO">Clicking element 'xpath=//*[@id="mainmenua_commercial"]/span'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190108 10:18:44.537" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-24.png"&gt;&lt;img src="selenium-screenshot-24.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20190108 10:18:44.537" starttime="20190108 10:18:44.445"></status>
+</kw>
+<msg timestamp="20190108 10:18:44.537" level="FAIL">Element with locator 'xpath=//*[@id="mainmenua_commercial"]/span' not found.</msg>
+<status status="FAIL" endtime="20190108 10:18:44.538" starttime="20190108 10:18:44.422"></status>
+</kw>
+<status status="FAIL" endtime="20190108 10:18:44.538" critical="yes" starttime="20190108 10:18:44.421">Element with locator 'xpath=//*[@id="mainmenua_commercial"]/span' not found.</status>
+</test>
+<test id="s1-s5-t4" name="4_1_CT_EX_creation_prop_commerciales">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="mainmenua_commercial"]/span</arg>
+</arguments>
+<msg timestamp="20190108 10:18:44.539" level="INFO">Clicking element 'xpath=//*[@id="mainmenua_commercial"]/span'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190108 10:18:44.654" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-25.png"&gt;&lt;img src="selenium-screenshot-25.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20190108 10:18:44.655" starttime="20190108 10:18:44.555"></status>
+</kw>
+<msg timestamp="20190108 10:18:44.655" level="FAIL">Element with locator 'xpath=//*[@id="mainmenua_commercial"]/span' not found.</msg>
+<status status="FAIL" endtime="20190108 10:18:44.655" starttime="20190108 10:18:44.539"></status>
+</kw>
+<status status="FAIL" endtime="20190108 10:18:44.655" critical="yes" starttime="20190108 10:18:44.538">Element with locator 'xpath=//*[@id="mainmenua_commercial"]/span' not found.</status>
+</test>
+<test id="s1-s5-t5" name="4_2_CT_NM_pdf_proposition">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>http://192.168.200.50:8000/dolibarr/comm/propal/list.php?leftmenu=propals</arg>
+</arguments>
+<msg timestamp="20190108 10:18:44.657" level="INFO">Opening url 'http://192.168.200.50:8000/dolibarr/comm/propal/list.php?leftmenu=propals'</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190108 10:23:44.927" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-26.png"&gt;&lt;img src="selenium-screenshot-26.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20190108 10:23:44.927" starttime="20190108 10:23:44.797"></status>
+</kw>
+<msg timestamp="20190108 10:23:44.927" level="FAIL">TimeoutException: Message: timeout
+  (Session info: chrome=70.0.3538.110)
+  (Driver info: chromedriver=2.41,platform=Linux 4.9.125-linuxkit x86_64)
+</msg>
+<status status="FAIL" endtime="20190108 10:23:44.927" starttime="20190108 10:18:44.657"></status>
+</kw>
+<status status="FAIL" endtime="20190108 10:23:44.928" critical="yes" starttime="20190108 10:18:44.656">TimeoutException: Message: timeout
+  (Session info: chrome=70.0.3538.110)
+  (Driver info: chromedriver=2.41,platform=Linux 4.9.125-linuxkit x86_64)
+</status>
+</test>
+<test id="s1-s5-t6" name="4_3_CT_NM_creation_commande">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="mainmenua_commercial"]/span</arg>
+</arguments>
+<msg timestamp="20190108 10:23:44.931" level="INFO">Clicking element 'xpath=//*[@id="mainmenua_commercial"]/span'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190108 10:23:45.045" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-27.png"&gt;&lt;img src="selenium-screenshot-27.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20190108 10:23:45.045" starttime="20190108 10:23:44.945"></status>
+</kw>
+<msg timestamp="20190108 10:23:45.045" level="FAIL">Element with locator 'xpath=//*[@id="mainmenua_commercial"]/span' not found.</msg>
+<status status="FAIL" endtime="20190108 10:23:45.045" starttime="20190108 10:23:44.931"></status>
+</kw>
+<status status="FAIL" endtime="20190108 10:23:45.045" critical="yes" starttime="20190108 10:23:44.929">Element with locator 'xpath=//*[@id="mainmenua_commercial"]/span' not found.</status>
+</test>
+<test id="s1-s5-t7" name="4_3_CT_EX_creation_commande">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="mainmenua_commercial"]/span</arg>
+</arguments>
+<msg timestamp="20190108 10:23:45.047" level="INFO">Clicking element 'xpath=//*[@id="mainmenua_commercial"]/span'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190108 10:23:45.160" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-28.png"&gt;&lt;img src="selenium-screenshot-28.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20190108 10:23:45.160" starttime="20190108 10:23:45.064"></status>
+</kw>
+<msg timestamp="20190108 10:23:45.161" level="FAIL">Element with locator 'xpath=//*[@id="mainmenua_commercial"]/span' not found.</msg>
+<status status="FAIL" endtime="20190108 10:23:45.161" starttime="20190108 10:23:45.047"></status>
+</kw>
+<status status="FAIL" endtime="20190108 10:23:45.161" critical="yes" starttime="20190108 10:23:45.046">Element with locator 'xpath=//*[@id="mainmenua_commercial"]/span' not found.</status>
+</test>
+<test id="s1-s5-t8" name="4_4_CT_NM_pdf_commande">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>http://192.168.200.50:8000/dolibarr/commande/list.php?leftmenu=orders</arg>
+</arguments>
+<msg timestamp="20190108 10:23:45.163" level="INFO">Opening url 'http://192.168.200.50:8000/dolibarr/commande/list.php?leftmenu=orders'</msg>
+<status status="PASS" endtime="20190108 10:27:07.384" starttime="20190108 10:23:45.162"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="searchFormList"]/div[2]/table/tbody/tr[3]/td[1]/table/tbody/tr/td[1]</arg>
+</arguments>
+<msg timestamp="20190108 10:27:07.385" level="INFO">Clicking element 'xpath=//*[@id="searchFormList"]/div[2]/table/tbody/tr[3]/td[1]/table/tbody/tr/td[1]'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190108 10:27:07.563" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-29.png"&gt;&lt;img src="selenium-screenshot-29.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20190108 10:27:07.563" starttime="20190108 10:27:07.419"></status>
+</kw>
+<msg timestamp="20190108 10:27:07.563" level="FAIL">Element with locator 'xpath=//*[@id="searchFormList"]/div[2]/table/tbody/tr[3]/td[1]/table/tbody/tr/td[1]' not found.</msg>
+<status status="FAIL" endtime="20190108 10:27:07.563" starttime="20190108 10:27:07.385"></status>
+</kw>
+<status status="FAIL" endtime="20190108 10:27:07.563" critical="yes" starttime="20190108 10:23:45.161">Element with locator 'xpath=//*[@id="searchFormList"]/div[2]/table/tbody/tr[3]/td[1]/table/tbody/tr/td[1]' not found.</status>
+</test>
+<test id="s1-s5-t9" name="4_5_CT_NM_creation_facture">
