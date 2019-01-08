@@ -53,7 +53,7 @@ Gestion de Stock
 	Click Button		xpath: //*[contains(text(), "Yes")]
 	
 	
-	Comment			Click Element		xpath=//*[contains(text(),'Yes')]
+	Comment			Click Element		xpath=//*[contains(text(),'Yes')] 
 	
 	
 	Comment 	VOIR FRANCOIS !!!!!	Click Element		xpath=//*[@id="mainbody"]/div[38]/div[3]/div/button[1]
