@@ -2,7 +2,7 @@
 Library           SeleniumLibrary
 
 *** Variables ***
-${BROWSER}        %{BROWSER}
+${BROWSER}        chrome
 ${URL_DOLIBARR}    http://192.168.200.50:8000/dolibarr/index.php
 
 *** Test Cases ***
@@ -50,7 +50,7 @@ Authentification
 4_4_CT_NM_pdf_commande
     Go To    http://192.168.200.50:8000/dolibarr/commande/list.php?leftmenu=orders
     Click Element    xpath=//*[@id="searchFormList"]/div[2]/table/tbody/tr[3]/td[1]/table/tbody/tr/td[1]
-	Click Button    id=builddoc_generatebutton
+    Click Button    id=builddoc_generatebutton
     Click Element    xpath=//*[@id="builddoc_form"]/div/table/tbody/tr[2]/td[1]/a[1]
 
 4_5_CT_NM_creation_facture
@@ -66,4 +66,3 @@ Authentification
     Click Element    id=reButtonNow
     Click Button    xpath=//*[@id="id-right"]/div/form/div[3]/input[1]
     Page Should Contain    Field 'Customer' is required
-

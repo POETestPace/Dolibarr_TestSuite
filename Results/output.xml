@@ -1,0 +1,1675 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20190108 09:51:07.792" generator="Robot 3.0.4 (Python 2.7.15 on win32)">
+<suite source="C:\Users\Stagiaire\Desktop\Dolibarr\Dolibarr_TestSuite\4.Gestion_propositions_commerciales_commandes_factures.txt" id="s1" name="4.Gestion propositions commerciales commandes factures">
+<test id="s1-t1" name="Acces au site">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>http://192.168.200.50:8000/dolibarr/index.php</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20190108 09:51:07.982" level="INFO">Opening browser 'chrome' to base url 'http://192.168.200.50:8000/dolibarr/index.php'.</msg>
+<status status="PASS" endtime="20190108 09:51:17.274" starttime="20190108 09:51:07.981"></status>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<doc>Verifies that current URL is exactly ``url`.</doc>
+<arguments>
+<arg>${URL_DOLIBARR}</arg>
+</arguments>
+<msg timestamp="20190108 09:51:17.343" level="INFO">Current location is 'http://192.168.200.50:8000/dolibarr/index.php'.</msg>
+<status status="PASS" endtime="20190108 09:51:17.343" starttime="20190108 09:51:17.275"></status>
+</kw>
+<status status="PASS" endtime="20190108 09:51:17.344" critical="yes" starttime="20190108 09:51:07.980"></status>
+</test>
+<test id="s1-t2" name="Authentification">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="username"]</arg>
+<arg>admin</arg>
+</arguments>
+<msg timestamp="20190108 09:51:17.349" level="INFO">Typing text 'admin' into text field 'xpath=//*[@id="username"]'.</msg>
+<status status="PASS" endtime="20190108 09:51:17.562" starttime="20190108 09:51:17.348"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="password"]</arg>
+<arg>root</arg>
+</arguments>
+<msg timestamp="20190108 09:51:17.564" level="INFO">Typing text 'root' into text field 'xpath=//*[@id="password"]'.</msg>
+<status status="PASS" endtime="20190108 09:51:17.761" starttime="20190108 09:51:17.563"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="login_line2"]/input</arg>
+</arguments>
+<msg timestamp="20190108 09:51:17.763" level="INFO">Clicking button 'xpath=//*[@id="login_line2"]/input'.</msg>
+<status status="PASS" endtime="20190108 09:51:22.697" starttime="20190108 09:51:17.762"></status>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<doc>Verifies that current URL is exactly ``url`.</doc>
+<arguments>
+<arg>http://192.168.200.50:8000/dolibarr/index.php?mainmenu=home</arg>
+</arguments>
+<msg timestamp="20190108 09:51:22.895" level="INFO">Current location is 'http://192.168.200.50:8000/dolibarr/index.php?mainmenu=home'.</msg>
+<status status="PASS" endtime="20190108 09:51:22.896" starttime="20190108 09:51:22.698"></status>
+</kw>
+<status status="PASS" endtime="20190108 09:51:22.896" critical="yes" starttime="20190108 09:51:17.345"></status>
+</test>
+<test id="s1-t3" name="4_1_CT_NM_creation_prop_commerciales">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="mainmenua_commercial"]/span</arg>
+</arguments>
+<msg timestamp="20190108 09:51:22.901" level="INFO">Clicking element 'xpath=//*[@id="mainmenua_commercial"]/span'.</msg>
+<status status="PASS" endtime="20190108 09:51:24.754" starttime="20190108 09:51:22.900"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="id-left"]/div/div[3]/div[3]/a</arg>
+</arguments>
+<msg timestamp="20190108 09:51:24.756" level="INFO">Clicking element '//*[@id="id-left"]/div/div[3]/div[3]/a'.</msg>
+<status status="PASS" endtime="20190108 09:51:26.934" starttime="20190108 09:51:24.755"></status>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<arguments>
+<arg>id=socid</arg>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20190108 09:51:26.935" level="INFO">Selecting options from selection list 'id=socid' by index 1.</msg>
+<status status="PASS" endtime="20190108 09:51:27.155" starttime="20190108 09:51:26.934"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="id-right"]/div/form/div[3]/input[1]</arg>
+</arguments>
+<msg timestamp="20190108 09:51:27.157" level="INFO">Clicking button 'xpath=//*[@id="id-right"]/div/form/div[3]/input[1]'.</msg>
+<status status="PASS" endtime="20190108 09:51:32.177" starttime="20190108 09:51:27.156"></status>
+</kw>
+<kw name="Location Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current URL contains ``expected``.</doc>
+<arguments>
+<arg>dolibarr/comm/propal/card.php?id=</arg>
+</arguments>
+<msg timestamp="20190108 09:51:32.189" level="INFO">Current location contains 'dolibarr/comm/propal/card.php?id='.</msg>
+<status status="PASS" endtime="20190108 09:51:32.189" starttime="20190108 09:51:32.178"></status>
+</kw>
+<status status="PASS" endtime="20190108 09:51:32.190" critical="yes" starttime="20190108 09:51:22.898"></status>
+</test>
+<test id="s1-t4" name="4_1_CT_EX_creation_prop_commerciales">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="mainmenua_commercial"]/span</arg>
+</arguments>
+<msg timestamp="20190108 09:51:32.194" level="INFO">Clicking element 'xpath=//*[@id="mainmenua_commercial"]/span'.</msg>
+<status status="PASS" endtime="20190108 09:51:33.949" starttime="20190108 09:51:32.194"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="id-left"]/div/div[3]/div[3]/a</arg>
+</arguments>
+<msg timestamp="20190108 09:51:33.951" level="INFO">Clicking element '//*[@id="id-left"]/div/div[3]/div[3]/a'.</msg>
+<status status="PASS" endtime="20190108 09:51:35.643" starttime="20190108 09:51:33.950"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="id-right"]/div/form/div[3]/input[1]</arg>
+</arguments>
+<msg timestamp="20190108 09:51:35.645" level="INFO">Clicking button 'xpath=//*[@id="id-right"]/div/form/div[3]/input[1]'.</msg>
+<status status="PASS" endtime="20190108 09:51:37.322" starttime="20190108 09:51:35.644"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Field 'Customer' is required</arg>
+</arguments>
+<msg timestamp="20190108 09:51:37.412" level="INFO">&lt;!DOCTYPE html&gt;&lt;html xmlns="http://www.w3.org/1999/xhtml" lang="fr"&gt;&lt;head&gt;
+&lt;meta charset="UTF-8" /&gt;
+&lt;meta name="robots" content="noindex,nofollow" /&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+&lt;meta name="author" content="Dolibarr Development Team" /&gt;
+&lt;link rel="shortcut icon" type="image/x-icon" href="/dolibarr/theme/eldy/img/favicon.ico" /&gt;
+&lt;title&gt;Proposition commerciale&lt;/title&gt;
+&lt;!-- Includes CSS for JQuery (Ajax library) --&gt;
+&lt;link rel="stylesheet" type="text/css" href="/dolibarr/includes/jquery/css/base/jquery-ui.css?layout=classic&amp;amp;version=8.0.4" /&gt;
+&lt;link rel="stylesheet" type="text/css" href="/dolibarr/includes/jquery/plugins/jnotify/jquery.jnotify-alt.min.css?layout=classic&amp;amp;version=8.0.4" /&gt;
+&lt;link rel="stylesheet" type="text/css" href="/dolibarr/includes/jquery/plugins/select2/dist/css/select2.css?layout=classic&amp;amp;version=8.0.4" /&gt;
+&lt;!-- Includes CSS for font awesome --&gt;
+&lt;link rel="stylesheet" type="text/css" href="/dolibarr/theme/common/fontawesome/css/font-awesome.min.css?layout=classic&amp;amp;version=8.0.4" /&gt;
+&lt;!-- Includes CSS for Dolibarr theme --&gt;
+&lt;link rel="stylesheet" type="text/css" href="/dolibarr/theme/eldy/style.css.php?lang=fr_FR&amp;amp;theme=eldy&amp;amp;userid=1&amp;amp;entity=1&amp;amp;layout=classic&amp;amp;version=8.0.4" /&gt;
+&lt;!-- Includes JS for JQuery --&gt;
+&lt;script type="text/javascript" src="/dolibarr/includes/jquery/js/jquery.min.js?layout=classic&amp;amp;version=8.0.4"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="/dolibarr/includes/jquery/js/jquery-ui.min.js?layout=classic&amp;amp;version=8.0.4"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="/dolibarr/includes/jquery/plugins/tablednd/jquery.tablednd.min.js?layout=classic&amp;amp;version=8.0.4"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="/dolibarr/includes/jquery/plugins/jnotify/jquery.jnotify.min.js?layout=classic&amp;amp;version=8.0.4"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="/dolibarr/includes/jquery/plugins/flot/jquery.flot.min.js?layout=classic&amp;amp;version=8.0.4"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="/dolibarr/includes/jquery/plugins/flot/jquery.flot.pie.min.js?layout=classic&amp;amp;version=8.0.4"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="/dolibarr/includes/jquery/plugins/flot/jquery.flot.stack.min.js?layout=classic&amp;amp;version=8.0.4"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="/dolibarr/includes/jquery/plugins/select2/dist/js/select2.full.min.js?layout=classic&amp;amp;version=8.0.4"&gt;&lt;/script&gt;
+&lt;!-- Includes JS of Dolibarr --&gt;
+&lt;script type="text/javascript" src="/dolibarr/core/js/lib_head.js.php?lang=fr_FR&amp;amp;layout=classic&amp;amp;version=8.0.4"&gt;&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body id="mainbody"&gt;
+
+&lt;!-- Start top horizontal --&gt;
+&lt;div class="side-nav-vert"&gt;&lt;div id="id-top"&gt;&lt;div id="tmenu_tooltip" class="tmenu"&gt;
+&lt;div class="tmenudiv"&gt;&lt;ul class="tmenu"&gt;&lt;li class="tmenu" id="mainmenutd_home"&gt;&lt;div class="tmenucenter"&gt;&lt;a class="tmenuimage" tabindex="-1" href="/dolibarr/index.php?mainmenu=home&amp;amp;leftmenu=home"&gt;&lt;div class="mainmenu home topmenuimage"&gt;&lt;span class="mainmenu tmenuimage" id="mainmenuspan_home"&gt;&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;&lt;a class="tmenu" id="mainmenua_home" href="/dolibarr/index.php?mainmenu=home&amp;amp;leftmenu=home"&gt;&lt;span class="mainmenuaspan"&gt;Accueil&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li class="tmenu" id="mainmenutd_agenda"&gt;&lt;div class="tmenucenter"&gt;&lt;a class="tmenuimage" tabindex="-1" href="/dolibarr/comm/action/index.php?idmenu=1&amp;amp;mainmenu=agenda&amp;amp;leftmenu="&gt;&lt;div class="mainmenu agenda topmenuimage"&gt;&lt;span class="mainmenu tmenuimage" id="mainmenuspan_agenda"&gt;&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;&lt;a class="tmenu" id="mainmenua_agenda" href="/dolibarr/comm/action/index.php?idmenu=1&amp;amp;mainmenu=agenda&amp;amp;leftmenu="&gt;&lt;span class="mainmenuaspan"&gt;Agenda&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li class="tmenu" id="mainmenutd_companies"&gt;&lt;div class="tmenucenter"&gt;&lt;a class="tmenuimage" tabindex="-1" href="/dolibarr/societe/index.php?mainmenu=companies&amp;amp;leftmenu="&gt;&lt;div class="mainmenu companies topmenuimage"&gt;&lt;span class="mainmenu tmenuimage" id="mainmenuspan_companies"&gt;&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;&lt;a class="tmenu" id="mainmenua_companies" href="/dolibarr/societe/index.php?mainmenu=companies&amp;amp;leftmenu="&gt;&lt;span class="mainmenuaspan"&gt;Tiers&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li class="tmenu" id="mainmenutd_products"&gt;&lt;div class="tmenucenter"&gt;&lt;a class="tmenuimage" tabindex="-1" href="/dolibarr/product/index.php?mainmenu=products&amp;amp;leftmenu="&gt;&lt;div class="mainmenu products topmenuimage"&gt;&lt;span class="mainmenu tmenuimage" id="mainmenuspan_products"&gt;&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;&lt;a class="tmenu" id="mainmenua_products" href="/dolibarr/product/index.php?mainmenu=products&amp;amp;leftmenu="&gt;&lt;span class="mainmenuaspan"&gt;Produits&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li class="tmenusel" id="mainmenutd_commercial"&gt;&lt;div class="tmenucenter"&gt;&lt;a class="tmenuimage" tabindex="-1" href="/dolibarr/comm/index.php?mainmenu=commercial&amp;amp;leftmenu="&gt;&lt;div class="mainmenu commercial topmenuimage"&gt;&lt;span class="mainmenu tmenuimage" id="mainmenuspan_commercial"&gt;&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;&lt;a class="tmenusel" id="mainmenua_commercial" href="/dolibarr/comm/index.php?mainmenu=commercial&amp;amp;leftmenu="&gt;&lt;span class="mainmenuaspan"&gt;Commercial&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li class="tmenu" id="mainmenutd_billing"&gt;&lt;div class="tmenucenter"&gt;&lt;a class="tmenuimage" tabindex="-1" href="/dolibarr/compta/index.php?mainmenu=billing&amp;amp;leftmenu="&gt;&lt;div class="mainmenu billing topmenuimage"&gt;&lt;span class="mainmenu tmenuimage" id="mainmenuspan_billing"&gt;&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;&lt;a class="tmenu" id="mainmenua_billing" href="/dolibarr/compta/index.php?mainmenu=billing&amp;amp;leftmenu="&gt;&lt;span class="mainmenuaspan"&gt;Facturation | Paiement&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li class="tmenu" id="mainmenutd_bank"&gt;&lt;div class="tmenucenter"&gt;&lt;a class="tmenuimage" tabindex="-1" href="/dolibarr/compta/bank/list.php?mainmenu=bank&amp;amp;leftmenu="&gt;&lt;div class="mainmenu bank topmenuimage"&gt;&lt;span class="mainmenu tmenuimage" id="mainmenuspan_bank"&gt;&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;&lt;a class="tmenu" id="mainmenua_bank" href="/dolibarr/compta/bank/list.php?mainmenu=bank&amp;amp;leftmenu="&gt;&lt;span class="mainmenuaspan"&gt;Banques | Caisses&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li class="tmenu" id="mainmenutd_project"&gt;&lt;div class="tmenucenter"&gt;&lt;a class="tmenuimage" tabindex="-1" href="/dolibarr/projet/index.php?mainmenu=project&amp;amp;leftmenu="&gt;&lt;div class="mainmenu project topmenuimage"&gt;&lt;span class="mainmenu tmenuimage" id="mainmenuspan_project"&gt;&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;&lt;a class="tmenu" id="mainmenua_project" href="/dolibarr/projet/index.php?mainmenu=project&amp;amp;leftmenu="&gt;&lt;span class="mainmenuaspan"&gt;Projets&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li class="tmenu" id="mainmenutd_tools"&gt;&lt;div class="tmenucenter"&gt;&lt;a class="tmenuimage" tabindex="-1" href="/dolibarr/core/tools.php?mainmenu=tools&amp;amp;leftmenu="&gt;&lt;div class="mainmenu tools topmenuimage"&gt;&lt;span class="mainmenu tmenuimage" id="mainmenuspan_tools"&gt;&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;&lt;a class="tmenu" id="mainmenua_tools" href="/dolibarr/core/tools.php?mainmenu=tools&amp;amp;leftmenu="&gt;&lt;span class="mainmenuaspan"&gt;Outils&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li class="tmenuend" id="mainmenutd_"&gt;&lt;div class="tmenucenter"&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="login_block"&gt;
+&lt;div class="login_block_user"&gt;&lt;div class="inline-block nowrap"&gt;&lt;div class="inline-block login_block_elem login_block_elem_name" style="padding: 0px;"&gt;&lt;a href="/dolibarr/user/card.php?id=1" title="&amp;lt;div class=&amp;quot;centpercent&amp;quot;&amp;gt;&amp;lt;u&amp;gt;Utilisateur&amp;lt;/u&amp;gt;&amp;lt;br&amp;gt;&amp;lt;b&amp;gt;Nom:&amp;lt;/b&amp;gt; SuperAdmin&amp;lt;br&amp;gt;&amp;lt;b&amp;gt;Identifiant:&amp;lt;/b&amp;gt; admin&amp;lt;br&amp;gt;&amp;lt;b&amp;gt;Email:&amp;lt;/b&amp;gt; &amp;lt;br&amp;gt;&amp;lt;b&amp;gt;Administrateur&amp;lt;/b&amp;gt;: Oui&amp;lt;br&amp;gt;&amp;lt;b&amp;gt;Type:&amp;lt;/b&amp;gt; Interne&amp;lt;br&amp;gt;&amp;lt;b&amp;gt;État&amp;lt;/b&amp;gt;: Actif&amp;lt;/div&amp;gt;&amp;lt;br&amp;gt;&amp;lt;br&amp;gt;&amp;lt;u&amp;gt;Identifiant&amp;lt;/u&amp;gt;&amp;lt;br&amp;gt;&amp;lt;b&amp;gt;Adresse IP&amp;lt;/b&amp;gt;: 192.168.200.50&amp;lt;br&amp;gt;&amp;lt;b&amp;gt;Mode authentification:&amp;lt;/b&amp;gt; dolibarr&amp;lt;br&amp;gt;&amp;lt;b&amp;gt;Connecté depuis:&amp;lt;/b&amp;gt; 08/01/2019 09:51&amp;lt;br&amp;gt;&amp;lt;b&amp;gt;Connexion précédente:&amp;lt;/b&amp;gt; 08/01/2019 09:47&amp;lt;br&amp;gt;&amp;lt;b&amp;gt;Thème courant:&amp;lt;/b&amp;gt; eldy&amp;lt;br&amp;gt;&amp;lt;b&amp;gt;Gestionnaire de menu courant:&amp;lt;/b&amp;gt; eldy&amp;lt;br&amp;gt;&amp;lt;b&amp;gt;Langue utilisateur actuelle:&amp;lt;/b&amp;gt; &amp;lt;img src=&amp;quot;/dolibarr/theme/common/flags/fr.png&amp;quot; alt=&amp;quot;&amp;quot; title=&amp;quot;fr_FR&amp;quot; class=&amp;quot;inline-block&amp;quot;&amp;gt; fr_FR&amp;lt;br&amp;gt;&amp;lt;b&amp;gt;Navigateur:&amp;lt;/b&amp;gt; chrome 71.0.3578.98 (Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36)&amp;lt;br&amp;gt;&amp;lt;b&amp;gt;Présentation:&amp;lt;/b&amp;gt; classic&amp;lt;br&amp;gt;&amp;lt;b&amp;gt;Ecran:&amp;lt;/b&amp;gt; 1036 x 684" class="classfortooltip atoplogin"&gt;&lt;!-- picto photo user --&gt;&lt;div class="inline-block nopadding userimg atoplogin" style="margin-right: 3px;"&gt;&lt;img class="photouserphoto userphoto" alt="No photo" src="/dolibarr/public/theme/common/user_anonymous.png" /&gt;&lt;/div&gt;&lt;div class="inline-block nopadding valignmiddle usertext atoplogin"&gt;SuperAdmin&lt;/div&gt;&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class="login_block_other"&gt;&lt;div class="inline-block"&gt;&lt;div class="classfortooltip inline-block login_block_elem inline-block" style="padding: 0px; padding: 0px; padding-right: 3px !important;" title="Afficher page d'impression de la zone centrale"&gt;&lt;a href="/dolibarr/comm/propal/card.php?&amp;amp;token=%242y%2410%24z0VgBwoApkwGemrT6HwlbOVg%2FBpMPJt7v0dkdLZIgrJtrQeNLnUA.&amp;amp;ref_client=&amp;amp;socid=-1&amp;amp;re=08%2F01%2F2019&amp;amp;reday=08&amp;amp;remonth=01&amp;amp;reyear=2019&amp;amp;duree_validite=15&amp;amp;cond_reglement_id=1&amp;amp;mode_reglement_id=&amp;amp;demand_reason_id=0&amp;amp;availability_id=0&amp;amp;shipping_method_id=-1&amp;amp;date_livraison=&amp;amp;date_livraisonday=&amp;amp;date_livraisonmonth=&amp;amp;date_livraisonyear=&amp;amp;projectid=0&amp;amp;model=azur&amp;amp;multicurrency_code=EUR&amp;amp;note_public=&amp;amp;note_private=&amp;amp;createmode=empty&amp;amp;optioncss=print" target="_blank"&gt;&lt;span class="fa fa-print atoplogin"&gt;&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="inline-block"&gt;&lt;div class="classfortooltip inline-block login_block_elem inline-block" style="padding: 0px; padding: 0px; padding-right: 3px !important;" title="Dolibarr 8.0.4&amp;lt;br&amp;gt;Consulter l'aide (nécessite un accès internet) - Page Wiki &amp;quot;Proposition commerciale&amp;quot;"&gt;&lt;a class="help" target="_blank" rel="noopener" href="http://wiki.dolibarr.org/index.php/Proposition_commerciale"&gt;&lt;span class="fa fa-question-circle atoplogin"&gt;&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="inline-block"&gt;&lt;div class="classfortooltip inline-block login_block_elem inline-block" style="padding: 0px; padding: 0px; padding-right: 3px !important;" title="Déconnexion&amp;lt;br&amp;gt;"&gt;&lt;a href="/dolibarr/user/logout.php"&gt;&lt;span class="fa fa-sign-out atoplogin"&gt;&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div style="clear: both;"&gt;&lt;/div&gt;&lt;!-- End top horizontal menu --&gt;
+
+&lt;!-- Begin div id-container --&gt;&lt;div id="id-container" class="id-container"&gt;
+&lt;!-- Begin side-nav id-left --&gt;
+&lt;div class="side-nav"&gt;&lt;div id="id-left"&gt;
+
+&lt;!-- Begin left menu --&gt;
+&lt;div class="vmenu"&gt;
+
+
+&lt;!-- Show logo on menu --&gt;
+&lt;div class="blockvmenuimpair blockvmenulogo"&gt;
+&lt;div class="menu_titre" id="menu_titre_logo"&gt;&lt;/div&gt;&lt;div class="menu_top" id="menu_top_logo"&gt;&lt;/div&gt;&lt;div class="menu_contenu" id="menu_contenu_logo"&gt;&lt;div class="center"&gt;&lt;img class="mycompany" title="Allez dans Accueil - Configuration - Société/institution pour changer le  logo ou aller dans Accueil - Configuration - Affichage pour le cacher." alt="" src="/dolibarr/theme/dolibarr_logo.png" style="max-width: 70%" /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;div class="menu_end" id="menu_end_logo"&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;!-- Begin SearchForm --&gt;
+&lt;div id="blockvmenusearch" class="blockvmenusearch"&gt;
+&lt;select type="text" class="searchselectcombo vmenusearchselectcombo select2-hidden-accessible" name="searchselectcombo" tabindex="-1" aria-hidden="true"&gt;&lt;option&gt;&lt;/option&gt;&lt;option value="searchintothirdparty"&gt;&amp;lt;img src="/dolibarr/theme/eldy/img/object_company.png" alt="" class="inline-block"&amp;gt; Tiers&lt;/option&gt;&lt;option value="searchintocontact"&gt;&amp;lt;img src="/dolibarr/theme/eldy/img/object_contact.png" alt="" class="inline-block"&amp;gt; Contacts&lt;/option&gt;&lt;option value="searchintoproduct"&gt;&amp;lt;img src="/dolibarr/theme/eldy/img/object_product.png" alt="" class="inline-block"&amp;gt; Produits ou services&lt;/option&gt;&lt;option value="searchintoprojects"&gt;&amp;lt;img src="/dolibarr/theme/eldy/img/object_projectpub.png" alt="" class="inline-block"&amp;gt; Projets&lt;/option&gt;&lt;option value="searchintotasks"&gt;&amp;lt;img src="/dolibarr/theme/eldy/img/object_task.png" alt="" class="inline-block"&amp;gt; T&amp;amp;acirc;ches&lt;/option&gt;&lt;option value="searchintopropal"&gt;&amp;lt;img src="/dolibarr/theme/eldy/img/object_propal.png" alt="" class="inline-block"&amp;gt; Propositions/devis&lt;/option&gt;&lt;option value="searchintoorder"&gt;&amp;lt;img src="/dolibarr/theme/eldy/img/object_order.png" alt="" class="inline-block"&amp;gt; Commandes clients&lt;/option&gt;&lt;option value="searchintoshipment"&gt;&amp;lt;img src="/dolibarr/theme/eldy/img/object_sending.png" alt="" class="inline-block"&amp;gt; Exp&amp;amp;eacute;ditions clients&lt;/option&gt;&lt;option value="searchintoinvoice"&gt;&amp;lt;img src="/dolibarr/theme/eldy/img/object_bill.png" alt="" class="inline-block"&amp;gt; Factures clients&lt;/option&gt;&lt;option value="searchintouser"&gt;&amp;lt;img src="/dolibarr/theme/eldy/img/object_user.png" alt="" class="inline-block"&amp;gt; Utilisateurs&lt;/option&gt;&lt;/select&gt;&lt;span class="select2 select2-container select2-container--default" dir="ltr" style="width: 188px;"&gt;&lt;span class="selection"&gt;&lt;span class="select2-selection select2-selection--single searchselectcombo vmenusearchselectcombo" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-searchselectcombo-oo-container"&gt;&lt;span class="select2-selection__rendered" id="select2-searchselectcombo-oo-container"&gt;&lt;span class="select2-selection__placeholder"&gt;Rechercher&lt;/span&gt;&lt;/span&gt;&lt;span class="select2-selection__arrow" role="presentation"&gt;&lt;b role="presentation"&gt;&lt;/b&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="dropdown-wrapper" aria-hidden="true"&gt;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;!-- End SearchForm --&gt;
+&lt;div class="blockvmenu blockvmenupair blockvmenufirst"&gt;
+&lt;!-- Process menu entry with mainmenu=commercial, leftmenu=propals, level=0 enabled=1, position=100 --&gt;
+&lt;div class="menu_titre"&gt;&lt;a class="vmenu" href="/dolibarr/comm/propal/index.php?leftmenu=propals"&gt;Propositions commerciales&lt;/a&gt;&lt;/div&gt;
+&lt;div class="menu_top"&gt;&lt;/div&gt;
+&lt;!-- Process menu entry with mainmenu=, leftmenu=, level=1 enabled=1, position=0 --&gt;
+&lt;div class="menu_contenu menu_contenu_comm_propal_card"&gt;&lt;a class="vsmenu" href="/dolibarr/comm/propal/card.php?action=create&amp;amp;leftmenu=propals"&gt;Nouvelle proposition&lt;/a&gt;&lt;br /&gt;&lt;/div&gt;
+&lt;!-- Process menu entry with mainmenu=, leftmenu=, level=1 enabled=1, position=0 --&gt;
+&lt;div class="menu_contenu menu_contenu_comm_propal_list"&gt;&lt;a class="vsmenu" href="/dolibarr/comm/propal/list.php?leftmenu=propals"&gt;Liste&lt;/a&gt;&lt;br /&gt;&lt;/div&gt;
+&lt;!-- Process menu entry with mainmenu=, leftmenu=, level=2 enabled=1, position=0 --&gt;
+&lt;div class="menu_contenu menu_contenu_comm_propal_list"&gt;   &lt;a class="vsmenu" href="/dolibarr/comm/propal/list.php?leftmenu=propals&amp;amp;viewstatut=0"&gt;Brouillons&lt;/a&gt;&lt;br /&gt;&lt;/div&gt;
+&lt;!-- Process menu entry with mainmenu=, leftmenu=, level=2 enabled=1, position=0 --&gt;
+&lt;div class="menu_contenu menu_contenu_comm_propal_list"&gt;   &lt;a class="vsmenu" href="/dolibarr/comm/propal/list.php?leftmenu=propals&amp;amp;viewstatut=1"&gt;Ouvert&lt;/a&gt;&lt;br /&gt;&lt;/div&gt;
+&lt;!-- Process menu entry with mainmenu=, leftmenu=, level=2 enabled=1, position=0 --&gt;
+&lt;div class="menu_contenu menu_contenu_comm_propal_list"&gt;   &lt;a class="vsmenu" href="/dolibarr/comm/propal/list.php?leftmenu=propals&amp;amp;viewstatut=2"&gt;Signée (à facturer)&lt;/a&gt;&lt;br /&gt;&lt;/div&gt;
+&lt;!-- Process menu entry with mainmenu=, leftmenu=, level=2 enabled=1, position=0 --&gt;
+&lt;div class="menu_contenu menu_contenu_comm_propal_list"&gt;   &lt;a class="vsmenu" href="/dolibarr/comm/propal/list.php?leftmenu=propals&amp;amp;viewstatut=3"&gt;Non signée (fermée)&lt;/a&gt;&lt;br /&gt;&lt;/div&gt;
+&lt;!-- Process menu entry with mainmenu=, leftmenu=, level=2 enabled=1, position=0 --&gt;
+&lt;div class="menu_contenu menu_contenu_comm_propal_list"&gt;   &lt;a class="vsmenu" href="/dolibarr/comm/propal/list.php?leftmenu=propals&amp;amp;viewstatut=4"&gt;Facturée&lt;/a&gt;&lt;br /&gt;&lt;/div&gt;
+&lt;!-- Process menu entry with mainmenu=, leftmenu=, level=1 enabled=1, position=0 --&gt;
+&lt;div class="menu_contenu menu_contenu_comm_propal_stats_index"&gt;&lt;a class="vsmenu" href="/dolibarr/comm/propal/stats/index.php?leftmenu=propals"&gt;Statistiques&lt;/a&gt;&lt;br /&gt;&lt;/div&gt;
+&lt;div class="menu_end"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="blockvmenu blockvmenuimpair blockvmenulast"&gt;
+&lt;!-- Process menu entry with mainmenu=commercial, leftmenu=orders, level=0 enabled=1, position=200 --&gt;
+&lt;div class="menu_titre"&gt;&lt;a class="vmenu" href="/dolibarr/commande/index.php?leftmenu=orders"&gt;Commandes clients&lt;/a&gt;&lt;/div&gt;
+&lt;div class="menu_top"&gt;&lt;/div&gt;
+&lt;!-- Process menu entry with mainmenu=, leftmenu=, level=1 enabled=1, position=0 --&gt;
+&lt;div class="menu_contenu menu_contenu_commande_card"&gt;&lt;a class="vsmenu" href="/dolibarr/commande/card.php?action=create&amp;amp;leftmenu=orders"&gt;Nouvelle commande&lt;/a&gt;&lt;br /&gt;&lt;/div&gt;
+&lt;!-- Process menu entry with mainmenu=, leftmenu=, level=1 enabled=1, position=0 --&gt;
+&lt;div class="menu_contenu menu_contenu_commande_list"&gt;&lt;a class="vsmenu" href="/dolibarr/commande/list.php?leftmenu=orders"&gt;Liste&lt;/a&gt;&lt;br /&gt;&lt;/div&gt;
+&lt;!-- Process menu entry with mainmenu=, leftmenu=, level=1 enabled=1, position=0 --&gt;
+&lt;div class="menu_contenu menu_contenu_commande_stats_index"&gt;&lt;a class="vsmenu" href="/dolibarr/commande/stats/index.php?leftmenu=orders"&gt;Statistiques&lt;/a&gt;&lt;br /&gt;&lt;/div&gt;
+&lt;div class="menu_end"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="blockvmenuend"&gt;&lt;/div&gt;
+&lt;!-- Begin Help Block--&gt;
+&lt;div id="blockvmenuhelp" class="blockvmenuhelp"&gt;
+&lt;div id="blockvmenuhelpapp" class="blockvmenuhelp"&gt;&lt;a class="help" target="_blank" rel="noopener" href="https://www.dolibarr.fr"&gt;Dolibarr 8.0.4&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- End Help Block--&gt;
+
+&lt;/div&gt;
+&lt;!-- End left menu --&gt;
+
+&lt;/div&gt;&lt;/div&gt; &lt;!-- End side-nav id-left --&gt;
+&lt;!-- Begin right area --&gt;
+&lt;div id="id-right"&gt;
+&lt;!-- Begin div class="fiche" --&gt;
+&lt;div class="fiche"&gt;
+
+&lt;table summary="" class="centpercent notopnoleftnoright" style="margin-bottom: 2px;"&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class="nobordernopadding widthpictotitle opacityhigh" valign="middle"&gt;&lt;img src="/dolibarr/theme/eldy/img/title_generic.png" alt="" class="valignmiddle widthpictotitle pictotitle" /&gt;&lt;/td&gt;&lt;td class="nobordernopadding" valign="middle"&gt;&lt;div class="titre"&gt;Nouvelle proposition commerciale&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;form name="addprop" action="/dolibarr/comm/propal/card.php" method="POST"&gt;&lt;input type="hidden" name="token" value="$2y$10$08bybB0OeVpM.eqV/DUaC.GGhv0aPPui4sfMLYiYFMCg8FeSjSeum" /&gt;&lt;input type="hidden" name="action" value="add" /&gt;
+&lt;div class="tabs" data-role="controlgroup" data-type="horizontal"&gt;
+&lt;/div&gt;
+
+&lt;div class="tabBar tabBarWithBottom"&gt;
+&lt;table class="border" width="100%"&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class="titlefieldcreate fieldrequired"&gt;Réf.&lt;/td&gt;&lt;td&gt;Brouillon&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Réf. client&lt;/td&gt;&lt;td&gt;&lt;input type="text" name="ref_client" value="" /&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class="fieldrequired"&gt;Client&lt;/td&gt;&lt;td&gt;
+&lt;!-- JS CODE TO ENABLE select2 for id = socid --&gt;
+          &lt;script type="text/javascript"&gt;
+        	$(document).ready(function () {
+        		$('#socid').select2({
+        		    dir: 'ltr',
+        			width: 'resolve',		/* off or resolve */
+					minimumInputLength: 0,
+					language: select2arrayoflanguage,
+    				containerCssClass: ':all:',					/* Line to add class of origin SELECT propagated to the new &amp;lt;span class="select2-selection...&amp;gt; tag */
+					templateResult: function (data, container) {	/* Format visible output into combo list */
+	 					/* Code to add class of origin OPTION propagated to the new select2 &amp;lt;li&amp;gt; tag */
+						if (data.element) { $(container).addClass($(data.element).attr("class")); }
+					    //console.log(data.html);
+						if ($(data.element).attr("data-html") != undefined) return htmlEntityDecodeJs($(data.element).attr("data-html"));		// If property html set, we decode html entities and use this
+					    return data.text;
+					},
+					templateSelection: function (selection) {		/* Format visible output of selected value */
+						return selection.text;
+					},
+					escapeMarkup: function(markup) {
+						return markup;
+					},
+					dropdownCssClass: 'ui-dialog'
+				});
+});
+&lt;/script&gt;
+&lt;select id="socid" class="flat minwidth300 select2-hidden-accessible" name="socid" tabindex="-1" aria-hidden="true"&gt;
+&lt;option value="-1"&gt;&lt;/option&gt;
+&lt;option value="8"&gt;Atos1&lt;/option&gt;&lt;option value="9"&gt;Atos2&lt;/option&gt;&lt;option value="12"&gt;client&lt;/option&gt;&lt;option value="14"&gt;client&lt;/option&gt;&lt;option value="18"&gt;client&lt;/option&gt;&lt;option value="20"&gt;client&lt;/option&gt;&lt;option value="24"&gt;client&lt;/option&gt;&lt;option value="26"&gt;client&lt;/option&gt;&lt;option value="28"&gt;client&lt;/option&gt;&lt;option value="30"&gt;client&lt;/option&gt;
+&lt;option value="32"&gt;client&lt;/option&gt;&lt;option value="34"&gt;client&lt;/option&gt;&lt;option value="36"&gt;client&lt;/option&gt;&lt;option value="11"&gt;Ne_pas_effacer&lt;/option&gt;&lt;option value="31"&gt;prospect1&lt;/option&gt;&lt;option value="33"&gt;prospect1&lt;/option&gt;&lt;option value="35"&gt;prospect1&lt;/option&gt;&lt;/select&gt;&lt;span class="select2 select2-container select2-container--default" dir="ltr" style="width: 300px;"&gt;&lt;span class="selection"&gt;&lt;span class="select2-selection select2-selection--single flat minwidth300" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-socid-container"&gt;&lt;span class="select2-selection__rendered" id="select2-socid-container" title=""&gt;&lt;/span&gt;&lt;span class="select2-selection__arrow" role="presentation"&gt;&lt;b role="presentation"&gt;&lt;/b&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="dropdown-wrapper" aria-hidden="true"&gt;&lt;/span&gt;&lt;/span&gt;
+ &lt;a href="/dolibarr/societe/card.php?action=create&amp;amp;client=3&amp;amp;fournisseur=0&amp;amp;backtopage=%2Fdolibarr%2Fcomm%2Fpropal%2Fcard.php%3Faction%3Dcreate"&gt;Créer tiers&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class="fieldrequired"&gt;Date&lt;/td&gt;&lt;td&gt;&lt;script type="text/javascript"&gt;$(function(){ $('#re').datepicker({
+							dateFormat: 'dd/mm/yy',
+							autoclose: true,
+							todayHighlight: true,
+								showOn: 'button',
+								buttonImage: '/dolibarr/theme/eldy/img/object_calendarday.png',
+								buttonImageOnly: true
+							}) });&lt;/script&gt;&lt;div class="nowrap inline-block"&gt;&lt;input id="re" name="re" type="text" class="maxwidth75 hasDatepicker" maxlength="11" value="08/01/2019" onchange="dpChangeDay('re','dd/MM/yyyy'); " size="10" /&gt;&lt;img class="ui-datepicker-trigger" src="/dolibarr/theme/eldy/img/object_calendarday.png" alt="..." title="..." /&gt;&lt;/div&gt;&lt;input type="hidden" id="reday" name="reday" value="08" /&gt;
+&lt;input type="hidden" id="remonth" name="remonth" value="01" /&gt;
+&lt;input type="hidden" id="reyear" name="reyear" value="2019" /&gt;
+ &lt;button class="dpInvisibleButtons datenowlink" id="reButtonNow" type="button" name="_useless" value="now" onclick="jQuery('#re').val('08/01/2019');jQuery('#reday').val('08');jQuery('#remonth').val('01');jQuery('#reyear').val('2019');"&gt;Maintenant&lt;/button&gt; &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class="fieldrequired"&gt;Durée de validité&lt;/td&gt;&lt;td&gt;&lt;input name="duree_validite" size="5" value="15" /&gt; jours&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class="nowrap fieldrequired"&gt;Conditions de règlement&lt;/td&gt;&lt;td&gt;&lt;select id="cond_reglement_id" class="flat selectpaymentterms" name="cond_reglement_id"&gt;&lt;option value="1"&gt;A réception&lt;/option&gt;&lt;option value="2"&gt;30 jours&lt;/option&gt;&lt;option value="3"&gt;30 jours fin de mois&lt;/option&gt;&lt;option value="4"&gt;60 jours&lt;/option&gt;&lt;option value="5"&gt;60 jours fin de mois&lt;/option&gt;&lt;option value="6"&gt;A commande&lt;/option&gt;&lt;option value="7"&gt;A livraison&lt;/option&gt;&lt;option value="8"&gt;50/50&lt;/option&gt;&lt;option value="9"&gt;10 jours&lt;/option&gt;&lt;option value="10"&gt;10 jours fin de mois&lt;/option&gt;&lt;option value="11"&gt;14 jours&lt;/option&gt;&lt;option value="12"&gt;14 jours fin de mois&lt;/option&gt;&lt;/select&gt;&lt;img src="/dolibarr/theme/eldy/img/info.png" alt="" title="Les valeurs de cette liste sont modifiables  depuis le menu Accueil &amp;gt; Configuration &amp;gt; Dictionnaires" class="hideonsmartphone" /&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Mode de règlement&lt;/td&gt;&lt;td&gt;&lt;select id="selectmode_reglement_id" class="flat selectpaymenttypes" name="mode_reglement_id"&gt;&lt;option value=""&gt; &lt;/option&gt;&lt;option value="6"&gt;Carte bancaire&lt;/option&gt;&lt;option value="7"&gt;Chèque&lt;/option&gt;&lt;option value="4"&gt;Espèce&lt;/option&gt;&lt;option value="3"&gt;Ordre de prélèvement&lt;/option&gt;&lt;option value="2"&gt;Virement bancaire&lt;/option&gt;&lt;/select&gt;&lt;img src="/dolibarr/theme/eldy/img/info.png" alt="" title="Les valeurs de cette liste sont modifiables  depuis le menu Accueil &amp;gt; Configuration &amp;gt; Dictionnaires" class="hideonsmartphone" /&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Origine&lt;/td&gt;&lt;td&gt;&lt;select class="flat" name="demand_reason_id"&gt;&lt;option value="0" selected=""&gt; &lt;/option&gt;&lt;option value="8"&gt;Bouche à oreille&lt;/option&gt;&lt;option value="4"&gt;Campagne Fax&lt;/option&gt;&lt;option value="2"&gt;Campagne Publipostage&lt;/option&gt;&lt;option value="3"&gt;Campagne Téléphonique&lt;/option&gt;&lt;option value="7"&gt;Campagne d'emailing&lt;/option&gt;&lt;option value="5"&gt;Contact commercial&lt;/option&gt;&lt;option value="6"&gt;Contact en boutique&lt;/option&gt;&lt;option value="10"&gt;Employé&lt;/option&gt;&lt;option value="1"&gt;Internet&lt;/option&gt;&lt;option value="11"&gt;Parrainage/Sponsoring&lt;/option&gt;&lt;option value="9"&gt;Partenaire&lt;/option&gt;&lt;/select&gt;&lt;img src="/dolibarr/theme/eldy/img/info.png" alt="" title="Les valeurs de cette liste sont modifiables  depuis le menu Accueil &amp;gt; Configuration &amp;gt; Dictionnaires" class="hideonsmartphone" /&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr class="fielddeliverydelay"&gt;&lt;td&gt;Délai de livraison&lt;/td&gt;&lt;td&gt;&lt;select id="availability_id" class="flat" name="availability_id"&gt;&lt;option value="0"&gt; &lt;/option&gt;&lt;option value="2"&gt;1 semaine&lt;/option&gt;&lt;option value="3"&gt;2 semaines&lt;/option&gt;&lt;option value="4"&gt;3 semaines&lt;/option&gt;&lt;option value="1"&gt;Immédiate&lt;/option&gt;&lt;/select&gt;&lt;img src="/dolibarr/theme/eldy/img/info.png" alt="" title="Les valeurs de cette liste sont modifiables  depuis le menu Accueil &amp;gt; Configuration &amp;gt; Dictionnaires" class="hideonsmartphone" /&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Méthode d'expédition&lt;/td&gt;&lt;td&gt;&lt;select id="selectshipping_method_id" class="flat selectshippingmethod" name="shipping_method_id"&gt;&lt;option value="-1"&gt; &lt;/option&gt;&lt;option value="1"&gt;At-Store Reclamation&lt;/option&gt;&lt;option value="2"&gt;Generic transporter&lt;/option&gt;&lt;/select&gt;&lt;img src="/dolibarr/theme/eldy/img/info.png" alt="" title="Les valeurs de cette liste sont modifiables  depuis le menu Accueil &amp;gt; Configuration &amp;gt; Dictionnaires" class="hideonsmartphone" /&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Date de livraison&lt;/td&gt;&lt;td&gt;&lt;script type="text/javascript"&gt;$(function(){ $('#date_livraison').datepicker({
+							dateFormat: 'dd/mm/yy',
+							autoclose: true,
+							todayHighlight: true,
+								showOn: 'button',
+								buttonImage: '/dolibarr/theme/eldy/img/object_calendarday.png',
+								buttonImageOnly: true
+							}) });&lt;/script&gt;&lt;div class="nowrap inline-block"&gt;&lt;input id="date_livraison" name="date_livraison" type="text" class="maxwidth75 hasDatepicker" maxlength="11" value="" onchange="dpChangeDay('date_livraison','dd/MM/yyyy'); " size="10" /&gt;&lt;img class="ui-datepicker-trigger" src="/dolibarr/theme/eldy/img/object_calendarday.png" alt="..." title="..." /&gt;&lt;/div&gt;&lt;input type="hidden" id="date_livraisonday" name="date_livraisonday" value="" /&gt;
+&lt;input type="hidden" id="date_livraisonmonth" name="date_livraisonmonth" value="" /&gt;
+&lt;input type="hidden" id="date_livraisonyear" name="date_livraisonyear" value="" /&gt;
+ &lt;button class="dpInvisibleButtons datenowlink" id="date_livraisonButtonNow" type="button" name="_useless" value="now" onclick="jQuery('#date_livraison').val('08/01/2019');jQuery('#date_livraisonday').val('08');jQuery('#date_livraisonmonth').val('01');jQuery('#date_livraisonyear').val('2019');"&gt;Maintenant&lt;/button&gt; &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Projet&lt;/td&gt;&lt;td&gt;
+&lt;!-- JS CODE TO ENABLE select2 for id = projectid --&gt;
+          &lt;script type="text/javascript"&gt;
+        	$(document).ready(function () {
+        		$('#projectid').select2({
+        		    dir: 'ltr',
+        			width: 'resolve',		/* off or resolve */
+					minimumInputLength: 0,
+					language: select2arrayoflanguage,
+    				containerCssClass: ':all:',					/* Line to add class of origin SELECT propagated to the new &amp;lt;span class="select2-selection...&amp;gt; tag */
+					templateResult: function (data, container) {	/* Format visible output into combo list */
+	 					/* Code to add class of origin OPTION propagated to the new select2 &amp;lt;li&amp;gt; tag */
+						if (data.element) { $(container).addClass($(data.element).attr("class")); }
+					    //console.log(data.html);
+						if ($(data.element).attr("data-html") != undefined) return htmlEntityDecodeJs($(data.element).attr("data-html"));		// If property html set, we decode html entities and use this
+					    return data.text;
+					},
+					templateSelection: function (selection) {		/* Format visible output of selected value */
+						return selection.text;
+					},
+					escapeMarkup: function(markup) {
+						return markup;
+					},
+					dropdownCssClass: 'ui-dialog'
+				});
+});
+&lt;/script&gt;
+&lt;select class="flat minwidth100 select2-hidden-accessible" id="projectid" name="projectid" tabindex="-1" aria-hidden="true"&gt;&lt;option value="0"&gt; &lt;/option&gt;&lt;/select&gt;&lt;span class="select2 select2-container select2-container--default" dir="ltr" style="width: 100px;"&gt;&lt;span class="selection"&gt;&lt;span class="select2-selection select2-selection--single flat minwidth100" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-projectid-container"&gt;&lt;span class="select2-selection__rendered" id="select2-projectid-container" title=" "&gt; &lt;/span&gt;&lt;span class="select2-selection__arrow" role="presentation"&gt;&lt;b role="presentation"&gt;&lt;/b&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="dropdown-wrapper" aria-hidden="true"&gt;&lt;/span&gt;&lt;/span&gt;&lt;div class="inline-block"&gt;&lt;div class="classfortooltip inline-block inline-block" style="padding: 0px; padding: 0px; padding-right: 3px !important;" title="Les projets fermés ne sont pas visible."&gt;&lt;img src="/dolibarr/theme/eldy/img/info.png" alt="" style="vertical-align: middle; cursor: help" /&gt;&lt;/div&gt;&lt;/div&gt;   &lt;a href="/dolibarr/projet/card.php?socid=&amp;amp;action=create&amp;amp;status=1&amp;amp;backtopage=%2Fdolibarr%2Fcomm%2Fpropal%2Fcard.php%3Faction%3Dcreate%26socid%3D"&gt;Créer projet&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Modèle de document par défaut&lt;/td&gt;&lt;td&gt;&lt;select id="model" class="flat model" name="model"&gt;&lt;option value="azur" selected=""&gt;azur&lt;/option&gt;
+&lt;/select&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;label for="multicurrency_code"&gt;Devise&lt;/label&gt;&lt;/td&gt;&lt;td class="maxwidthonsmartphone"&gt;&lt;select class="flat select2-hidden-accessible" name="multicurrency_code" id="multicurrency_code" tabindex="-1" aria-hidden="true"&gt;&lt;option value="EUR" selected="selected"&gt;Euros (€)&lt;/option&gt;&lt;/select&gt;&lt;span class="select2 select2-container select2-container--default" dir="ltr" style="width: 85.4px;"&gt;&lt;span class="selection"&gt;&lt;span class="select2-selection select2-selection--single flat" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-multicurrency_code-container"&gt;&lt;span class="select2-selection__rendered" id="select2-multicurrency_code-container" title="Euros (€)"&gt;Euros (€)&lt;/span&gt;&lt;span class="select2-selection__arrow" role="presentation"&gt;&lt;b role="presentation"&gt;&lt;/b&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="dropdown-wrapper" aria-hidden="true"&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;!-- JS CODE TO ENABLE select2 for id = multicurrency_code --&gt;
+          &lt;script type="text/javascript"&gt;
+        	$(document).ready(function () {
+        		$('#multicurrency_code').select2({
+        		    dir: 'ltr',
+        			width: 'resolve',		/* off or resolve */
+					minimumInputLength: 0,
+					language: select2arrayoflanguage,
+    				containerCssClass: ':all:',					/* Line to add class of origin SELECT propagated to the new &amp;lt;span class="select2-selection...&amp;gt; tag */
+					templateResult: function (data, container) {	/* Format visible output into combo list */
+	 					/* Code to add class of origin OPTION propagated to the new select2 &amp;lt;li&amp;gt; tag */
+						if (data.element) { $(container).addClass($(data.element).attr("class")); }
+					    //console.log(data.html);
+						if ($(data.element).attr("data-html") != undefined) return htmlEntityDecodeJs($(data.element).attr("data-html"));		// If property html set, we decode html entities and use this
+					    return data.text;
+					},
+					templateSelection: function (selection) {		/* Format visible output of selected value */
+						return selection.text;
+					},
+					escapeMarkup: function(markup) {
+						return markup;
+					},
+					dropdownCssClass: 'ui-dialog'
+				});
+});
+&lt;/script&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class="tdtop"&gt;Note (publique)&lt;/td&gt;&lt;td valign="top"&gt;&lt;textarea id="note_public" name="note_public" rows="3" style="margin-top: 5px; width: 90%" class="flat"&gt;&lt;/textarea&gt;&lt;!-- Output ckeditor $disallowAnyContent=1 toolbarname=dolibarr_notes --&gt;
+&lt;script type="text/javascript"&gt;
+            			$(document).ready(function () {
+                            /* if (CKEDITOR.loadFullCore) CKEDITOR.loadFullCore(); */
+                            /* should be editor=CKEDITOR.replace but what if serveral editors ? */
+                            CKEDITOR.replace('note_public',
+            					{
+            						/* property:xxx is same than CKEDITOR.config.property = xxx */
+            						customConfig : ckeditorConfig,
+            						readOnly : false,
+                            		htmlEncodeOutput :false,
+            						allowedContent :false,
+            						extraAllowedContent : '',
+            						fullPage : false,
+                            		toolbar: 'dolibarr_notes',
+            						toolbarStartupExpanded: false,
+            						width: '',
+            						height: 80,
+                                    skin: 'moono-lisa',
+                                    language: 'fr_FR',
+                                    textDirection: 'ltr',
+                                    on :
+                                            {
+                                                instanceReady : function( ev )
+                                                {
+                                                    // Output paragraphs as &amp;lt;p&amp;gt;Text&amp;lt;/p&amp;gt;.
+                                                    this.dataProcessor.writer.setRules( 'p',
+                                                        {
+                                                            indent : false,
+                                                            breakBeforeOpen : true,
+                                                            breakAfterOpen : false,
+                                                            breakBeforeClose : false,
+                                                            breakAfterClose : true
+                                                        });
+                                                }
+                                            }	})});
+&lt;/script&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class="tdtop"&gt;Note (privée)&lt;/td&gt;&lt;td valign="top"&gt;&lt;textarea id="note_private" name="note_private" rows="3" style="margin-top: 5px; width: 90%" class="flat"&gt;&lt;/textarea&gt;&lt;!-- Output ckeditor $disallowAnyContent=1 toolbarname=dolibarr_notes --&gt;
+&lt;script type="text/javascript"&gt;
+            			$(document).ready(function () {
+                            /* if (CKEDITOR.loadFullCore) CKEDITOR.loadFullCore(); */
+                            /* should be editor=CKEDITOR.replace but what if serveral editors ? */
+                            CKEDITOR.replace('note_private',
+            					{
+            						/* property:xxx is same than CKEDITOR.config.property = xxx */
+            						customConfig : ckeditorConfig,
+            						readOnly : false,
+                            		htmlEncodeOutput :false,
+            						allowedContent :false,
+            						extraAllowedContent : '',
+            						fullPage : false,
+                            		toolbar: 'dolibarr_notes',
+            						toolbarStartupExpanded: false,
+            						width: '',
+            						height: 80,
+                                    skin: 'moono-lisa',
+                                    language: 'fr_FR',
+                                    textDirection: 'ltr',
+                                    on :
+                                            {
+                                                instanceReady : function( ev )
+                                                {
+                                                    // Output paragraphs as &amp;lt;p&amp;gt;Text&amp;lt;/p&amp;gt;.
+                                                    this.dataProcessor.writer.setRules( 'p',
+                                                        {
+                                                            indent : false,
+                                                            breakBeforeOpen : true,
+                                                            breakAfterOpen : false,
+                                                            breakBeforeClose : false,
+                                                            breakAfterClose : true
+                                                        });
+                                                }
+                                            }	})});
+&lt;/script&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;!-- BEGIN PHP TEMPLATE extrafields_add.tpl.php --&gt;
+&lt;!-- END PHP TEMPLATE extrafields_add.tpl.php --&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;input type="hidden" name="createmode" value="empty" /&gt;
+&lt;/div&gt;
+&lt;div class="center"&gt;&lt;input type="submit" class="button" value="Créer brouillon" /&gt;     &lt;input type="button" class="button" value="Annuler" onclick="javascript:history.go(-1)" /&gt;&lt;/div&gt;&lt;/form&gt;&lt;script type="text/javascript"&gt;
+					$(document).ready(function() {
+						var block = false
+						if (block) {
+							$.dolEventValid("","Le champ \'Client\' est obligatoire");
+						} else {
+							/* jnotify(message, preset of message type, keepmessage) */
+							$.jnotify("Le champ \'Client\' est obligatoire",
+							"error",
+							true,
+							{ remove: function (){} } );
+						}
+					});
+				&lt;/script&gt;
+
+&lt;/div&gt; &lt;!-- End div class="fiche" --&gt;
+&lt;/div&gt; &lt;!-- End div id-right --&gt;
+&lt;/div&gt; &lt;!-- End div id-container --&gt;
+
+
+&lt;!-- Common footer for private page --&gt;
+
+&lt;!-- A div to store page_y POST paramater --&gt;
+&lt;div id="page_y" style="display: none;"&gt;&lt;/div&gt;
+
+&lt;script type="text/javascript" language="javascript"&gt;
+
+/* JS CODE TO ENABLE to enable handler to switch left menu page (menuhider) */
+jQuery(".menuhider").click(function() {  console.log("We click on .menuhider");
+  $('.side-nav').toggle()
+  $('.login_block').toggle()
+});
+
+&lt;/script&gt;
+
+&lt;!-- JS CODE TO ENABLE select2 for id searchselectcombo --&gt;
+			&lt;script type="text/javascript"&gt;
+			$(document).ready(function () {
+				var data = [{"id":"searchintothirdparty","text":"&amp;lt;img src=\"\/dolibarr\/theme\/eldy\/img\/object_company.png\" alt=\"\" class=\"inline-block\"&amp;gt; Tiers","url":"\/dolibarr\/societe\/list.php"},{"id":"searchintocontact","text":"&amp;lt;img src=\"\/dolibarr\/theme\/eldy\/img\/object_contact.png\" alt=\"\" class=\"inline-block\"&amp;gt; Contacts","url":"\/dolibarr\/contact\/list.php"},{"id":"searchintoproduct","text":"&amp;lt;img src=\"\/dolibarr\/theme\/eldy\/img\/object_product.png\" alt=\"\" class=\"inline-block\"&amp;gt; Produits ou services","url":"\/dolibarr\/product\/list.php"},{"id":"searchintoprojects","text":"&amp;lt;img src=\"\/dolibarr\/theme\/eldy\/img\/object_projectpub.png\" alt=\"\" class=\"inline-block\"&amp;gt; Projets","url":"\/dolibarr\/projet\/list.php"},{"id":"searchintotasks","text":"&amp;lt;img src=\"\/dolibarr\/theme\/eldy\/img\/object_task.png\" alt=\"\" class=\"inline-block\"&amp;gt; T&amp;amp;acirc;ches","url":"\/dolibarr\/projet\/tasks\/list.php"},{"id":"searchintopropal","text":"&amp;lt;img src=\"\/dolibarr\/theme\/eldy\/img\/object_propal.png\" alt=\"\" class=\"inline-block\"&amp;gt; Propositions\/devis","url":"\/dolibarr\/comm\/propal\/list.php"},{"id":"searchintoorder","text":"&amp;lt;img src=\"\/dolibarr\/theme\/eldy\/img\/object_order.png\" alt=\"\" class=\"inline-block\"&amp;gt; Commandes clients","url":"\/dolibarr\/commande\/list.php"},{"id":"searchintoshipment","text":"&amp;lt;img src=\"\/dolibarr\/theme\/eldy\/img\/object_sending.png\" alt=\"\" class=\"inline-block\"&amp;gt; Exp&amp;amp;eacute;ditions clients","url":"\/dolibarr\/expedition\/list.php"},{"id":"searchintoinvoice","text":"&amp;lt;img src=\"\/dolibarr\/theme\/eldy\/img\/object_bill.png\" alt=\"\" class=\"inline-block\"&amp;gt; Factures clients","url":"\/dolibarr\/compta\/facture\/list.php"},{"id":"searchintouser","text":"&amp;lt;img src=\"\/dolibarr\/theme\/eldy\/img\/object_user.png\" alt=\"\" class=\"inline-block\"&amp;gt; Utilisateurs","url":"\/dolibarr\/user\/list.php"}];
+
+				var saveRemoteData = {"searchintothirdparty":{"position":10,"shortcut":"T","img":"object_company","label":"Tiers","text":"&amp;lt;img src=\"\/dolibarr\/theme\/eldy\/img\/object_company.png\" alt=\"\" class=\"inline-block\"&amp;gt; Tiers","url":"\/dolibarr\/societe\/list.php"},"searchintocontact":{"position":15,"shortcut":"A","img":"object_contact","label":"Contacts","text":"&amp;lt;img src=\"\/dolibarr\/theme\/eldy\/img\/object_contact.png\" alt=\"\" class=\"inline-block\"&amp;gt; Contacts","url":"\/dolibarr\/contact\/list.php"},"searchintoproduct":{"position":30,"shortcut":"P","img":"object_product","label":"Produits ou services","text":"&amp;lt;img src=\"\/dolibarr\/theme\/eldy\/img\/object_product.png\" alt=\"\" class=\"inline-block\"&amp;gt; Produits ou services","url":"\/dolibarr\/product\/list.php"},"searchintoprojects":{"position":40,"shortcut":"Q","img":"object_projectpub","label":"Projets","text":"&amp;lt;img src=\"\/dolibarr\/theme\/eldy\/img\/object_projectpub.png\" alt=\"\" class=\"inline-block\"&amp;gt; Projets","url":"\/dolibarr\/projet\/list.php"},"searchintotasks":{"position":45,"img":"object_task","label":"T&amp;amp;acirc;ches","text":"&amp;lt;img src=\"\/dolibarr\/theme\/eldy\/img\/object_task.png\" alt=\"\" class=\"inline-block\"&amp;gt; T&amp;amp;acirc;ches","url":"\/dolibarr\/projet\/tasks\/list.php"},"searchintopropal":{"position":60,"img":"object_propal","label":"Propositions\/devis","text":"&amp;lt;img src=\"\/dolibarr\/theme\/eldy\/img\/object_propal.png\" alt=\"\" class=\"inline-block\"&amp;gt; Propositions\/devis","url":"\/dolibarr\/comm\/propal\/list.php"},"searchintoorder":{"position":70,"img":"object_order","label":"Commandes clients","text":"&amp;lt;img src=\"\/dolibarr\/theme\/eldy\/img\/object_order.png\" alt=\"\" class=\"inline-block\"&amp;gt; Commandes clients","url":"\/dolibarr\/commande\/list.php"},"searchintoshipment":{"position":80,"img":"object_sending","label":"Exp&amp;amp;eacute;ditions clients","text":"&amp;lt;img src=\"\/dolibarr\/theme\/eldy\/img\/object_sending.png\" alt=\"\" class=\"inline-block\"&amp;gt; Exp&amp;amp;eacute;ditions clients","url":"\/dolibarr\/expedition\/list.php"},"searchintoinvoice":{"position":90,"img":"object_bill","label":"Factures clients","text":"&amp;lt;img src=\"\/dolibarr\/theme\/eldy\/img\/object_bill.png\" alt=\"\" class=\"inline-block\"&amp;gt; Factures clients","url":"\/dolibarr\/compta\/facture\/list.php"},"searchintouser":{"position":200,"shortcut":"U","img":"object_user","label":"Utilisateurs","text":"&amp;lt;img src=\"\/dolibarr\/theme\/eldy\/img\/object_user.png\" alt=\"\" class=\"inline-block\"&amp;gt; Utilisateurs","url":"\/dolibarr\/user\/list.php"}};
+
+				$(".searchselectcombo").select2({
+					data: data,
+					language: select2arrayoflanguage,
+					containerCssClass: ':all:',					/* Line to add class of origin SELECT propagated to the new &amp;lt;span class="select2-selection...&amp;gt; tag */
+					placeholder: "Rechercher",
+					escapeMarkup: function (markup) { return markup; }, 	// let our custom formatter work
+					minimumInputLength: 1,
+					formatResult: function(result, container, query, escapeMarkup) {
+						return escapeMarkup(result.text);
+					},
+					matcher: function (params, data) {
+
+						if(! data.id) return null;
+
+						var urlBase = data.url;
+						var separ = urlBase.indexOf("?") &amp;gt;= 0 ? "&amp;amp;" : "?";
+						/* console.log("params.term="+params.term); */
+						/* console.log("params.term encoded="+encodeURIComponent(params.term)); */
+						saveRemoteData[data.id].url = urlBase + separ + "sall=" + encodeURIComponent(params.term);
+
+						return data;
+					}
+				});
+
+				
+				/* Code to execute a GET when we select a value */
+				$(".searchselectcombo").change(function() {
+					var selected = $(".searchselectcombo").val();
+					console.log("We select "+selected)
+
+					$(".searchselectcombo").val("");  /* reset visible combo value */
+					$.each( saveRemoteData, function( key, value ) {
+						if (key == selected)
+						{
+							console.log("selectArrayAjax - Do a redirect to "+value.url)
+							location.assign(value.url);
+						}
+					});
+				});
+
+			});
+			&lt;/script&gt;
+&lt;!-- Includes JS Footer of Dolibarr --&gt;
+&lt;script type="text/javascript" src="/dolibarr/core/js/lib_foot.js.php?lang=fr_FR&amp;amp;layout=classic&amp;amp;version=8.0.4"&gt;&lt;/script&gt;
+
+&lt;!-- A div to allow dialog popup --&gt;
+&lt;div id="dialogforpopup" style="display: none;"&gt;&lt;/div&gt;
+
+
+&lt;div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"&gt;&lt;/div&gt;&lt;div class="jnotify-container"&gt;&lt;div class="jnotify-notification jnotify-notification-error"&gt;&lt;div class="jnotify-background"&gt;&lt;/div&gt;&lt;a class="jnotify-close"&gt;×&lt;/a&gt;&lt;div class="jnotify-message"&gt;&lt;div&gt;Le champ 'Client' est obligatoire&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"&gt;&lt;/div&gt;&lt;div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"&gt;&lt;/div&gt;&lt;div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"&gt;&lt;/div&gt;&lt;div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"&gt;&lt;/div&gt;&lt;div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190108 09:51:37.727" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20190108 09:51:37.728" starttime="20190108 09:51:37.414"></status>
+</kw>
+<msg timestamp="20190108 09:51:37.729" level="FAIL">Page should have contained text 'Field 'Customer' is required' but did not.</msg>
+<status status="FAIL" endtime="20190108 09:51:37.730" starttime="20190108 09:51:37.322"></status>
+</kw>
+<status status="FAIL" endtime="20190108 09:51:37.730" critical="yes" starttime="20190108 09:51:32.192">Page should have contained text 'Field 'Customer' is required' but did not.</status>
+</test>
+<test id="s1-t5" name="4_2_CT_NM_pdf_proposition">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>http://192.168.200.50:8000/dolibarr/comm/propal/list.php?leftmenu=propals</arg>
+</arguments>
+<msg timestamp="20190108 09:51:37.733" level="INFO">Opening url 'http://192.168.200.50:8000/dolibarr/comm/propal/list.php?leftmenu=propals'</msg>
+<status status="PASS" endtime="20190108 09:51:39.739" starttime="20190108 09:51:37.732"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="searchFormList"]/div[2]/table/tbody/tr[3]/td[1]/table/tbody/tr/td[1]/a</arg>
+</arguments>
+<msg timestamp="20190108 09:51:39.741" level="INFO">Clicking element 'xpath=//*[@id="searchFormList"]/div[2]/table/tbody/tr[3]/td[1]/table/tbody/tr/td[1]/a'.</msg>
+<status status="PASS" endtime="20190108 09:51:41.596" starttime="20190108 09:51:39.740"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="builddoc_form"]/div/table/tbody/tr[2]/td[1]/a[1]</arg>
+</arguments>
+<msg timestamp="20190108 09:51:41.598" level="INFO">Clicking element 'xpath=//*[@id="builddoc_form"]/div/table/tbody/tr[2]/td[1]/a[1]'.</msg>
+<status status="PASS" endtime="20190108 09:51:41.792" starttime="20190108 09:51:41.597"></status>
+</kw>
+<status status="PASS" endtime="20190108 09:51:41.793" critical="yes" starttime="20190108 09:51:37.731"></status>
+</test>
+<test id="s1-t6" name="4_3_CT_NM_creation_commande">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="mainmenua_commercial"]/span</arg>
+</arguments>
+<msg timestamp="20190108 09:51:41.797" level="INFO">Clicking element 'xpath=//*[@id="mainmenua_commercial"]/span'.</msg>
+<status status="PASS" endtime="20190108 09:51:45.268" starttime="20190108 09:51:41.796"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="id-left"]/div/div[4]/div[3]/a</arg>
+</arguments>
+<msg timestamp="20190108 09:51:45.269" level="INFO">Clicking element 'xpath=//*[@id="id-left"]/div/div[4]/div[3]/a'.</msg>
+<status status="PASS" endtime="20190108 09:51:47.198" starttime="20190108 09:51:45.268"></status>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<arguments>
+<arg>id=socid</arg>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20190108 09:51:47.200" level="INFO">Selecting options from selection list 'id=socid' by index 1.</msg>
+<status status="PASS" endtime="20190108 09:51:47.308" starttime="20190108 09:51:47.199"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="id-right"]/div/form/div[3]/input[1]</arg>
+</arguments>
+<msg timestamp="20190108 09:51:47.309" level="INFO">Clicking button 'xpath=//*[@id="id-right"]/div/form/div[3]/input[1]'.</msg>
+<status status="PASS" endtime="20190108 09:51:50.583" starttime="20190108 09:51:47.309"></status>
+</kw>
+<kw name="Location Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current URL contains ``expected``.</doc>
+<arguments>
+<arg>dolibarr/commande/card.php?id=</arg>
+</arguments>
+<msg timestamp="20190108 09:51:50.591" level="INFO">Current location contains 'dolibarr/commande/card.php?id='.</msg>
+<status status="PASS" endtime="20190108 09:51:50.592" starttime="20190108 09:51:50.583"></status>
+</kw>
+<status status="PASS" endtime="20190108 09:51:50.592" critical="yes" starttime="20190108 09:51:41.794"></status>
+</test>
+<test id="s1-t7" name="4_3_CT_EX_creation_commande">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="mainmenua_commercial"]/span</arg>
+</arguments>
+<msg timestamp="20190108 09:51:50.594" level="INFO">Clicking element 'xpath=//*[@id="mainmenua_commercial"]/span'.</msg>
+<status status="PASS" endtime="20190108 09:51:52.319" starttime="20190108 09:51:50.594"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="id-left"]/div/div[4]/div[3]/a</arg>
+</arguments>
+<msg timestamp="20190108 09:51:52.320" level="INFO">Clicking element 'xpath=//*[@id="id-left"]/div/div[4]/div[3]/a'.</msg>
+<status status="PASS" endtime="20190108 09:51:54.002" starttime="20190108 09:51:52.319"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="id-right"]/div/form/div[3]/input[1]</arg>
+</arguments>
+<msg timestamp="20190108 09:51:54.003" level="INFO">Clicking button 'xpath=//*[@id="id-right"]/div/form/div[3]/input[1]'.</msg>
+<status status="PASS" endtime="20190108 09:51:55.790" starttime="20190108 09:51:54.003"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Field 'Customer' is required</arg>
+</arguments>
+<msg timestamp="20190108 09:51:55.883" level="INFO">&lt;!DOCTYPE html&gt;&lt;html xmlns="http://www.w3.org/1999/xhtml" lang="fr"&gt;&lt;head&gt;
+&lt;meta charset="UTF-8" /&gt;
+&lt;meta name="robots" content="noindex,nofollow" /&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+&lt;meta name="author" content="Dolibarr Development Team" /&gt;
+&lt;link rel="shortcut icon" type="image/x-icon" href="/dolibarr/theme/eldy/img/favicon.ico" /&gt;
+&lt;title&gt;Commande&lt;/title&gt;
+&lt;!-- Includes CSS for JQuery (Ajax library) --&gt;
+&lt;link rel="stylesheet" type="text/css" href="/dolibarr/includes/jquery/css/base/jquery-ui.css?layout=classic&amp;amp;version=8.0.4" /&gt;
+&lt;link rel="stylesheet" type="text/css" href="/dolibarr/includes/jquery/plugins/jnotify/jquery.jnotify-alt.min.css?layout=classic&amp;amp;version=8.0.4" /&gt;
+&lt;link rel="stylesheet" type="text/css" href="/dolibarr/includes/jquery/plugins/select2/dist/css/select2.css?layout=classic&amp;amp;version=8.0.4" /&gt;
+&lt;!-- Includes CSS for font awesome --&gt;
+&lt;link rel="stylesheet" type="text/css" href="/dolibarr/theme/common/fontawesome/css/font-awesome.min.css?layout=classic&amp;amp;version=8.0.4" /&gt;
+&lt;!-- Includes CSS for Dolibarr theme --&gt;
+&lt;link rel="stylesheet" type="text/css" href="/dolibarr/theme/eldy/style.css.php?lang=fr_FR&amp;amp;theme=eldy&amp;amp;userid=1&amp;amp;entity=1&amp;amp;layout=classic&amp;amp;version=8.0.4" /&gt;
+&lt;!-- Includes JS for JQuery --&gt;
+&lt;script type="text/javascript" src="/dolibarr/includes/jquery/js/jquery.min.js?layout=classic&amp;amp;version=8.0.4"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="/dolibarr/includes/jquery/js/jquery-ui.min.js?layout=classic&amp;amp;version=8.0.4"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="/dolibarr/includes/jquery/plugins/tablednd/jquery.tablednd.min.js?layout=classic&amp;amp;version=8.0.4"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="/dolibarr/includes/jquery/plugins/jnotify/jquery.jnotify.min.js?layout=classic&amp;amp;version=8.0.4"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="/dolibarr/includes/jquery/plugins/flot/jquery.flot.min.js?layout=classic&amp;amp;version=8.0.4"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="/dolibarr/includes/jquery/plugins/flot/jquery.flot.pie.min.js?layout=classic&amp;amp;version=8.0.4"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="/dolibarr/includes/jquery/plugins/flot/jquery.flot.stack.min.js?layout=classic&amp;amp;version=8.0.4"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="/dolibarr/includes/jquery/plugins/select2/dist/js/select2.full.min.js?layout=classic&amp;amp;version=8.0.4"&gt;&lt;/script&gt;
+&lt;!-- Includes JS of Dolibarr --&gt;
+&lt;script type="text/javascript" src="/dolibarr/core/js/lib_head.js.php?lang=fr_FR&amp;amp;layout=classic&amp;amp;version=8.0.4"&gt;&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body id="mainbody"&gt;
+
+&lt;!-- Start top horizontal --&gt;
+&lt;div class="side-nav-vert"&gt;&lt;div id="id-top"&gt;&lt;div id="tmenu_tooltip" class="tmenu"&gt;
+&lt;div class="tmenudiv"&gt;&lt;ul class="tmenu"&gt;&lt;li class="tmenu" id="mainmenutd_home"&gt;&lt;div class="tmenucenter"&gt;&lt;a class="tmenuimage" tabindex="-1" href="/dolibarr/index.php?mainmenu=home&amp;amp;leftmenu=home"&gt;&lt;div class="mainmenu home topmenuimage"&gt;&lt;span class="mainmenu tmenuimage" id="mainmenuspan_home"&gt;&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;&lt;a class="tmenu" id="mainmenua_home" href="/dolibarr/index.php?mainmenu=home&amp;amp;leftmenu=home"&gt;&lt;span class="mainmenuaspan"&gt;Accueil&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li class="tmenu" id="mainmenutd_agenda"&gt;&lt;div class="tmenucenter"&gt;&lt;a class="tmenuimage" tabindex="-1" href="/dolibarr/comm/action/index.php?idmenu=1&amp;amp;mainmenu=agenda&amp;amp;leftmenu="&gt;&lt;div class="mainmenu agenda topmenuimage"&gt;&lt;span class="mainmenu tmenuimage" id="mainmenuspan_agenda"&gt;&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;&lt;a class="tmenu" id="mainmenua_agenda" href="/dolibarr/comm/action/index.php?idmenu=1&amp;amp;mainmenu=agenda&amp;amp;leftmenu="&gt;&lt;span class="mainmenuaspan"&gt;Agenda&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li class="tmenu" id="mainmenutd_companies"&gt;&lt;div class="tmenucenter"&gt;&lt;a class="tmenuimage" tabindex="-1" href="/dolibarr/societe/index.php?mainmenu=companies&amp;amp;leftmenu="&gt;&lt;div class="mainmenu companies topmenuimage"&gt;&lt;span class="mainmenu tmenuimage" id="mainmenuspan_companies"&gt;&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;&lt;a class="tmenu" id="mainmenua_companies" href="/dolibarr/societe/index.php?mainmenu=companies&amp;amp;leftmenu="&gt;&lt;span class="mainmenuaspan"&gt;Tiers&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li class="tmenu" id="mainmenutd_products"&gt;&lt;div class="tmenucenter"&gt;&lt;a class="tmenuimage" tabindex="-1" href="/dolibarr/product/index.php?mainmenu=products&amp;amp;leftmenu="&gt;&lt;div class="mainmenu products topmenuimage"&gt;&lt;span class="mainmenu tmenuimage" id="mainmenuspan_products"&gt;&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;&lt;a class="tmenu" id="mainmenua_products" href="/dolibarr/product/index.php?mainmenu=products&amp;amp;leftmenu="&gt;&lt;span class="mainmenuaspan"&gt;Produits&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li class="tmenusel" id="mainmenutd_commercial"&gt;&lt;div class="tmenucenter"&gt;&lt;a class="tmenuimage" tabindex="-1" href="/dolibarr/comm/index.php?mainmenu=commercial&amp;amp;leftmenu="&gt;&lt;div class="mainmenu commercial topmenuimage"&gt;&lt;span class="mainmenu tmenuimage" id="mainmenuspan_commercial"&gt;&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;&lt;a class="tmenusel" id="mainmenua_commercial" href="/dolibarr/comm/index.php?mainmenu=commercial&amp;amp;leftmenu="&gt;&lt;span class="mainmenuaspan"&gt;Commercial&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li class="tmenu" id="mainmenutd_billing"&gt;&lt;div class="tmenucenter"&gt;&lt;a class="tmenuimage" tabindex="-1" href="/dolibarr/compta/index.php?mainmenu=billing&amp;amp;leftmenu="&gt;&lt;div class="mainmenu billing topmenuimage"&gt;&lt;span class="mainmenu tmenuimage" id="mainmenuspan_billing"&gt;&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;&lt;a class="tmenu" id="mainmenua_billing" href="/dolibarr/compta/index.php?mainmenu=billing&amp;amp;leftmenu="&gt;&lt;span class="mainmenuaspan"&gt;Facturation | Paiement&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li class="tmenu" id="mainmenutd_bank"&gt;&lt;div class="tmenucenter"&gt;&lt;a class="tmenuimage" tabindex="-1" href="/dolibarr/compta/bank/list.php?mainmenu=bank&amp;amp;leftmenu="&gt;&lt;div class="mainmenu bank topmenuimage"&gt;&lt;span class="mainmenu tmenuimage" id="mainmenuspan_bank"&gt;&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;&lt;a class="tmenu" id="mainmenua_bank" href="/dolibarr/compta/bank/list.php?mainmenu=bank&amp;amp;leftmenu="&gt;&lt;span class="mainmenuaspan"&gt;Banques | Caisses&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li class="tmenu" id="mainmenutd_project"&gt;&lt;div class="tmenucenter"&gt;&lt;a class="tmenuimage" tabindex="-1" href="/dolibarr/projet/index.php?mainmenu=project&amp;amp;leftmenu="&gt;&lt;div class="mainmenu project topmenuimage"&gt;&lt;span class="mainmenu tmenuimage" id="mainmenuspan_project"&gt;&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;&lt;a class="tmenu" id="mainmenua_project" href="/dolibarr/projet/index.php?mainmenu=project&amp;amp;leftmenu="&gt;&lt;span class="mainmenuaspan"&gt;Projets&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li class="tmenu" id="mainmenutd_tools"&gt;&lt;div class="tmenucenter"&gt;&lt;a class="tmenuimage" tabindex="-1" href="/dolibarr/core/tools.php?mainmenu=tools&amp;amp;leftmenu="&gt;&lt;div class="mainmenu tools topmenuimage"&gt;&lt;span class="mainmenu tmenuimage" id="mainmenuspan_tools"&gt;&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;&lt;a class="tmenu" id="mainmenua_tools" href="/dolibarr/core/tools.php?mainmenu=tools&amp;amp;leftmenu="&gt;&lt;span class="mainmenuaspan"&gt;Outils&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li class="tmenuend" id="mainmenutd_"&gt;&lt;div class="tmenucenter"&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="login_block"&gt;
+&lt;div class="login_block_user"&gt;&lt;div class="inline-block nowrap"&gt;&lt;div class="inline-block login_block_elem login_block_elem_name" style="padding: 0px;"&gt;&lt;a href="/dolibarr/user/card.php?id=1" title="&amp;lt;div class=&amp;quot;centpercent&amp;quot;&amp;gt;&amp;lt;u&amp;gt;Utilisateur&amp;lt;/u&amp;gt;&amp;lt;br&amp;gt;&amp;lt;b&amp;gt;Nom:&amp;lt;/b&amp;gt; SuperAdmin&amp;lt;br&amp;gt;&amp;lt;b&amp;gt;Identifiant:&amp;lt;/b&amp;gt; admin&amp;lt;br&amp;gt;&amp;lt;b&amp;gt;Email:&amp;lt;/b&amp;gt; &amp;lt;br&amp;gt;&amp;lt;b&amp;gt;Administrateur&amp;lt;/b&amp;gt;: Oui&amp;lt;br&amp;gt;&amp;lt;b&amp;gt;Type:&amp;lt;/b&amp;gt; Interne&amp;lt;br&amp;gt;&amp;lt;b&amp;gt;État&amp;lt;/b&amp;gt;: Actif&amp;lt;/div&amp;gt;&amp;lt;br&amp;gt;&amp;lt;br&amp;gt;&amp;lt;u&amp;gt;Identifiant&amp;lt;/u&amp;gt;&amp;lt;br&amp;gt;&amp;lt;b&amp;gt;Adresse IP&amp;lt;/b&amp;gt;: 192.168.200.50&amp;lt;br&amp;gt;&amp;lt;b&amp;gt;Mode authentification:&amp;lt;/b&amp;gt; dolibarr&amp;lt;br&amp;gt;&amp;lt;b&amp;gt;Connecté depuis:&amp;lt;/b&amp;gt; 08/01/2019 09:51&amp;lt;br&amp;gt;&amp;lt;b&amp;gt;Connexion précédente:&amp;lt;/b&amp;gt; 08/01/2019 09:47&amp;lt;br&amp;gt;&amp;lt;b&amp;gt;Thème courant:&amp;lt;/b&amp;gt; eldy&amp;lt;br&amp;gt;&amp;lt;b&amp;gt;Gestionnaire de menu courant:&amp;lt;/b&amp;gt; eldy&amp;lt;br&amp;gt;&amp;lt;b&amp;gt;Langue utilisateur actuelle:&amp;lt;/b&amp;gt; &amp;lt;img src=&amp;quot;/dolibarr/theme/common/flags/fr.png&amp;quot; alt=&amp;quot;&amp;quot; title=&amp;quot;fr_FR&amp;quot; class=&amp;quot;inline-block&amp;quot;&amp;gt; fr_FR&amp;lt;br&amp;gt;&amp;lt;b&amp;gt;Navigateur:&amp;lt;/b&amp;gt; chrome 71.0.3578.98 (Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36)&amp;lt;br&amp;gt;&amp;lt;b&amp;gt;Présentation:&amp;lt;/b&amp;gt; classic&amp;lt;br&amp;gt;&amp;lt;b&amp;gt;Ecran:&amp;lt;/b&amp;gt; 1036 x 684" class="classfortooltip atoplogin"&gt;&lt;!-- picto photo user --&gt;&lt;div class="inline-block nopadding userimg atoplogin" style="margin-right: 3px;"&gt;&lt;img class="photouserphoto userphoto" alt="No photo" src="/dolibarr/public/theme/common/user_anonymous.png" /&gt;&lt;/div&gt;&lt;div class="inline-block nopadding valignmiddle usertext atoplogin"&gt;SuperAdmin&lt;/div&gt;&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class="login_block_other"&gt;&lt;div class="inline-block"&gt;&lt;div class="classfortooltip inline-block login_block_elem inline-block" style="padding: 0px; padding: 0px; padding-right: 3px !important;" title="Afficher page d'impression de la zone centrale"&gt;&lt;a href="/dolibarr/commande/card.php?&amp;amp;token=%242y%2410%24%2FfUfHNLWyAun3R3tnDwntezaDx2jhi9f8%2FL1utgIZ2oNjBkOfUcf.&amp;amp;socid=-1&amp;amp;remise_percent=&amp;amp;origin=&amp;amp;originid=&amp;amp;ref_client=&amp;amp;re=08%2F01%2F2019&amp;amp;reday=08&amp;amp;remonth=01&amp;amp;reyear=2019&amp;amp;liv_=&amp;amp;liv_day=&amp;amp;liv_month=&amp;amp;liv_year=&amp;amp;cond_reglement_id=0&amp;amp;mode_reglement_id=&amp;amp;availability_id=0&amp;amp;shipping_method_id=-1&amp;amp;demand_reason_id=0&amp;amp;projectid=0&amp;amp;model=einstein&amp;amp;multicurrency_code=EUR&amp;amp;note_public=&amp;amp;note_private=&amp;amp;bouton=Cr%C3%A9er+brouillon&amp;amp;optioncss=print" target="_blank"&gt;&lt;span class="fa fa-print atoplogin"&gt;&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="inline-block"&gt;&lt;div class="classfortooltip inline-block login_block_elem inline-block" style="padding: 0px; padding: 0px; padding-right: 3px !important;" title="Dolibarr 8.0.4&amp;lt;br&amp;gt;Consulter l'aide (nécessite un accès internet) - Page Wiki &amp;quot;Commandes Clients&amp;quot;"&gt;&lt;a class="help" target="_blank" rel="noopener" href="http://wiki.dolibarr.org/index.php/Commandes_Clients"&gt;&lt;span class="fa fa-question-circle atoplogin"&gt;&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="inline-block"&gt;&lt;div class="classfortooltip inline-block login_block_elem inline-block" style="padding: 0px; padding: 0px; padding-right: 3px !important;" title="Déconnexion&amp;lt;br&amp;gt;"&gt;&lt;a href="/dolibarr/user/logout.php"&gt;&lt;span class="fa fa-sign-out atoplogin"&gt;&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div style="clear: both;"&gt;&lt;/div&gt;&lt;!-- End top horizontal menu --&gt;
+
+&lt;!-- Begin div id-container --&gt;&lt;div id="id-container" class="id-container"&gt;
+&lt;!-- Begin side-nav id-left --&gt;
+&lt;div class="side-nav"&gt;&lt;div id="id-left"&gt;
+
+&lt;!-- Begin left menu --&gt;
+&lt;div class="vmenu"&gt;
+
+
+&lt;!-- Show logo on menu --&gt;
+&lt;div class="blockvmenuimpair blockvmenulogo"&gt;
+&lt;div class="menu_titre" id="menu_titre_logo"&gt;&lt;/div&gt;&lt;div class="menu_top" id="menu_top_logo"&gt;&lt;/div&gt;&lt;div class="menu_contenu" id="menu_contenu_logo"&gt;&lt;div class="center"&gt;&lt;img class="mycompany" title="Allez dans Accueil - Configuration - Société/institution pour changer le  logo ou aller dans Accueil - Configuration - Affichage pour le cacher." alt="" src="/dolibarr/theme/dolibarr_logo.png" style="max-width: 70%" /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;div class="menu_end" id="menu_end_logo"&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;!-- Begin SearchForm --&gt;
+&lt;div id="blockvmenusearch" class="blockvmenusearch"&gt;
+&lt;select type="text" class="searchselectcombo vmenusearchselectcombo select2-hidden-accessible" name="searchselectcombo" tabindex="-1" aria-hidden="true"&gt;&lt;option&gt;&lt;/option&gt;&lt;option value="searchintothirdparty"&gt;&amp;lt;img src="/dolibarr/theme/eldy/img/object_company.png" alt="" class="inline-block"&amp;gt; Tiers&lt;/option&gt;&lt;option value="searchintocontact"&gt;&amp;lt;img src="/dolibarr/theme/eldy/img/object_contact.png" alt="" class="inline-block"&amp;gt; Contacts&lt;/option&gt;&lt;option value="searchintoproduct"&gt;&amp;lt;img src="/dolibarr/theme/eldy/img/object_product.png" alt="" class="inline-block"&amp;gt; Produits ou services&lt;/option&gt;&lt;option value="searchintoprojects"&gt;&amp;lt;img src="/dolibarr/theme/eldy/img/object_projectpub.png" alt="" class="inline-block"&amp;gt; Projets&lt;/option&gt;&lt;option value="searchintotasks"&gt;&amp;lt;img src="/dolibarr/theme/eldy/img/object_task.png" alt="" class="inline-block"&amp;gt; T&amp;amp;acirc;ches&lt;/option&gt;&lt;option value="searchintopropal"&gt;&amp;lt;img src="/dolibarr/theme/eldy/img/object_propal.png" alt="" class="inline-block"&amp;gt; Propositions/devis&lt;/option&gt;&lt;option value="searchintoorder"&gt;&amp;lt;img src="/dolibarr/theme/eldy/img/object_order.png" alt="" class="inline-block"&amp;gt; Commandes clients&lt;/option&gt;&lt;option value="searchintoshipment"&gt;&amp;lt;img src="/dolibarr/theme/eldy/img/object_sending.png" alt="" class="inline-block"&amp;gt; Exp&amp;amp;eacute;ditions clients&lt;/option&gt;&lt;option value="searchintoinvoice"&gt;&amp;lt;img src="/dolibarr/theme/eldy/img/object_bill.png" alt="" class="inline-block"&amp;gt; Factures clients&lt;/option&gt;&lt;option value="searchintouser"&gt;&amp;lt;img src="/dolibarr/theme/eldy/img/object_user.png" alt="" class="inline-block"&amp;gt; Utilisateurs&lt;/option&gt;&lt;/select&gt;&lt;span class="select2 select2-container select2-container--default" dir="ltr" style="width: 188px;"&gt;&lt;span class="selection"&gt;&lt;span class="select2-selection select2-selection--single searchselectcombo vmenusearchselectcombo" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-searchselectcombo-ap-container"&gt;&lt;span class="select2-selection__rendered" id="select2-searchselectcombo-ap-container"&gt;&lt;span class="select2-selection__placeholder"&gt;Rechercher&lt;/span&gt;&lt;/span&gt;&lt;span class="select2-selection__arrow" role="presentation"&gt;&lt;b role="presentation"&gt;&lt;/b&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="dropdown-wrapper" aria-hidden="true"&gt;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;!-- End SearchForm --&gt;
+&lt;div class="blockvmenu blockvmenupair blockvmenufirst"&gt;
+&lt;!-- Process menu entry with mainmenu=commercial, leftmenu=propals, level=0 enabled=1, position=100 --&gt;
+&lt;div class="menu_titre"&gt;&lt;a class="vmenu" href="/dolibarr/comm/propal/index.php?leftmenu=propals"&gt;Propositions commerciales&lt;/a&gt;&lt;/div&gt;
+&lt;div class="menu_top"&gt;&lt;/div&gt;
+&lt;!-- Process menu entry with mainmenu=, leftmenu=, level=1 enabled=1, position=0 --&gt;
+&lt;div class="menu_contenu menu_contenu_comm_propal_card"&gt;&lt;a class="vsmenu" href="/dolibarr/comm/propal/card.php?action=create&amp;amp;leftmenu=propals"&gt;Nouvelle proposition&lt;/a&gt;&lt;br /&gt;&lt;/div&gt;
+&lt;!-- Process menu entry with mainmenu=, leftmenu=, level=1 enabled=1, position=0 --&gt;
+&lt;div class="menu_contenu menu_contenu_comm_propal_list"&gt;&lt;a class="vsmenu" href="/dolibarr/comm/propal/list.php?leftmenu=propals"&gt;Liste&lt;/a&gt;&lt;br /&gt;&lt;/div&gt;
+&lt;!-- Process menu entry with mainmenu=, leftmenu=, level=1 enabled=1, position=0 --&gt;
+&lt;div class="menu_contenu menu_contenu_comm_propal_stats_index"&gt;&lt;a class="vsmenu" href="/dolibarr/comm/propal/stats/index.php?leftmenu=propals"&gt;Statistiques&lt;/a&gt;&lt;br /&gt;&lt;/div&gt;
+&lt;div class="menu_end"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="blockvmenu blockvmenuimpair blockvmenulast"&gt;
+&lt;!-- Process menu entry with mainmenu=commercial, leftmenu=orders, level=0 enabled=1, position=200 --&gt;
+&lt;div class="menu_titre"&gt;&lt;a class="vmenu" href="/dolibarr/commande/index.php?leftmenu=orders"&gt;Commandes clients&lt;/a&gt;&lt;/div&gt;
+&lt;div class="menu_top"&gt;&lt;/div&gt;
+&lt;!-- Process menu entry with mainmenu=, leftmenu=, level=1 enabled=1, position=0 --&gt;
+&lt;div class="menu_contenu menu_contenu_commande_card"&gt;&lt;a class="vsmenu" href="/dolibarr/commande/card.php?action=create&amp;amp;leftmenu=orders"&gt;Nouvelle commande&lt;/a&gt;&lt;br /&gt;&lt;/div&gt;
+&lt;!-- Process menu entry with mainmenu=, leftmenu=, level=1 enabled=1, position=0 --&gt;
+&lt;div class="menu_contenu menu_contenu_commande_list"&gt;&lt;a class="vsmenu" href="/dolibarr/commande/list.php?leftmenu=orders"&gt;Liste&lt;/a&gt;&lt;br /&gt;&lt;/div&gt;
+&lt;!-- Process menu entry with mainmenu=, leftmenu=, level=2 enabled=1, position=0 --&gt;
+&lt;div class="menu_contenu menu_contenu_commande_list"&gt;   &lt;a class="vsmenu" href="/dolibarr/commande/list.php?leftmenu=orders&amp;amp;viewstatut=0"&gt;Brouillon&lt;/a&gt;&lt;br /&gt;&lt;/div&gt;
+&lt;!-- Process menu entry with mainmenu=, leftmenu=, level=2 enabled=1, position=0 --&gt;
+&lt;div class="menu_contenu menu_contenu_commande_list"&gt;   &lt;a class="vsmenu" href="/dolibarr/commande/list.php?leftmenu=orders&amp;amp;viewstatut=1"&gt;Validée&lt;/a&gt;&lt;br /&gt;&lt;/div&gt;
+&lt;!-- Process menu entry with mainmenu=, leftmenu=, level=2 enabled=1, position=0 --&gt;
+&lt;div class="menu_contenu menu_contenu_commande_list"&gt;   &lt;a class="vsmenu" href="/dolibarr/commande/list.php?leftmenu=orders&amp;amp;viewstatut=2"&gt;En cours&lt;/a&gt;&lt;br /&gt;&lt;/div&gt;
+&lt;!-- Process menu entry with mainmenu=, leftmenu=, level=2 enabled=1, position=0 --&gt;
+&lt;div class="menu_contenu menu_contenu_commande_list"&gt;   &lt;a class="vsmenu" href="/dolibarr/commande/list.php?leftmenu=orders&amp;amp;viewstatut=3"&gt;Livrée&lt;/a&gt;&lt;br /&gt;&lt;/div&gt;
+&lt;!-- Process menu entry with mainmenu=, leftmenu=, level=2 enabled=1, position=0 --&gt;
+&lt;div class="menu_contenu menu_contenu_commande_list"&gt;   &lt;a class="vsmenu" href="/dolibarr/commande/list.php?leftmenu=orders&amp;amp;viewstatut=-1"&gt;Annulée&lt;/a&gt;&lt;br /&gt;&lt;/div&gt;
+&lt;!-- Process menu entry with mainmenu=, leftmenu=, level=1 enabled=1, position=0 --&gt;
+&lt;div class="menu_contenu menu_contenu_commande_stats_index"&gt;&lt;a class="vsmenu" href="/dolibarr/commande/stats/index.php?leftmenu=orders"&gt;Statistiques&lt;/a&gt;&lt;br /&gt;&lt;/div&gt;
+&lt;div class="menu_end"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="blockvmenuend"&gt;&lt;/div&gt;
+&lt;!-- Begin Help Block--&gt;
+&lt;div id="blockvmenuhelp" class="blockvmenuhelp"&gt;
+&lt;div id="blockvmenuhelpapp" class="blockvmenuhelp"&gt;&lt;a class="help" target="_blank" rel="noopener" href="https://www.dolibarr.fr"&gt;Dolibarr 8.0.4&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- End Help Block--&gt;
+
+&lt;/div&gt;
+&lt;!-- End left menu --&gt;
+
+&lt;/div&gt;&lt;/div&gt; &lt;!-- End side-nav id-left --&gt;
+&lt;!-- Begin right area --&gt;
+&lt;div id="id-right"&gt;
+&lt;!-- Begin div class="fiche" --&gt;
+&lt;div class="fiche"&gt;
+
+&lt;table summary="" class="centpercent notopnoleftnoright" style="margin-bottom: 2px;"&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class="nobordernopadding widthpictotitle opacityhigh" valign="middle"&gt;&lt;img src="/dolibarr/theme/eldy/img/title_commercial.png" alt="" class="valignmiddle widthpictotitle pictotitle" /&gt;&lt;/td&gt;&lt;td class="nobordernopadding" valign="middle"&gt;&lt;div class="titre"&gt;Créer Commande&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;form name="crea_commande" action="/dolibarr/commande/card.php" method="POST"&gt;&lt;input type="hidden" name="token" value="$2y$10$hsumH9MHP5DfGfVLg5aA2uBP7LmicNZXW7nOLcz4t42mfHCeyVPDy" /&gt;&lt;input type="hidden" name="action" value="add" /&gt;&lt;input type="hidden" name="socid" value="" /&gt;
+&lt;input type="hidden" name="remise_percent" value="" /&gt;&lt;input type="hidden" name="origin" value="" /&gt;&lt;input type="hidden" name="originid" value="" /&gt;
+&lt;div class="tabs" data-role="controlgroup" data-type="horizontal"&gt;
+&lt;/div&gt;
+
+&lt;div class="tabBar tabBarWithBottom"&gt;
+&lt;table class="border" width="100%"&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class="titlefieldcreate fieldrequired"&gt;Réf.&lt;/td&gt;&lt;td&gt;Brouillon&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Réf. client&lt;/td&gt;&lt;td&gt;&lt;input type="text" name="ref_client" value="" /&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class="fieldrequired"&gt;Client&lt;/td&gt;&lt;td&gt;
+&lt;!-- JS CODE TO ENABLE select2 for id = socid --&gt;
+          &lt;script type="text/javascript"&gt;
+        	$(document).ready(function () {
+        		$('#socid').select2({
+        		    dir: 'ltr',
+        			width: 'resolve',		/* off or resolve */
+					minimumInputLength: 0,
+					language: select2arrayoflanguage,
+    				containerCssClass: ':all:',					/* Line to add class of origin SELECT propagated to the new &amp;lt;span class="select2-selection...&amp;gt; tag */
+					templateResult: function (data, container) {	/* Format visible output into combo list */
+	 					/* Code to add class of origin OPTION propagated to the new select2 &amp;lt;li&amp;gt; tag */
+						if (data.element) { $(container).addClass($(data.element).attr("class")); }
+					    //console.log(data.html);
+						if ($(data.element).attr("data-html") != undefined) return htmlEntityDecodeJs($(data.element).attr("data-html"));		// If property html set, we decode html entities and use this
+					    return data.text;
+					},
+					templateSelection: function (selection) {		/* Format visible output of selected value */
+						return selection.text;
+					},
+					escapeMarkup: function(markup) {
+						return markup;
+					},
+					dropdownCssClass: 'ui-dialog'
+				});
+});
+&lt;/script&gt;
+&lt;select id="socid" class="flat minwidth300 select2-hidden-accessible" name="socid" tabindex="-1" aria-hidden="true"&gt;
+&lt;option value="-1"&gt;&lt;/option&gt;
+&lt;option value="8"&gt;Atos1&lt;/option&gt;&lt;option value="9"&gt;Atos2&lt;/option&gt;&lt;option value="12"&gt;client&lt;/option&gt;&lt;option value="14"&gt;client&lt;/option&gt;&lt;option value="18"&gt;client&lt;/option&gt;&lt;option value="20"&gt;client&lt;/option&gt;&lt;option value="24"&gt;client&lt;/option&gt;&lt;option value="26"&gt;client&lt;/option&gt;&lt;option value="28"&gt;client&lt;/option&gt;&lt;option value="30"&gt;client&lt;/option&gt;
+&lt;option value="32"&gt;client&lt;/option&gt;&lt;option value="34"&gt;client&lt;/option&gt;&lt;option value="36"&gt;client&lt;/option&gt;&lt;/select&gt;&lt;span class="select2 select2-container select2-container--default" dir="ltr" style="width: 300px;"&gt;&lt;span class="selection"&gt;&lt;span class="select2-selection select2-selection--single flat minwidth300" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-socid-container"&gt;&lt;span class="select2-selection__rendered" id="select2-socid-container" title=""&gt;&lt;/span&gt;&lt;span class="select2-selection__arrow" role="presentation"&gt;&lt;b role="presentation"&gt;&lt;/b&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="dropdown-wrapper" aria-hidden="true"&gt;&lt;/span&gt;&lt;/span&gt;
+ &lt;a href="/dolibarr/societe/card.php?action=create&amp;amp;client=3&amp;amp;fournisseur=0&amp;amp;backtopage=%2Fdolibarr%2Fcommande%2Fcard.php%3Faction%3Dcreate"&gt;Créer tiers&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class="fieldrequired"&gt;Date&lt;/td&gt;&lt;td&gt;&lt;script type="text/javascript"&gt;$(function(){ $('#re').datepicker({
+							dateFormat: 'dd/mm/yy',
+							autoclose: true,
+							todayHighlight: true,
+								showOn: 'button',
+								buttonImage: '/dolibarr/theme/eldy/img/object_calendarday.png',
+								buttonImageOnly: true
+							}) });&lt;/script&gt;&lt;div class="nowrap inline-block"&gt;&lt;input id="re" name="re" type="text" class="maxwidth75 hasDatepicker" maxlength="11" value="08/01/2019" onchange="dpChangeDay('re','dd/MM/yyyy'); " size="10" /&gt;&lt;img class="ui-datepicker-trigger" src="/dolibarr/theme/eldy/img/object_calendarday.png" alt="..." title="..." /&gt;&lt;/div&gt;&lt;input type="hidden" id="reday" name="reday" value="08" /&gt;
+&lt;input type="hidden" id="remonth" name="remonth" value="01" /&gt;
+&lt;input type="hidden" id="reyear" name="reyear" value="2019" /&gt;
+ &lt;button class="dpInvisibleButtons datenowlink" id="reButtonNow" type="button" name="_useless" value="now" onclick="jQuery('#re').val('08/01/2019');jQuery('#reday').val('08');jQuery('#remonth').val('01');jQuery('#reyear').val('2019');"&gt;Maintenant&lt;/button&gt; &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Date prévue de livraison&lt;/td&gt;&lt;td&gt;&lt;script type="text/javascript"&gt;$(function(){ $('#liv_').datepicker({
+							dateFormat: 'dd/mm/yy',
+							autoclose: true,
+							todayHighlight: true,
+								showOn: 'button',
+								buttonImage: '/dolibarr/theme/eldy/img/object_calendarday.png',
+								buttonImageOnly: true
+							}) });&lt;/script&gt;&lt;div class="nowrap inline-block"&gt;&lt;input id="liv_" name="liv_" type="text" class="maxwidth75 hasDatepicker" maxlength="11" value="" onchange="dpChangeDay('liv_','dd/MM/yyyy'); " size="10" /&gt;&lt;img class="ui-datepicker-trigger" src="/dolibarr/theme/eldy/img/object_calendarday.png" alt="..." title="..." /&gt;&lt;/div&gt;&lt;input type="hidden" id="liv_day" name="liv_day" value="" /&gt;
+&lt;input type="hidden" id="liv_month" name="liv_month" value="" /&gt;
+&lt;input type="hidden" id="liv_year" name="liv_year" value="" /&gt;
+ &lt;button class="dpInvisibleButtons datenowlink" id="liv_ButtonNow" type="button" name="_useless" value="now" onclick="jQuery('#liv_').val('08/01/2019');jQuery('#liv_day').val('08');jQuery('#liv_month').val('01');jQuery('#liv_year').val('2019');"&gt;Maintenant&lt;/button&gt; &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class="nowrap"&gt;Conditions de règlement&lt;/td&gt;&lt;td&gt;&lt;select id="cond_reglement_id" class="flat selectpaymentterms" name="cond_reglement_id"&gt;&lt;option value="0"&gt; &lt;/option&gt;&lt;option value="1"&gt;A réception&lt;/option&gt;&lt;option value="2"&gt;30 jours&lt;/option&gt;&lt;option value="3"&gt;30 jours fin de mois&lt;/option&gt;&lt;option value="4"&gt;60 jours&lt;/option&gt;&lt;option value="5"&gt;60 jours fin de mois&lt;/option&gt;&lt;option value="6"&gt;A commande&lt;/option&gt;&lt;option value="7"&gt;A livraison&lt;/option&gt;&lt;option value="8"&gt;50/50&lt;/option&gt;&lt;option value="9"&gt;10 jours&lt;/option&gt;&lt;option value="10"&gt;10 jours fin de mois&lt;/option&gt;&lt;option value="11"&gt;14 jours&lt;/option&gt;&lt;option value="12"&gt;14 jours fin de mois&lt;/option&gt;&lt;/select&gt;&lt;img src="/dolibarr/theme/eldy/img/info.png" alt="" title="Les valeurs de cette liste sont modifiables  depuis le menu Accueil &amp;gt; Configuration &amp;gt; Dictionnaires" class="hideonsmartphone" /&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Mode de règlement&lt;/td&gt;&lt;td&gt;&lt;select id="selectmode_reglement_id" class="flat selectpaymenttypes" name="mode_reglement_id"&gt;&lt;option value=""&gt; &lt;/option&gt;&lt;option value="6"&gt;Carte bancaire&lt;/option&gt;&lt;option value="7"&gt;Chèque&lt;/option&gt;&lt;option value="4"&gt;Espèce&lt;/option&gt;&lt;option value="3"&gt;Ordre de prélèvement&lt;/option&gt;&lt;option value="2"&gt;Virement bancaire&lt;/option&gt;&lt;/select&gt;&lt;img src="/dolibarr/theme/eldy/img/info.png" alt="" title="Les valeurs de cette liste sont modifiables  depuis le menu Accueil &amp;gt; Configuration &amp;gt; Dictionnaires" class="hideonsmartphone" /&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr class="fielddeliverydelay"&gt;&lt;td&gt;Délai de livraison&lt;/td&gt;&lt;td&gt;&lt;select id="availability_id" class="flat" name="availability_id"&gt;&lt;option value="0"&gt; &lt;/option&gt;&lt;option value="2"&gt;1 semaine&lt;/option&gt;&lt;option value="3"&gt;2 semaines&lt;/option&gt;&lt;option value="4"&gt;3 semaines&lt;/option&gt;&lt;option value="1"&gt;Immédiate&lt;/option&gt;&lt;/select&gt;&lt;img src="/dolibarr/theme/eldy/img/info.png" alt="" title="Les valeurs de cette liste sont modifiables  depuis le menu Accueil &amp;gt; Configuration &amp;gt; Dictionnaires" class="hideonsmartphone" /&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Méthode d'expédition&lt;/td&gt;&lt;td&gt;&lt;select id="selectshipping_method_id" class="flat selectshippingmethod" name="shipping_method_id"&gt;&lt;option value="-1"&gt; &lt;/option&gt;&lt;option value="1"&gt;At-Store Reclamation&lt;/option&gt;&lt;option value="2"&gt;Generic transporter&lt;/option&gt;&lt;/select&gt;&lt;img src="/dolibarr/theme/eldy/img/info.png" alt="" title="Les valeurs de cette liste sont modifiables  depuis le menu Accueil &amp;gt; Configuration &amp;gt; Dictionnaires" class="hideonsmartphone" /&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Channel&lt;/td&gt;&lt;td&gt;&lt;select class="flat" name="demand_reason_id"&gt;&lt;option value="0" selected=""&gt; &lt;/option&gt;&lt;option value="8"&gt;Bouche à oreille&lt;/option&gt;&lt;option value="4"&gt;Campagne Fax&lt;/option&gt;&lt;option value="2"&gt;Campagne Publipostage&lt;/option&gt;&lt;option value="3"&gt;Campagne Téléphonique&lt;/option&gt;&lt;option value="7"&gt;Campagne d'emailing&lt;/option&gt;&lt;option value="5"&gt;Contact commercial&lt;/option&gt;&lt;option value="6"&gt;Contact en boutique&lt;/option&gt;&lt;option value="10"&gt;Employé&lt;/option&gt;&lt;option value="1"&gt;Internet&lt;/option&gt;&lt;option value="11"&gt;Parrainage/Sponsoring&lt;/option&gt;&lt;option value="9"&gt;Partenaire&lt;/option&gt;&lt;/select&gt;&lt;img src="/dolibarr/theme/eldy/img/info.png" alt="" title="Les valeurs de cette liste sont modifiables  depuis le menu Accueil &amp;gt; Configuration &amp;gt; Dictionnaires" class="hideonsmartphone" /&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Projet&lt;/td&gt;&lt;td&gt;
+&lt;!-- JS CODE TO ENABLE select2 for id = projectid --&gt;
+          &lt;script type="text/javascript"&gt;
+        	$(document).ready(function () {
+        		$('#projectid').select2({
+        		    dir: 'ltr',
+        			width: 'resolve',		/* off or resolve */
+					minimumInputLength: 0,
+					language: select2arrayoflanguage,
+    				containerCssClass: ':all:',					/* Line to add class of origin SELECT propagated to the new &amp;lt;span class="select2-selection...&amp;gt; tag */
+					templateResult: function (data, container) {	/* Format visible output into combo list */
+	 					/* Code to add class of origin OPTION propagated to the new select2 &amp;lt;li&amp;gt; tag */
+						if (data.element) { $(container).addClass($(data.element).attr("class")); }
+					    //console.log(data.html);
+						if ($(data.element).attr("data-html") != undefined) return htmlEntityDecodeJs($(data.element).attr("data-html"));		// If property html set, we decode html entities and use this
+					    return data.text;
+					},
+					templateSelection: function (selection) {		/* Format visible output of selected value */
+						return selection.text;
+					},
+					escapeMarkup: function(markup) {
+						return markup;
+					},
+					dropdownCssClass: 'ui-dialog'
+				});
+});
+&lt;/script&gt;
+&lt;select class="flat minwidth100 select2-hidden-accessible" id="projectid" name="projectid" tabindex="-1" aria-hidden="true"&gt;&lt;option value="0"&gt; &lt;/option&gt;&lt;/select&gt;&lt;span class="select2 select2-container select2-container--default" dir="ltr" style="width: 100px;"&gt;&lt;span class="selection"&gt;&lt;span class="select2-selection select2-selection--single flat minwidth100" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-projectid-container"&gt;&lt;span class="select2-selection__rendered" id="select2-projectid-container" title=" "&gt; &lt;/span&gt;&lt;span class="select2-selection__arrow" role="presentation"&gt;&lt;b role="presentation"&gt;&lt;/b&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="dropdown-wrapper" aria-hidden="true"&gt;&lt;/span&gt;&lt;/span&gt;   &lt;a href="/dolibarr/projet/card.php?socid=&amp;amp;action=create&amp;amp;status=1&amp;amp;backtopage=%2Fdolibarr%2Fcommande%2Fcard.php%3Faction%3Dcreate%26socid%3D"&gt;Créer projet&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Modèle de document par défaut&lt;/td&gt;&lt;td&gt;&lt;select id="model" class="flat model" name="model"&gt;&lt;option value="einstein" selected=""&gt;einstein&lt;/option&gt;
+&lt;/select&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;label for="multicurrency_code"&gt;Devise&lt;/label&gt;&lt;/td&gt;&lt;td class="maxwidthonsmartphone"&gt;&lt;select class="flat select2-hidden-accessible" name="multicurrency_code" id="multicurrency_code" tabindex="-1" aria-hidden="true"&gt;&lt;option value="EUR" selected="selected"&gt;Euros (€)&lt;/option&gt;&lt;/select&gt;&lt;span class="select2 select2-container select2-container--default" dir="ltr" style="width: 85.4px;"&gt;&lt;span class="selection"&gt;&lt;span class="select2-selection select2-selection--single flat" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-multicurrency_code-container"&gt;&lt;span class="select2-selection__rendered" id="select2-multicurrency_code-container" title="Euros (€)"&gt;Euros (€)&lt;/span&gt;&lt;span class="select2-selection__arrow" role="presentation"&gt;&lt;b role="presentation"&gt;&lt;/b&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="dropdown-wrapper" aria-hidden="true"&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;!-- JS CODE TO ENABLE select2 for id = multicurrency_code --&gt;
+          &lt;script type="text/javascript"&gt;
+        	$(document).ready(function () {
+        		$('#multicurrency_code').select2({
+        		    dir: 'ltr',
+        			width: 'resolve',		/* off or resolve */
+					minimumInputLength: 0,
+					language: select2arrayoflanguage,
+    				containerCssClass: ':all:',					/* Line to add class of origin SELECT propagated to the new &amp;lt;span class="select2-selection...&amp;gt; tag */
+					templateResult: function (data, container) {	/* Format visible output into combo list */
+	 					/* Code to add class of origin OPTION propagated to the new select2 &amp;lt;li&amp;gt; tag */
+						if (data.element) { $(container).addClass($(data.element).attr("class")); }
+					    //console.log(data.html);
+						if ($(data.element).attr("data-html") != undefined) return htmlEntityDecodeJs($(data.element).attr("data-html"));		// If property html set, we decode html entities and use this
+					    return data.text;
+					},
+					templateSelection: function (selection) {		/* Format visible output of selected value */
+						return selection.text;
+					},
+					escapeMarkup: function(markup) {
+						return markup;
+					},
+					dropdownCssClass: 'ui-dialog'
+				});
+});
+&lt;/script&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class="tdtop"&gt;Note (publique)&lt;/td&gt;&lt;td&gt;&lt;textarea id="note_public" name="note_public" rows="3" style="margin-top: 5px; width: 90%" class="flat"&gt;&lt;/textarea&gt;&lt;!-- Output ckeditor $disallowAnyContent=1 toolbarname=dolibarr_notes --&gt;
+&lt;script type="text/javascript"&gt;
+            			$(document).ready(function () {
+                            /* if (CKEDITOR.loadFullCore) CKEDITOR.loadFullCore(); */
+                            /* should be editor=CKEDITOR.replace but what if serveral editors ? */
+                            CKEDITOR.replace('note_public',
+            					{
+            						/* property:xxx is same than CKEDITOR.config.property = xxx */
+            						customConfig : ckeditorConfig,
+            						readOnly : false,
+                            		htmlEncodeOutput :false,
+            						allowedContent :false,
+            						extraAllowedContent : '',
+            						fullPage : false,
+                            		toolbar: 'dolibarr_notes',
+            						toolbarStartupExpanded: false,
+            						width: '',
+            						height: 80,
+                                    skin: 'moono-lisa',
+                                    language: 'fr_FR',
+                                    textDirection: 'ltr',
+                                    on :
+                                            {
+                                                instanceReady : function( ev )
+                                                {
+                                                    // Output paragraphs as &amp;lt;p&amp;gt;Text&amp;lt;/p&amp;gt;.
+                                                    this.dataProcessor.writer.setRules( 'p',
+                                                        {
+                                                            indent : false,
+                                                            breakBeforeOpen : true,
+                                                            breakAfterOpen : false,
+                                                            breakBeforeClose : false,
+                                                            breakAfterClose : true
+                                                        });
+                                                }
+                                            }	})});
+&lt;/script&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class="tdtop"&gt;Note (privée)&lt;/td&gt;&lt;td&gt;&lt;textarea id="note_private" name="note_private" rows="3" style="margin-top: 5px; width: 90%" class="flat"&gt;&lt;/textarea&gt;&lt;!-- Output ckeditor $disallowAnyContent=1 toolbarname=dolibarr_notes --&gt;
+&lt;script type="text/javascript"&gt;
+            			$(document).ready(function () {
+                            /* if (CKEDITOR.loadFullCore) CKEDITOR.loadFullCore(); */
+                            /* should be editor=CKEDITOR.replace but what if serveral editors ? */
+                            CKEDITOR.replace('note_private',
+            					{
+            						/* property:xxx is same than CKEDITOR.config.property = xxx */
+            						customConfig : ckeditorConfig,
+            						readOnly : false,
+                            		htmlEncodeOutput :false,
+            						allowedContent :false,
+            						extraAllowedContent : '',
+            						fullPage : false,
+                            		toolbar: 'dolibarr_notes',
+            						toolbarStartupExpanded: false,
+            						width: '',
+            						height: 80,
+                                    skin: 'moono-lisa',
+                                    language: 'fr_FR',
+                                    textDirection: 'ltr',
+                                    on :
+                                            {
+                                                instanceReady : function( ev )
+                                                {
+                                                    // Output paragraphs as &amp;lt;p&amp;gt;Text&amp;lt;/p&amp;gt;.
+                                                    this.dataProcessor.writer.setRules( 'p',
+                                                        {
+                                                            indent : false,
+                                                            breakBeforeOpen : true,
+                                                            breakAfterOpen : false,
+                                                            breakBeforeClose : false,
+                                                            breakAfterClose : true
+                                                        });
+                                                }
+                                            }	})});
+&lt;/script&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;div class="center"&gt;&lt;input type="submit" class="button" name="bouton" value="Créer brouillon" /&gt;     &lt;input type="button" class="button" name="cancel" value="Annuler" onclick="javascript:history.go(-1)" /&gt;&lt;/div&gt;&lt;/form&gt;&lt;script type="text/javascript"&gt;
+					$(document).ready(function() {
+						var block = false
+						if (block) {
+							$.dolEventValid("","Le champ \'Client\' est obligatoire");
+						} else {
+							/* jnotify(message, preset of message type, keepmessage) */
+							$.jnotify("Le champ \'Client\' est obligatoire",
+							"error",
+							true,
+							{ remove: function (){} } );
+						}
+					});
+				&lt;/script&gt;
+
+&lt;/div&gt; &lt;!-- End div class="fiche" --&gt;
+&lt;/div&gt; &lt;!-- End div id-right --&gt;
+&lt;/div&gt; &lt;!-- End div id-container --&gt;
+
+
+&lt;!-- Common footer for private page --&gt;
+
+&lt;!-- A div to store page_y POST paramater --&gt;
+&lt;div id="page_y" style="display: none;"&gt;&lt;/div&gt;
+
+&lt;script type="text/javascript" language="javascript"&gt;
+
+/* JS CODE TO ENABLE to enable handler to switch left menu page (menuhider) */
+jQuery(".menuhider").click(function() {  console.log("We click on .menuhider");
+  $('.side-nav').toggle()
+  $('.login_block').toggle()
+});
+
+&lt;/script&gt;
+
+&lt;!-- JS CODE TO ENABLE select2 for id searchselectcombo --&gt;
+			&lt;script type="text/javascript"&gt;
+			$(document).ready(function () {
+				var data = [{"id":"searchintothirdparty","text":"&amp;lt;img src=\"\/dolibarr\/theme\/eldy\/img\/object_company.png\" alt=\"\" class=\"inline-block\"&amp;gt; Tiers","url":"\/dolibarr\/societe\/list.php"},{"id":"searchintocontact","text":"&amp;lt;img src=\"\/dolibarr\/theme\/eldy\/img\/object_contact.png\" alt=\"\" class=\"inline-block\"&amp;gt; Contacts","url":"\/dolibarr\/contact\/list.php"},{"id":"searchintoproduct","text":"&amp;lt;img src=\"\/dolibarr\/theme\/eldy\/img\/object_product.png\" alt=\"\" class=\"inline-block\"&amp;gt; Produits ou services","url":"\/dolibarr\/product\/list.php"},{"id":"searchintoprojects","text":"&amp;lt;img src=\"\/dolibarr\/theme\/eldy\/img\/object_projectpub.png\" alt=\"\" class=\"inline-block\"&amp;gt; Projets","url":"\/dolibarr\/projet\/list.php"},{"id":"searchintotasks","text":"&amp;lt;img src=\"\/dolibarr\/theme\/eldy\/img\/object_task.png\" alt=\"\" class=\"inline-block\"&amp;gt; T&amp;amp;acirc;ches","url":"\/dolibarr\/projet\/tasks\/list.php"},{"id":"searchintopropal","text":"&amp;lt;img src=\"\/dolibarr\/theme\/eldy\/img\/object_propal.png\" alt=\"\" class=\"inline-block\"&amp;gt; Propositions\/devis","url":"\/dolibarr\/comm\/propal\/list.php"},{"id":"searchintoorder","text":"&amp;lt;img src=\"\/dolibarr\/theme\/eldy\/img\/object_order.png\" alt=\"\" class=\"inline-block\"&amp;gt; Commandes clients","url":"\/dolibarr\/commande\/list.php"},{"id":"searchintoshipment","text":"&amp;lt;img src=\"\/dolibarr\/theme\/eldy\/img\/object_sending.png\" alt=\"\" class=\"inline-block\"&amp;gt; Exp&amp;amp;eacute;ditions clients","url":"\/dolibarr\/expedition\/list.php"},{"id":"searchintoinvoice","text":"&amp;lt;img src=\"\/dolibarr\/theme\/eldy\/img\/object_bill.png\" alt=\"\" class=\"inline-block\"&amp;gt; Factures clients","url":"\/dolibarr\/compta\/facture\/list.php"},{"id":"searchintouser","text":"&amp;lt;img src=\"\/dolibarr\/theme\/eldy\/img\/object_user.png\" alt=\"\" class=\"inline-block\"&amp;gt; Utilisateurs","url":"\/dolibarr\/user\/list.php"}];
+
+				var saveRemoteData = {"searchintothirdparty":{"position":10,"shortcut":"T","img":"object_company","label":"Tiers","text":"&amp;lt;img src=\"\/dolibarr\/theme\/eldy\/img\/object_company.png\" alt=\"\" class=\"inline-block\"&amp;gt; Tiers","url":"\/dolibarr\/societe\/list.php"},"searchintocontact":{"position":15,"shortcut":"A","img":"object_contact","label":"Contacts","text":"&amp;lt;img src=\"\/dolibarr\/theme\/eldy\/img\/object_contact.png\" alt=\"\" class=\"inline-block\"&amp;gt; Contacts","url":"\/dolibarr\/contact\/list.php"},"searchintoproduct":{"position":30,"shortcut":"P","img":"object_product","label":"Produits ou services","text":"&amp;lt;img src=\"\/dolibarr\/theme\/eldy\/img\/object_product.png\" alt=\"\" class=\"inline-block\"&amp;gt; Produits ou services","url":"\/dolibarr\/product\/list.php"},"searchintoprojects":{"position":40,"shortcut":"Q","img":"object_projectpub","label":"Projets","text":"&amp;lt;img src=\"\/dolibarr\/theme\/eldy\/img\/object_projectpub.png\" alt=\"\" class=\"inline-block\"&amp;gt; Projets","url":"\/dolibarr\/projet\/list.php"},"searchintotasks":{"position":45,"img":"object_task","label":"T&amp;amp;acirc;ches","text":"&amp;lt;img src=\"\/dolibarr\/theme\/eldy\/img\/object_task.png\" alt=\"\" class=\"inline-block\"&amp;gt; T&amp;amp;acirc;ches","url":"\/dolibarr\/projet\/tasks\/list.php"},"searchintopropal":{"position":60,"img":"object_propal","label":"Propositions\/devis","text":"&amp;lt;img src=\"\/dolibarr\/theme\/eldy\/img\/object_propal.png\" alt=\"\" class=\"inline-block\"&amp;gt; Propositions\/devis","url":"\/dolibarr\/comm\/propal\/list.php"},"searchintoorder":{"position":70,"img":"object_order","label":"Commandes clients","text":"&amp;lt;img src=\"\/dolibarr\/theme\/eldy\/img\/object_order.png\" alt=\"\" class=\"inline-block\"&amp;gt; Commandes clients","url":"\/dolibarr\/commande\/list.php"},"searchintoshipment":{"position":80,"img":"object_sending","label":"Exp&amp;amp;eacute;ditions clients","text":"&amp;lt;img src=\"\/dolibarr\/theme\/eldy\/img\/object_sending.png\" alt=\"\" class=\"inline-block\"&amp;gt; Exp&amp;amp;eacute;ditions clients","url":"\/dolibarr\/expedition\/list.php"},"searchintoinvoice":{"position":90,"img":"object_bill","label":"Factures clients","text":"&amp;lt;img src=\"\/dolibarr\/theme\/eldy\/img\/object_bill.png\" alt=\"\" class=\"inline-block\"&amp;gt; Factures clients","url":"\/dolibarr\/compta\/facture\/list.php"},"searchintouser":{"position":200,"shortcut":"U","img":"object_user","label":"Utilisateurs","text":"&amp;lt;img src=\"\/dolibarr\/theme\/eldy\/img\/object_user.png\" alt=\"\" class=\"inline-block\"&amp;gt; Utilisateurs","url":"\/dolibarr\/user\/list.php"}};
+
+				$(".searchselectcombo").select2({
+					data: data,
+					language: select2arrayoflanguage,
+					containerCssClass: ':all:',					/* Line to add class of origin SELECT propagated to the new &amp;lt;span class="select2-selection...&amp;gt; tag */
+					placeholder: "Rechercher",
+					escapeMarkup: function (markup) { return markup; }, 	// let our custom formatter work
+					minimumInputLength: 1,
+					formatResult: function(result, container, query, escapeMarkup) {
+						return escapeMarkup(result.text);
+					},
+					matcher: function (params, data) {
+
+						if(! data.id) return null;
+
+						var urlBase = data.url;
+						var separ = urlBase.indexOf("?") &amp;gt;= 0 ? "&amp;amp;" : "?";
+						/* console.log("params.term="+params.term); */
+						/* console.log("params.term encoded="+encodeURIComponent(params.term)); */
+						saveRemoteData[data.id].url = urlBase + separ + "sall=" + encodeURIComponent(params.term);
+
+						return data;
+					}
+				});
+
+				
+				/* Code to execute a GET when we select a value */
+				$(".searchselectcombo").change(function() {
+					var selected = $(".searchselectcombo").val();
+					console.log("We select "+selected)
+
+					$(".searchselectcombo").val("");  /* reset visible combo value */
+					$.each( saveRemoteData, function( key, value ) {
+						if (key == selected)
+						{
+							console.log("selectArrayAjax - Do a redirect to "+value.url)
+							location.assign(value.url);
+						}
+					});
+				});
+
+			});
+			&lt;/script&gt;
+&lt;!-- Includes JS Footer of Dolibarr --&gt;
+&lt;script type="text/javascript" src="/dolibarr/core/js/lib_foot.js.php?lang=fr_FR&amp;amp;layout=classic&amp;amp;version=8.0.4"&gt;&lt;/script&gt;
+
+&lt;!-- A div to allow dialog popup --&gt;
+&lt;div id="dialogforpopup" style="display: none;"&gt;&lt;/div&gt;
+
+
+&lt;div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"&gt;&lt;/div&gt;&lt;div class="jnotify-container"&gt;&lt;div class="jnotify-notification jnotify-notification-error"&gt;&lt;div class="jnotify-background"&gt;&lt;/div&gt;&lt;a class="jnotify-close"&gt;×&lt;/a&gt;&lt;div class="jnotify-message"&gt;&lt;div&gt;Le champ 'Client' est obligatoire&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"&gt;&lt;/div&gt;&lt;div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"&gt;&lt;/div&gt;&lt;div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"&gt;&lt;/div&gt;&lt;div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190108 09:51:56.158" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20190108 09:51:56.158" starttime="20190108 09:51:55.886"></status>
+</kw>
+<msg timestamp="20190108 09:51:56.159" level="FAIL">Page should have contained text 'Field 'Customer' is required' but did not.</msg>
+<status status="FAIL" endtime="20190108 09:51:56.160" starttime="20190108 09:51:55.790"></status>
+</kw>
+<status status="FAIL" endtime="20190108 09:51:56.161" critical="yes" starttime="20190108 09:51:50.593">Page should have contained text 'Field 'Customer' is required' but did not.</status>
+</test>
+<test id="s1-t8" name="4_4_CT_NM_pdf_commande">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>http://192.168.200.50:8000/dolibarr/commande/list.php?leftmenu=orders</arg>
+</arguments>
+<msg timestamp="20190108 09:51:56.165" level="INFO">Opening url 'http://192.168.200.50:8000/dolibarr/commande/list.php?leftmenu=orders'</msg>
+<status status="PASS" endtime="20190108 09:51:57.925" starttime="20190108 09:51:56.164"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="searchFormList"]/div[2]/table/tbody/tr[3]/td[1]/table/tbody/tr/td[1]</arg>
+</arguments>
+<msg timestamp="20190108 09:51:57.927" level="INFO">Clicking element 'xpath=//*[@id="searchFormList"]/div[2]/table/tbody/tr[3]/td[1]/table/tbody/tr/td[1]'.</msg>
+<status status="PASS" endtime="20190108 09:51:59.743" starttime="20190108 09:51:57.926"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>id=builddoc_generatebutton</arg>
+</arguments>
+<msg timestamp="20190108 09:51:59.745" level="INFO">Clicking button 'id=builddoc_generatebutton'.</msg>
+<status status="PASS" endtime="20190108 09:52:03.220" starttime="20190108 09:51:59.744"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="builddoc_form"]/div/table/tbody/tr[2]/td[1]/a[1]</arg>
+</arguments>
+<msg timestamp="20190108 09:52:03.222" level="INFO">Clicking element 'xpath=//*[@id="builddoc_form"]/div/table/tbody/tr[2]/td[1]/a[1]'.</msg>
+<status status="PASS" endtime="20190108 09:52:03.354" starttime="20190108 09:52:03.221"></status>
+</kw>
+<status status="PASS" endtime="20190108 09:52:03.355" critical="yes" starttime="20190108 09:51:56.162"></status>
+</test>
+<test id="s1-t9" name="4_5_CT_NM_creation_facture">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=mainmenua_billing</arg>
+</arguments>
+<msg timestamp="20190108 09:52:03.358" level="INFO">Clicking element 'id=mainmenua_billing'.</msg>
+<status status="PASS" endtime="20190108 09:52:06.573" starttime="20190108 09:52:03.357"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="id-left"]/div/div[3]/div[3]/a</arg>
+</arguments>
+<msg timestamp="20190108 09:52:06.574" level="INFO">Clicking element 'xpath=//*[@id="id-left"]/div/div[3]/div[3]/a'.</msg>
+<status status="PASS" endtime="20190108 09:52:08.627" starttime="20190108 09:52:06.573"></status>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<arguments>
+<arg>id=socid</arg>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20190108 09:52:08.629" level="INFO">Selecting options from selection list 'id=socid' by index 1.</msg>
+<status status="PASS" endtime="20190108 09:52:08.737" starttime="20190108 09:52:08.628"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=reButtonNow</arg>
+</arguments>
+<msg timestamp="20190108 09:52:08.739" level="INFO">Clicking element 'id=reButtonNow'.</msg>
+<status status="PASS" endtime="20190108 09:52:08.804" starttime="20190108 09:52:08.738"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="id-right"]/div/form/div[3]/input[1]</arg>
+</arguments>
+<msg timestamp="20190108 09:52:08.805" level="INFO">Clicking button 'xpath=//*[@id="id-right"]/div/form/div[3]/input[1]'.</msg>
+<status status="PASS" endtime="20190108 09:52:12.190" starttime="20190108 09:52:08.805"></status>
+</kw>
+<status status="PASS" endtime="20190108 09:52:12.191" critical="yes" starttime="20190108 09:52:03.356"></status>
+</test>
+<test id="s1-t10" name="4_5_CT_EX_creation_facture">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=mainmenua_billing</arg>
+</arguments>
+<msg timestamp="20190108 09:52:12.194" level="INFO">Clicking element 'id=mainmenua_billing'.</msg>
+<status status="PASS" endtime="20190108 09:52:13.851" starttime="20190108 09:52:12.193"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="id-left"]/div/div[3]/div[3]/a</arg>
+</arguments>
+<msg timestamp="20190108 09:52:13.853" level="INFO">Clicking element 'xpath=//*[@id="id-left"]/div/div[3]/div[3]/a'.</msg>
+<status status="PASS" endtime="20190108 09:52:15.535" starttime="20190108 09:52:13.852"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id=reButtonNow</arg>
+</arguments>
+<msg timestamp="20190108 09:52:15.537" level="INFO">Clicking element 'id=reButtonNow'.</msg>
+<status status="PASS" endtime="20190108 09:52:15.610" starttime="20190108 09:52:15.536"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="id-right"]/div/form/div[3]/input[1]</arg>
+</arguments>
+<msg timestamp="20190108 09:52:15.611" level="INFO">Clicking button 'xpath=//*[@id="id-right"]/div/form/div[3]/input[1]'.</msg>
+<status status="PASS" endtime="20190108 09:52:17.345" starttime="20190108 09:52:15.610"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Field 'Customer' is required</arg>
+</arguments>
+<msg timestamp="20190108 09:52:17.408" level="INFO">&lt;!DOCTYPE html&gt;&lt;html xmlns="http://www.w3.org/1999/xhtml" lang="fr"&gt;&lt;head&gt;
+&lt;meta charset="UTF-8" /&gt;
+&lt;meta name="robots" content="noindex,nofollow" /&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+&lt;meta name="author" content="Dolibarr Development Team" /&gt;
+&lt;link rel="shortcut icon" type="image/x-icon" href="/dolibarr/theme/eldy/img/favicon.ico" /&gt;
+&lt;title&gt;Facture client - Fiche&lt;/title&gt;
+&lt;!-- Includes CSS for JQuery (Ajax library) --&gt;
+&lt;link rel="stylesheet" type="text/css" href="/dolibarr/includes/jquery/css/base/jquery-ui.css?layout=classic&amp;amp;version=8.0.4" /&gt;
+&lt;link rel="stylesheet" type="text/css" href="/dolibarr/includes/jquery/plugins/jnotify/jquery.jnotify-alt.min.css?layout=classic&amp;amp;version=8.0.4" /&gt;
+&lt;link rel="stylesheet" type="text/css" href="/dolibarr/includes/jquery/plugins/select2/dist/css/select2.css?layout=classic&amp;amp;version=8.0.4" /&gt;
+&lt;!-- Includes CSS for font awesome --&gt;
+&lt;link rel="stylesheet" type="text/css" href="/dolibarr/theme/common/fontawesome/css/font-awesome.min.css?layout=classic&amp;amp;version=8.0.4" /&gt;
+&lt;!-- Includes CSS for Dolibarr theme --&gt;
+&lt;link rel="stylesheet" type="text/css" href="/dolibarr/theme/eldy/style.css.php?lang=fr_FR&amp;amp;theme=eldy&amp;amp;userid=1&amp;amp;entity=1&amp;amp;layout=classic&amp;amp;version=8.0.4" /&gt;
+&lt;!-- Includes JS for JQuery --&gt;
+&lt;script type="text/javascript" src="/dolibarr/includes/jquery/js/jquery.min.js?layout=classic&amp;amp;version=8.0.4"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="/dolibarr/includes/jquery/js/jquery-ui.min.js?layout=classic&amp;amp;version=8.0.4"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="/dolibarr/includes/jquery/plugins/tablednd/jquery.tablednd.min.js?layout=classic&amp;amp;version=8.0.4"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="/dolibarr/includes/jquery/plugins/jnotify/jquery.jnotify.min.js?layout=classic&amp;amp;version=8.0.4"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="/dolibarr/includes/jquery/plugins/flot/jquery.flot.min.js?layout=classic&amp;amp;version=8.0.4"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="/dolibarr/includes/jquery/plugins/flot/jquery.flot.pie.min.js?layout=classic&amp;amp;version=8.0.4"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="/dolibarr/includes/jquery/plugins/flot/jquery.flot.stack.min.js?layout=classic&amp;amp;version=8.0.4"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="/dolibarr/includes/jquery/plugins/select2/dist/js/select2.full.min.js?layout=classic&amp;amp;version=8.0.4"&gt;&lt;/script&gt;
+&lt;!-- Includes JS of Dolibarr --&gt;
+&lt;script type="text/javascript" src="/dolibarr/core/js/lib_head.js.php?lang=fr_FR&amp;amp;layout=classic&amp;amp;version=8.0.4"&gt;&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body id="mainbody"&gt;
+
+&lt;!-- Start top horizontal --&gt;
+&lt;div class="side-nav-vert"&gt;&lt;div id="id-top"&gt;&lt;div id="tmenu_tooltip" class="tmenu"&gt;
+&lt;div class="tmenudiv"&gt;&lt;ul class="tmenu"&gt;&lt;li class="tmenu" id="mainmenutd_home"&gt;&lt;div class="tmenucenter"&gt;&lt;a class="tmenuimage" tabindex="-1" href="/dolibarr/index.php?mainmenu=home&amp;amp;leftmenu=home"&gt;&lt;div class="mainmenu home topmenuimage"&gt;&lt;span class="mainmenu tmenuimage" id="mainmenuspan_home"&gt;&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;&lt;a class="tmenu" id="mainmenua_home" href="/dolibarr/index.php?mainmenu=home&amp;amp;leftmenu=home"&gt;&lt;span class="mainmenuaspan"&gt;Accueil&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li class="tmenu" id="mainmenutd_agenda"&gt;&lt;div class="tmenucenter"&gt;&lt;a class="tmenuimage" tabindex="-1" href="/dolibarr/comm/action/index.php?idmenu=1&amp;amp;mainmenu=agenda&amp;amp;leftmenu="&gt;&lt;div class="mainmenu agenda topmenuimage"&gt;&lt;span class="mainmenu tmenuimage" id="mainmenuspan_agenda"&gt;&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;&lt;a class="tmenu" id="mainmenua_agenda" href="/dolibarr/comm/action/index.php?idmenu=1&amp;amp;mainmenu=agenda&amp;amp;leftmenu="&gt;&lt;span class="mainmenuaspan"&gt;Agenda&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li class="tmenu" id="mainmenutd_companies"&gt;&lt;div class="tmenucenter"&gt;&lt;a class="tmenuimage" tabindex="-1" href="/dolibarr/societe/index.php?mainmenu=companies&amp;amp;leftmenu="&gt;&lt;div class="mainmenu companies topmenuimage"&gt;&lt;span class="mainmenu tmenuimage" id="mainmenuspan_companies"&gt;&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;&lt;a class="tmenu" id="mainmenua_companies" href="/dolibarr/societe/index.php?mainmenu=companies&amp;amp;leftmenu="&gt;&lt;span class="mainmenuaspan"&gt;Tiers&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li class="tmenu" id="mainmenutd_products"&gt;&lt;div class="tmenucenter"&gt;&lt;a class="tmenuimage" tabindex="-1" href="/dolibarr/product/index.php?mainmenu=products&amp;amp;leftmenu="&gt;&lt;div class="mainmenu products topmenuimage"&gt;&lt;span class="mainmenu tmenuimage" id="mainmenuspan_products"&gt;&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;&lt;a class="tmenu" id="mainmenua_products" href="/dolibarr/product/index.php?mainmenu=products&amp;amp;leftmenu="&gt;&lt;span class="mainmenuaspan"&gt;Produits&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li class="tmenu" id="mainmenutd_commercial"&gt;&lt;div class="tmenucenter"&gt;&lt;a class="tmenuimage" tabindex="-1" href="/dolibarr/comm/index.php?mainmenu=commercial&amp;amp;leftmenu="&gt;&lt;div class="mainmenu commercial topmenuimage"&gt;&lt;span class="mainmenu tmenuimage" id="mainmenuspan_commercial"&gt;&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;&lt;a class="tmenu" id="mainmenua_commercial" href="/dolibarr/comm/index.php?mainmenu=commercial&amp;amp;leftmenu="&gt;&lt;span class="mainmenuaspan"&gt;Commercial&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li class="tmenusel" id="mainmenutd_billing"&gt;&lt;div class="tmenucenter"&gt;&lt;a class="tmenuimage" tabindex="-1" href="/dolibarr/compta/index.php?mainmenu=billing&amp;amp;leftmenu="&gt;&lt;div class="mainmenu billing topmenuimage"&gt;&lt;span class="mainmenu tmenuimage" id="mainmenuspan_billing"&gt;&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;&lt;a class="tmenusel" id="mainmenua_billing" href="/dolibarr/compta/index.php?mainmenu=billing&amp;amp;leftmenu="&gt;&lt;span class="mainmenuaspan"&gt;Facturation | Paiement&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li class="tmenu" id="mainmenutd_bank"&gt;&lt;div class="tmenucenter"&gt;&lt;a class="tmenuimage" tabindex="-1" href="/dolibarr/compta/bank/list.php?mainmenu=bank&amp;amp;leftmenu="&gt;&lt;div class="mainmenu bank topmenuimage"&gt;&lt;span class="mainmenu tmenuimage" id="mainmenuspan_bank"&gt;&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;&lt;a class="tmenu" id="mainmenua_bank" href="/dolibarr/compta/bank/list.php?mainmenu=bank&amp;amp;leftmenu="&gt;&lt;span class="mainmenuaspan"&gt;Banques | Caisses&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li class="tmenu" id="mainmenutd_project"&gt;&lt;div class="tmenucenter"&gt;&lt;a class="tmenuimage" tabindex="-1" href="/dolibarr/projet/index.php?mainmenu=project&amp;amp;leftmenu="&gt;&lt;div class="mainmenu project topmenuimage"&gt;&lt;span class="mainmenu tmenuimage" id="mainmenuspan_project"&gt;&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;&lt;a class="tmenu" id="mainmenua_project" href="/dolibarr/projet/index.php?mainmenu=project&amp;amp;leftmenu="&gt;&lt;span class="mainmenuaspan"&gt;Projets&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li class="tmenu" id="mainmenutd_tools"&gt;&lt;div class="tmenucenter"&gt;&lt;a class="tmenuimage" tabindex="-1" href="/dolibarr/core/tools.php?mainmenu=tools&amp;amp;leftmenu="&gt;&lt;div class="mainmenu tools topmenuimage"&gt;&lt;span class="mainmenu tmenuimage" id="mainmenuspan_tools"&gt;&lt;/span&gt;&lt;/div&gt;&lt;/a&gt;&lt;a class="tmenu" id="mainmenua_tools" href="/dolibarr/core/tools.php?mainmenu=tools&amp;amp;leftmenu="&gt;&lt;span class="mainmenuaspan"&gt;Outils&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li class="tmenuend" id="mainmenutd_"&gt;&lt;div class="tmenucenter"&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="login_block"&gt;
+&lt;div class="login_block_user"&gt;&lt;div class="inline-block nowrap"&gt;&lt;div class="inline-block login_block_elem login_block_elem_name" style="padding: 0px;"&gt;&lt;a href="/dolibarr/user/card.php?id=1" title="&amp;lt;div class=&amp;quot;centpercent&amp;quot;&amp;gt;&amp;lt;u&amp;gt;Utilisateur&amp;lt;/u&amp;gt;&amp;lt;br&amp;gt;&amp;lt;b&amp;gt;Nom:&amp;lt;/b&amp;gt; SuperAdmin&amp;lt;br&amp;gt;&amp;lt;b&amp;gt;Identifiant:&amp;lt;/b&amp;gt; admin&amp;lt;br&amp;gt;&amp;lt;b&amp;gt;Email:&amp;lt;/b&amp;gt; &amp;lt;br&amp;gt;&amp;lt;b&amp;gt;Administrateur&amp;lt;/b&amp;gt;: Oui&amp;lt;br&amp;gt;&amp;lt;b&amp;gt;Type:&amp;lt;/b&amp;gt; Interne&amp;lt;br&amp;gt;&amp;lt;b&amp;gt;État&amp;lt;/b&amp;gt;: Actif&amp;lt;/div&amp;gt;&amp;lt;br&amp;gt;&amp;lt;br&amp;gt;&amp;lt;u&amp;gt;Identifiant&amp;lt;/u&amp;gt;&amp;lt;br&amp;gt;&amp;lt;b&amp;gt;Adresse IP&amp;lt;/b&amp;gt;: 192.168.200.50&amp;lt;br&amp;gt;&amp;lt;b&amp;gt;Mode authentification:&amp;lt;/b&amp;gt; dolibarr&amp;lt;br&amp;gt;&amp;lt;b&amp;gt;Connecté depuis:&amp;lt;/b&amp;gt; 08/01/2019 09:51&amp;lt;br&amp;gt;&amp;lt;b&amp;gt;Connexion précédente:&amp;lt;/b&amp;gt; 08/01/2019 09:47&amp;lt;br&amp;gt;&amp;lt;b&amp;gt;Thème courant:&amp;lt;/b&amp;gt; eldy&amp;lt;br&amp;gt;&amp;lt;b&amp;gt;Gestionnaire de menu courant:&amp;lt;/b&amp;gt; eldy&amp;lt;br&amp;gt;&amp;lt;b&amp;gt;Langue utilisateur actuelle:&amp;lt;/b&amp;gt; &amp;lt;img src=&amp;quot;/dolibarr/theme/common/flags/fr.png&amp;quot; alt=&amp;quot;&amp;quot; title=&amp;quot;fr_FR&amp;quot; class=&amp;quot;inline-block&amp;quot;&amp;gt; fr_FR&amp;lt;br&amp;gt;&amp;lt;b&amp;gt;Navigateur:&amp;lt;/b&amp;gt; chrome 71.0.3578.98 (Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36)&amp;lt;br&amp;gt;&amp;lt;b&amp;gt;Présentation:&amp;lt;/b&amp;gt; classic&amp;lt;br&amp;gt;&amp;lt;b&amp;gt;Ecran:&amp;lt;/b&amp;gt; 1036 x 684" class="classfortooltip atoplogin"&gt;&lt;!-- picto photo user --&gt;&lt;div class="inline-block nopadding userimg atoplogin" style="margin-right: 3px;"&gt;&lt;img class="photouserphoto userphoto" alt="No photo" src="/dolibarr/public/theme/common/user_anonymous.png" /&gt;&lt;/div&gt;&lt;div class="inline-block nopadding valignmiddle usertext atoplogin"&gt;SuperAdmin&lt;/div&gt;&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class="login_block_other"&gt;&lt;div class="inline-block"&gt;&lt;div class="classfortooltip inline-block login_block_elem inline-block" style="padding: 0px; padding: 0px; padding-right: 3px !important;" title="Afficher page d'impression de la zone centrale"&gt;&lt;a href="/dolibarr/compta/facture/card.php?&amp;amp;token=%242y%2410%24G3QsvEj8LWWQG5a3kFW62ebL3IisF4kXDA8I6xm8sRWIpf4AGrJZ.&amp;amp;facnumber=provisoire&amp;amp;ref_client=&amp;amp;ref_int=&amp;amp;origin=&amp;amp;originid=&amp;amp;socid=-1&amp;amp;type=0&amp;amp;re=08%2F01%2F2019&amp;amp;reday=08&amp;amp;remonth=01&amp;amp;reyear=2019&amp;amp;cond_reglement_id=1&amp;amp;mode_reglement_id=&amp;amp;fk_account=-1&amp;amp;projectid=0&amp;amp;model=crabe&amp;amp;multicurrency_code=EUR&amp;amp;note_public=&amp;amp;note_private=&amp;amp;bouton=Cr%C3%A9er+brouillon&amp;amp;optioncss=print" target="_blank"&gt;&lt;span class="fa fa-print atoplogin"&gt;&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="inline-block"&gt;&lt;div class="classfortooltip inline-block login_block_elem inline-block" style="padding: 0px; padding: 0px; padding-right: 3px !important;" title="Dolibarr 8.0.4&amp;lt;br&amp;gt;Consulter l'aide (nécessite un accès internet) - Page Wiki &amp;quot;Factures Clients&amp;quot;"&gt;&lt;a class="help" target="_blank" rel="noopener" href="http://wiki.dolibarr.org/index.php/Factures_Clients"&gt;&lt;span class="fa fa-question-circle atoplogin"&gt;&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="inline-block"&gt;&lt;div class="classfortooltip inline-block login_block_elem inline-block" style="padding: 0px; padding: 0px; padding-right: 3px !important;" title="Déconnexion&amp;lt;br&amp;gt;"&gt;&lt;a href="/dolibarr/user/logout.php"&gt;&lt;span class="fa fa-sign-out atoplogin"&gt;&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;div style="clear: both;"&gt;&lt;/div&gt;&lt;!-- End top horizontal menu --&gt;
+
+&lt;!-- Begin div id-container --&gt;&lt;div id="id-container" class="id-container"&gt;
+&lt;!-- Begin side-nav id-left --&gt;
+&lt;div class="side-nav"&gt;&lt;div id="id-left"&gt;
+
+&lt;!-- Begin left menu --&gt;
+&lt;div class="vmenu"&gt;
+
+
+&lt;!-- Show logo on menu --&gt;
+&lt;div class="blockvmenuimpair blockvmenulogo"&gt;
+&lt;div class="menu_titre" id="menu_titre_logo"&gt;&lt;/div&gt;&lt;div class="menu_top" id="menu_top_logo"&gt;&lt;/div&gt;&lt;div class="menu_contenu" id="menu_contenu_logo"&gt;&lt;div class="center"&gt;&lt;img class="mycompany" title="Allez dans Accueil - Configuration - Société/institution pour changer le  logo ou aller dans Accueil - Configuration - Affichage pour le cacher." alt="" src="/dolibarr/theme/dolibarr_logo.png" style="max-width: 70%" /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;div class="menu_end" id="menu_end_logo"&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;!-- Begin SearchForm --&gt;
+&lt;div id="blockvmenusearch" class="blockvmenusearch"&gt;
+&lt;select type="text" class="searchselectcombo vmenusearchselectcombo select2-hidden-accessible" name="searchselectcombo" tabindex="-1" aria-hidden="true"&gt;&lt;option&gt;&lt;/option&gt;&lt;option value="searchintothirdparty"&gt;&amp;lt;img src="/dolibarr/theme/eldy/img/object_company.png" alt="" class="inline-block"&amp;gt; Tiers&lt;/option&gt;&lt;option value="searchintocontact"&gt;&amp;lt;img src="/dolibarr/theme/eldy/img/object_contact.png" alt="" class="inline-block"&amp;gt; Contacts&lt;/option&gt;&lt;option value="searchintoproduct"&gt;&amp;lt;img src="/dolibarr/theme/eldy/img/object_product.png" alt="" class="inline-block"&amp;gt; Produits ou services&lt;/option&gt;&lt;option value="searchintoprojects"&gt;&amp;lt;img src="/dolibarr/theme/eldy/img/object_projectpub.png" alt="" class="inline-block"&amp;gt; Projets&lt;/option&gt;&lt;option value="searchintotasks"&gt;&amp;lt;img src="/dolibarr/theme/eldy/img/object_task.png" alt="" class="inline-block"&amp;gt; T&amp;amp;acirc;ches&lt;/option&gt;&lt;option value="searchintopropal"&gt;&amp;lt;img src="/dolibarr/theme/eldy/img/object_propal.png" alt="" class="inline-block"&amp;gt; Propositions/devis&lt;/option&gt;&lt;option value="searchintoorder"&gt;&amp;lt;img src="/dolibarr/theme/eldy/img/object_order.png" alt="" class="inline-block"&amp;gt; Commandes clients&lt;/option&gt;&lt;option value="searchintoshipment"&gt;&amp;lt;img src="/dolibarr/theme/eldy/img/object_sending.png" alt="" class="inline-block"&amp;gt; Exp&amp;amp;eacute;ditions clients&lt;/option&gt;&lt;option value="searchintoinvoice"&gt;&amp;lt;img src="/dolibarr/theme/eldy/img/object_bill.png" alt="" class="inline-block"&amp;gt; Factures clients&lt;/option&gt;&lt;option value="searchintouser"&gt;&amp;lt;img src="/dolibarr/theme/eldy/img/object_user.png" alt="" class="inline-block"&amp;gt; Utilisateurs&lt;/option&gt;&lt;/select&gt;&lt;span class="select2 select2-container select2-container--default" dir="ltr" style="width: 188px;"&gt;&lt;span class="selection"&gt;&lt;span class="select2-selection select2-selection--single searchselectcombo vmenusearchselectcombo" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-searchselectcombo-aj-container"&gt;&lt;span class="select2-selection__rendered" id="select2-searchselectcombo-aj-container"&gt;&lt;span class="select2-selection__placeholder"&gt;Rechercher&lt;/span&gt;&lt;/span&gt;&lt;span class="select2-selection__arrow" role="presentation"&gt;&lt;b role="presentation"&gt;&lt;/b&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="dropdown-wrapper" aria-hidden="true"&gt;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;!-- End SearchForm --&gt;
+&lt;div class="blockvmenu blockvmenupair blockvmenufirst"&gt;
+&lt;!-- Process menu entry with mainmenu=billing, leftmenu=customers_bills, level=0 enabled=1, position=0 --&gt;
+&lt;div class="menu_titre"&gt;&lt;a class="vmenu" href="/dolibarr/compta/facture/list.php?leftmenu=customers_bills"&gt;Factures clients&lt;/a&gt;&lt;/div&gt;
+&lt;div class="menu_top"&gt;&lt;/div&gt;
+&lt;!-- Process menu entry with mainmenu=, leftmenu=, level=1 enabled=1, position=0 --&gt;
+&lt;div class="menu_contenu menu_contenu_compta_facture_card"&gt;&lt;a class="vsmenu" href="/dolibarr/compta/facture/card.php?action=create&amp;amp;leftmenu="&gt;Nouvelle facture&lt;/a&gt;&lt;br /&gt;&lt;/div&gt;
+&lt;!-- Process menu entry with mainmenu=billing, leftmenu=customers_bills_list, level=1 enabled=1, position=0 --&gt;
+&lt;div class="menu_contenu menu_contenu_compta_facture_list"&gt;&lt;a class="vsmenu" href="/dolibarr/compta/facture/list.php?leftmenu=customers_bills"&gt;Liste&lt;/a&gt;&lt;br /&gt;&lt;/div&gt;
+&lt;!-- Process menu entry with mainmenu=billing, leftmenu=customers_bills_templates, level=1 enabled=1, position=0 --&gt;
+&lt;div class="menu_contenu menu_contenu_compta_facture_invoicetemplate_list"&gt;&lt;a class="vsmenu" href="/dolibarr/compta/facture/invoicetemplate_list.php?leftmenu=customers_bills_templates"&gt;Liste des modèles&lt;/a&gt;&lt;br /&gt;&lt;/div&gt;
+&lt;!-- Process menu entry with mainmenu=billing, leftmenu=customers_bills_payment, level=1 enabled=1, position=0 --&gt;
+&lt;div class="menu_contenu menu_contenu_compta_paiement_list"&gt;&lt;a class="vsmenu" href="/dolibarr/compta/paiement/list.php?leftmenu=customers_bills_payment"&gt;Règlements&lt;/a&gt;&lt;br /&gt;&lt;/div&gt;
+&lt;!-- Process menu entry with mainmenu=billing, leftmenu=customers_bills_reports, level=2 enabled=1, position=0 --&gt;
+&lt;div class="menu_contenu menu_contenu_compta_paiement_rapport"&gt;   &lt;a class="vsmenu" href="/dolibarr/compta/paiement/rapport.php?leftmenu=customers_bills_reports"&gt;Rapports&lt;/a&gt;&lt;br /&gt;&lt;/div&gt;
+&lt;!-- Process menu entry with mainmenu=billing, leftmenu=customers_bills_stats, level=1 enabled=1, position=0 --&gt;
+&lt;div class="menu_contenu menu_contenu_compta_facture_stats_index"&gt;&lt;a class="vsmenu" href="/dolibarr/compta/facture/stats/index.php?leftmenu=customers_bills_stats"&gt;Statistiques&lt;/a&gt;&lt;br /&gt;&lt;/div&gt;
+&lt;div class="menu_end"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="blockvmenu blockvmenuimpair"&gt;
+&lt;!-- Process menu entry with mainmenu=billing, leftmenu=orders, level=0 enabled=1, position=0 --&gt;
+&lt;div class="menu_titre"&gt;&lt;a class="vmenu" href="/dolibarr/commande/list.php?leftmenu=orders&amp;amp;viewstatut=-3&amp;amp;billed=0&amp;amp;contextpage=billableorders"&gt;Commandes facturables&lt;/a&gt;&lt;/div&gt;
+&lt;div class="menu_top"&gt;&lt;/div&gt;
+&lt;div class="menu_end"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="blockvmenu blockvmenupair"&gt;
+&lt;!-- Process menu entry with mainmenu=billing, leftmenu=donations, level=0 enabled=1, position=0 --&gt;
+&lt;div class="menu_titre"&gt;&lt;a class="vmenu" href="/dolibarr/don/index.php?leftmenu=donations&amp;amp;mainmenu=billing"&gt;Dons&lt;/a&gt;&lt;/div&gt;
+&lt;div class="menu_top"&gt;&lt;/div&gt;
+&lt;div class="menu_end"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="blockvmenu blockvmenuimpair blockvmenulast"&gt;
+&lt;!-- Process menu entry with mainmenu=billing, leftmenu=tax, level=0 enabled=1, position=0 --&gt;
+&lt;div class="menu_titre"&gt;&lt;a class="vmenu" href="/dolibarr/compta/charges/index.php?leftmenu=tax&amp;amp;mainmenu=billing"&gt;Dépenses spéciales&lt;/a&gt;&lt;/div&gt;
+&lt;div class="menu_top"&gt;&lt;/div&gt;
+&lt;div class="menu_end"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="blockvmenuend"&gt;&lt;/div&gt;
+&lt;!-- Begin Help Block--&gt;
+&lt;div id="blockvmenuhelp" class="blockvmenuhelp"&gt;
+&lt;div id="blockvmenuhelpapp" class="blockvmenuhelp"&gt;&lt;a class="help" target="_blank" rel="noopener" href="https://www.dolibarr.fr"&gt;Dolibarr 8.0.4&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- End Help Block--&gt;
+
+&lt;/div&gt;
+&lt;!-- End left menu --&gt;
+
+&lt;/div&gt;&lt;/div&gt; &lt;!-- End side-nav id-left --&gt;
+&lt;!-- Begin right area --&gt;
+&lt;div id="id-right"&gt;
+&lt;!-- Begin div class="fiche" --&gt;
+&lt;div class="fiche"&gt;
+
+&lt;table summary="" class="centpercent notopnoleftnoright" style="margin-bottom: 2px;"&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class="nobordernopadding widthpictotitle opacityhigh" valign="middle"&gt;&lt;img src="/dolibarr/theme/eldy/img/title_generic.png" alt="" class="valignmiddle widthpictotitle pictotitle" /&gt;&lt;/td&gt;&lt;td class="nobordernopadding" valign="middle"&gt;&lt;div class="titre"&gt;Nouvelle facture&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+
+&lt;!-- JS CODE TO ENABLE select2 for id = fac_replacement --&gt;
+          &lt;script type="text/javascript"&gt;
+        	$(document).ready(function () {
+        		$('#fac_replacement').select2({
+        		    dir: 'ltr',
+        			width: 'resolve',		/* off or resolve */
+					minimumInputLength: 0,
+					language: select2arrayoflanguage,
+    				containerCssClass: ':all:',					/* Line to add class of origin SELECT propagated to the new &amp;lt;span class="select2-selection...&amp;gt; tag */
+					templateResult: function (data, container) {	/* Format visible output into combo list */
+	 					/* Code to add class of origin OPTION propagated to the new select2 &amp;lt;li&amp;gt; tag */
+						if (data.element) { $(container).addClass($(data.element).attr("class")); }
+					    //console.log(data.html);
+						if ($(data.element).attr("data-html") != undefined) return htmlEntityDecodeJs($(data.element).attr("data-html"));		// If property html set, we decode html entities and use this
+					    return data.text;
+					},
+					templateSelection: function (selection) {		/* Format visible output of selected value */
+						return selection.text;
+					},
+					escapeMarkup: function(markup) {
+						return markup;
+					},
+					dropdownCssClass: 'ui-dialog'
+				});
+});
+&lt;/script&gt;
+
+&lt;!-- JS CODE TO ENABLE select2 for id = fac_avoir --&gt;
+          &lt;script type="text/javascript"&gt;
+        	$(document).ready(function () {
+        		$('#fac_avoir').select2({
+        		    dir: 'ltr',
+        			width: 'resolve',		/* off or resolve */
+					minimumInputLength: 0,
+					language: select2arrayoflanguage,
+    				containerCssClass: ':all:',					/* Line to add class of origin SELECT propagated to the new &amp;lt;span class="select2-selection...&amp;gt; tag */
+					templateResult: function (data, container) {	/* Format visible output into combo list */
+	 					/* Code to add class of origin OPTION propagated to the new select2 &amp;lt;li&amp;gt; tag */
+						if (data.element) { $(container).addClass($(data.element).attr("class")); }
+					    //console.log(data.html);
+						if ($(data.element).attr("data-html") != undefined) return htmlEntityDecodeJs($(data.element).attr("data-html"));		// If property html set, we decode html entities and use this
+					    return data.text;
+					},
+					templateSelection: function (selection) {		/* Format visible output of selected value */
+						return selection.text;
+					},
+					escapeMarkup: function(markup) {
+						return markup;
+					},
+					dropdownCssClass: 'ui-dialog'
+				});
+});
+&lt;/script&gt;
+
+&lt;!-- JS CODE TO ENABLE select2 for id = situations --&gt;
+          &lt;script type="text/javascript"&gt;
+        	$(document).ready(function () {
+        		$('#situations').select2({
+        		    dir: 'ltr',
+        			width: 'resolve',		/* off or resolve */
+					minimumInputLength: 0,
+					language: select2arrayoflanguage,
+    				containerCssClass: ':all:',					/* Line to add class of origin SELECT propagated to the new &amp;lt;span class="select2-selection...&amp;gt; tag */
+					templateResult: function (data, container) {	/* Format visible output into combo list */
+	 					/* Code to add class of origin OPTION propagated to the new select2 &amp;lt;li&amp;gt; tag */
+						if (data.element) { $(container).addClass($(data.element).attr("class")); }
+					    //console.log(data.html);
+						if ($(data.element).attr("data-html") != undefined) return htmlEntityDecodeJs($(data.element).attr("data-html"));		// If property html set, we decode html entities and use this
+					    return data.text;
+					},
+					templateSelection: function (selection) {		/* Format visible output of selected value */
+						return selection.text;
+					},
+					escapeMarkup: function(markup) {
+						return markup;
+					},
+					dropdownCssClass: 'ui-dialog'
+				});
+});
+&lt;/script&gt;
+&lt;form name="add" action="/dolibarr/compta/facture/card.php" method="POST"&gt;&lt;input type="hidden" name="token" value="$2y$10$Xn1/PHsT5SYtWXxi32pEzerg.ZW6X1vXE22AcDY8lVJWiS8k6otky" /&gt;&lt;input type="hidden" name="action" value="add" /&gt;&lt;input name="facnumber" type="hidden" value="provisoire" /&gt;&lt;input name="ref_client" type="hidden" value="" /&gt;&lt;input name="ref_int" type="hidden" value="" /&gt;&lt;input type="hidden" name="origin" value="" /&gt;&lt;input type="hidden" name="originid" value="" /&gt;
+&lt;div class="tabs" data-role="controlgroup" data-type="horizontal"&gt;
+&lt;/div&gt;
+
+&lt;div class="tabBar tabBarWithBottom"&gt;
+&lt;table class="border" width="100%"&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class="titlefieldcreate fieldrequired"&gt;Réf.&lt;/td&gt;&lt;td colspan="2"&gt;Brouillon&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class="fieldrequired"&gt;Client&lt;/td&gt;&lt;td colspan="2"&gt;
+&lt;!-- JS CODE TO ENABLE select2 for id = socid --&gt;
+          &lt;script type="text/javascript"&gt;
+        	$(document).ready(function () {
+        		$('#socid').select2({
+        		    dir: 'ltr',
+        			width: 'resolve',		/* off or resolve */
+					minimumInputLength: 0,
+					language: select2arrayoflanguage,
+    				containerCssClass: ':all:',					/* Line to add class of origin SELECT propagated to the new &amp;lt;span class="select2-selection...&amp;gt; tag */
+					templateResult: function (data, container) {	/* Format visible output into combo list */
+	 					/* Code to add class of origin OPTION propagated to the new select2 &amp;lt;li&amp;gt; tag */
+						if (data.element) { $(container).addClass($(data.element).attr("class")); }
+					    //console.log(data.html);
+						if ($(data.element).attr("data-html") != undefined) return htmlEntityDecodeJs($(data.element).attr("data-html"));		// If property html set, we decode html entities and use this
+					    return data.text;
+					},
+					templateSelection: function (selection) {		/* Format visible output of selected value */
+						return selection.text;
+					},
+					escapeMarkup: function(markup) {
+						return markup;
+					},
+					dropdownCssClass: 'ui-dialog'
+				});
+});
+&lt;/script&gt;
+&lt;select id="socid" class="flat minwidth300 select2-hidden-accessible" name="socid" tabindex="-1" aria-hidden="true"&gt;
+&lt;option value="-1"&gt;&lt;/option&gt;
+&lt;option value="8"&gt;Atos1&lt;/option&gt;&lt;option value="9"&gt;Atos2&lt;/option&gt;&lt;option value="12"&gt;client&lt;/option&gt;&lt;option value="14"&gt;client&lt;/option&gt;&lt;option value="18"&gt;client&lt;/option&gt;&lt;option value="20"&gt;client&lt;/option&gt;&lt;option value="24"&gt;client&lt;/option&gt;&lt;option value="26"&gt;client&lt;/option&gt;&lt;option value="28"&gt;client&lt;/option&gt;&lt;option value="30"&gt;client&lt;/option&gt;
+&lt;option value="32"&gt;client&lt;/option&gt;&lt;option value="34"&gt;client&lt;/option&gt;&lt;option value="36"&gt;client&lt;/option&gt;&lt;/select&gt;&lt;span class="select2 select2-container select2-container--default" dir="ltr" style="width: 300px;"&gt;&lt;span class="selection"&gt;&lt;span class="select2-selection select2-selection--single flat minwidth300" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-socid-container"&gt;&lt;span class="select2-selection__rendered" id="select2-socid-container" title=""&gt;&lt;/span&gt;&lt;span class="select2-selection__arrow" role="presentation"&gt;&lt;b role="presentation"&gt;&lt;/b&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="dropdown-wrapper" aria-hidden="true"&gt;&lt;/span&gt;&lt;/span&gt;
+ &lt;a href="/dolibarr/societe/card.php?action=create&amp;amp;client=3&amp;amp;fournisseur=0&amp;amp;backtopage=%2Fdolibarr%2Fcompta%2Ffacture%2Fcard.php%3Faction%3Dcreate"&gt;Créer tiers&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class="tdtop fieldrequired"&gt;Type&lt;/td&gt;&lt;td colspan="2"&gt;&lt;div class="tagtable"&gt;
+&lt;div class="tagtr listofinvoicetype"&gt;&lt;div class="tagtd listofinvoicetype"&gt;&lt;span class="inline-block" style="padding: 0px; padding-right: 3px !important;"&gt;&lt;input type="radio" id="radio_standard" name="type" value="0" checked="" /&gt; Facture standard&lt;/span&gt;&lt;span class="classfortooltip inline-block inline-block" style="padding: 0px; padding: 0px; padding-right: 3px !important;" title="Ce type de facture est la facture traditionnelle. On l'appelle aussi &amp;lt;b&amp;gt;facture de doit&amp;lt;/b&amp;gt; (du verbe devoir)."&gt;&lt;img src="/dolibarr/theme/eldy/img/info.png" alt="" style="vertical-align: middle; cursor: help" /&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="tagtr listofinvoicetype"&gt;&lt;div class="tagtd listofinvoicetype"&gt;&lt;script type="text/javascript" language="javascript"&gt;
+    		jQuery(document).ready(function() {
+    			jQuery("#typedeposit, #valuedeposit").click(function() {
+    				jQuery("#radio_deposit").prop("checked", true);
+    			});
+    		});
+    		&lt;/script&gt;&lt;table class="nobordernopadding"&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;span class="inline-block" style="padding: 0px; padding-right: 3px !important;"&gt;&lt;input type="radio" id="radio_deposit" name="type" value="3" /&gt; Facture d'acompte&lt;/span&gt;&lt;span class="classfortooltip inline-block inline-block" style="padding: 0px; padding: 0px; padding-right: 3px !important;" title="Ce type de facture fait suite à réception d'un acompte, s'il n'est pas encore possible de saisir le paiement sur une facture définitive."&gt;&lt;img src="/dolibarr/theme/eldy/img/info.png" alt="" style="vertical-align: middle; cursor: help" /&gt;&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="tagtr listofinvoicetype"&gt;&lt;div class="tagtd listofinvoicetype"&gt;&lt;span class="inline-block" style="padding: 0px; padding-right: 3px !important;"&gt;&lt;input type="radio" name="type" id="radio_replacement" value="0" disabled="" /&gt; Facture de remplacement (Cette option est disponible uniquement lors de la création de la facture depuis l'onglet «client» du tiers) &lt;/span&gt;&lt;span class="classfortooltip inline-block inline-block" style="padding: 0px; padding: 0px; padding-right: 3px !important;" title="La &amp;lt;b&amp;gt;facture de remplacement&amp;lt;/b&amp;gt; sert à annuler et remplacer complètement une facture existante sur laquelle aucun paiement n'a encore eu lieu.&amp;lt;br&amp;gt;&amp;lt;br&amp;gt;Rem: Seules les factures sans aucun paiement peuvent être remplacées. Si ces dernières ne sont pas fermées, elles le seront automatiquement au statut 'abandonnée'."&gt;&lt;img src="/dolibarr/theme/eldy/img/info.png" alt="" style="vertical-align: middle; cursor: help" /&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="tagtr listofinvoicetype"&gt;&lt;div class="tagtd listofinvoicetype"&gt;&lt;span class="inline-block" style="padding: 0px; padding-right: 3px !important;"&gt;&lt;input type="radio" name="type" id="radio_creditnote" value="0" disabled="" /&gt; Facture avoir (Cette option est disponible uniquement lors de la création de la facture depuis l'onglet «client» du tiers) &lt;/span&gt;&lt;span class="classfortooltip inline-block inline-block" style="padding: 0px; padding: 0px; padding-right: 3px !important;" title="La &amp;lt;b&amp;gt;facture d'avoir&amp;lt;/b&amp;gt; est une facture négative destinée à compenser un montant de facture qui diffère du montant réellement versé (suite à un trop versé par le client par erreur ou un manque non versé par le client suite à un retour produit par exemple)."&gt;&lt;img src="/dolibarr/theme/eldy/img/info.png" alt="" style="vertical-align: middle; cursor: help" /&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class="tagtr listofinvoicetype"&gt;&lt;div class="tagtd listofinvoicetype"&gt;&lt;span class="inline-block" style="padding: 0px; padding-right: 3px !important;"&gt;&lt;input type="radio" name="type" id="radio_template" value="0" disabled="" /&gt; Facture modèle &lt;/span&gt;&lt;span class="classfortooltip inline-block inline-block" style="padding: 0px; padding: 0px; padding-right: 3px !important;" title="Pour créer une facture modèle, vous devez d'abord créer une facture standard brouillon et la convertir en modèle."&gt;&lt;img src="/dolibarr/theme/eldy/img/info.png" alt="" style="vertical-align: middle; cursor: help" /&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class="fieldrequired"&gt;Date facturation&lt;/td&gt;&lt;td colspan="2"&gt;&lt;script type="text/javascript"&gt;$(function(){ $('#re').datepicker({
+							dateFormat: 'dd/mm/yy',
+							autoclose: true,
+							todayHighlight: true,
+								showOn: 'button',
+								buttonImage: '/dolibarr/theme/eldy/img/object_calendarday.png',
+								buttonImageOnly: true
+							}) });&lt;/script&gt;&lt;div class="nowrap inline-block"&gt;&lt;input id="re" name="re" type="text" class="maxwidth75 hasDatepicker" maxlength="11" value="08/01/2019" onchange="dpChangeDay('re','dd/MM/yyyy'); " size="10" /&gt;&lt;img class="ui-datepicker-trigger" src="/dolibarr/theme/eldy/img/object_calendarday.png" alt="..." title="..." /&gt;&lt;/div&gt;&lt;input type="hidden" id="reday" name="reday" value="08" /&gt;
+&lt;input type="hidden" id="remonth" name="remonth" value="01" /&gt;
+&lt;input type="hidden" id="reyear" name="reyear" value="2019" /&gt;
+ &lt;button class="dpInvisibleButtons datenowlink" id="reButtonNow" type="button" name="_useless" value="now" onclick="jQuery('#re').val('08/01/2019');jQuery('#reday').val('08');jQuery('#remonth').val('01');jQuery('#reyear').val('2019');"&gt;Maintenant&lt;/button&gt; &lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class="nowrap fieldrequired"&gt;Conditions de règlement&lt;/td&gt;&lt;td colspan="2"&gt;&lt;select id="cond_reglement_id" class="flat selectpaymentterms" name="cond_reglement_id"&gt;&lt;option value="1" selected=""&gt;A réception&lt;/option&gt;&lt;option value="2"&gt;30 jours&lt;/option&gt;&lt;option value="3"&gt;30 jours fin de mois&lt;/option&gt;&lt;option value="4"&gt;60 jours&lt;/option&gt;&lt;option value="5"&gt;60 jours fin de mois&lt;/option&gt;&lt;option value="6"&gt;A commande&lt;/option&gt;&lt;option value="7"&gt;A livraison&lt;/option&gt;&lt;option value="8"&gt;50/50&lt;/option&gt;&lt;option value="9"&gt;10 jours&lt;/option&gt;&lt;option value="10"&gt;10 jours fin de mois&lt;/option&gt;&lt;option value="11"&gt;14 jours&lt;/option&gt;&lt;option value="12"&gt;14 jours fin de mois&lt;/option&gt;&lt;/select&gt;&lt;img src="/dolibarr/theme/eldy/img/info.png" alt="" title="Les valeurs de cette liste sont modifiables  depuis le menu Accueil &amp;gt; Configuration &amp;gt; Dictionnaires" class="hideonsmartphone" /&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Mode de règlement&lt;/td&gt;&lt;td colspan="2"&gt;&lt;select id="selectmode_reglement_id" class="flat selectpaymenttypes" name="mode_reglement_id"&gt;&lt;option value=""&gt; &lt;/option&gt;&lt;option value="6"&gt;Carte bancaire&lt;/option&gt;&lt;option value="7"&gt;Chèque&lt;/option&gt;&lt;option value="4"&gt;Espèce&lt;/option&gt;&lt;option value="3"&gt;Ordre de prélèvement&lt;/option&gt;&lt;option value="2"&gt;Virement bancaire&lt;/option&gt;&lt;/select&gt;&lt;img src="/dolibarr/theme/eldy/img/info.png" alt="" title="Les valeurs de cette liste sont modifiables  depuis le menu Accueil &amp;gt; Configuration &amp;gt; Dictionnaires" class="hideonsmartphone" /&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Compte bancaire&lt;/td&gt;&lt;td colspan="2"&gt;&lt;select id="selectfk_account" class="flat selectbankaccount" name="fk_account"&gt;&lt;option value="-1"&gt; &lt;/option&gt;&lt;option value="1"&gt;200&lt;/option&gt;&lt;option value="2"&gt;300&lt;/option&gt;&lt;option value="5"&gt;BinJH&lt;/option&gt;&lt;option value="9"&gt;kLHuR&lt;/option&gt;&lt;option value="6"&gt;MEduy&lt;/option&gt;&lt;option value="12"&gt;oPCMp&lt;/option&gt;&lt;option value="3"&gt;pdYha&lt;/option&gt;&lt;option value="11"&gt;Pjysz&lt;/option&gt;&lt;option value="8"&gt;QyYWz&lt;/option&gt;&lt;option value="10"&gt;VfdkU&lt;/option&gt;&lt;option value="4"&gt;VTrnd&lt;/option&gt;&lt;option value="7"&gt;ycKIz&lt;/option&gt;&lt;/select&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Projet&lt;/td&gt;&lt;td colspan="2"&gt;
+&lt;!-- JS CODE TO ENABLE select2 for id = projectid --&gt;
+          &lt;script type="text/javascript"&gt;
+        	$(document).ready(function () {
+        		$('#projectid').select2({
+        		    dir: 'ltr',
+        			width: 'resolve',		/* off or resolve */
+					minimumInputLength: 0,
+					language: select2arrayoflanguage,
+    				containerCssClass: ':all:',					/* Line to add class of origin SELECT propagated to the new &amp;lt;span class="select2-selection...&amp;gt; tag */
+					templateResult: function (data, container) {	/* Format visible output into combo list */
+	 					/* Code to add class of origin OPTION propagated to the new select2 &amp;lt;li&amp;gt; tag */
+						if (data.element) { $(container).addClass($(data.element).attr("class")); }
+					    //console.log(data.html);
+						if ($(data.element).attr("data-html") != undefined) return htmlEntityDecodeJs($(data.element).attr("data-html"));		// If property html set, we decode html entities and use this
+					    return data.text;
+					},
+					templateSelection: function (selection) {		/* Format visible output of selected value */
+						return selection.text;
+					},
+					escapeMarkup: function(markup) {
+						return markup;
+					},
+					dropdownCssClass: 'ui-dialog'
+				});
+});
+&lt;/script&gt;
+&lt;select class="flat minwidth100 select2-hidden-accessible" id="projectid" name="projectid" tabindex="-1" aria-hidden="true"&gt;&lt;option value="0"&gt; &lt;/option&gt;&lt;/select&gt;&lt;span class="select2 select2-container select2-container--default" dir="ltr" style="width: 100px;"&gt;&lt;span class="selection"&gt;&lt;span class="select2-selection select2-selection--single flat minwidth100" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-projectid-container"&gt;&lt;span class="select2-selection__rendered" id="select2-projectid-container" title=" "&gt; &lt;/span&gt;&lt;span class="select2-selection__arrow" role="presentation"&gt;&lt;b role="presentation"&gt;&lt;/b&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="dropdown-wrapper" aria-hidden="true"&gt;&lt;/span&gt;&lt;/span&gt;&lt;div class="inline-block"&gt;&lt;div class="classfortooltip inline-block inline-block" style="padding: 0px; padding: 0px; padding-right: 3px !important;" title="Les projets fermés ne sont pas visible."&gt;&lt;img src="/dolibarr/theme/eldy/img/info.png" alt="" style="vertical-align: middle; cursor: help" /&gt;&lt;/div&gt;&lt;/div&gt;   &lt;a href="/dolibarr/projet/card.php?socid=&amp;amp;action=create&amp;amp;status=1&amp;amp;backtopage=%2Fdolibarr%2Fcompta%2Ffacture%2Fcard.php%3Faction%3Dcreate%26socid%3D"&gt;Créer projet&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Modèle de document&lt;/td&gt;&lt;td colspan="2"&gt;&lt;select id="model" class="flat model" name="model"&gt;&lt;option value="crabe" selected=""&gt;crabe&lt;/option&gt;
+&lt;/select&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;label for="multicurrency_code"&gt;Devise&lt;/label&gt;&lt;/td&gt;&lt;td colspan="2" class="maxwidthonsmartphone"&gt;&lt;select class="flat select2-hidden-accessible" name="multicurrency_code" id="multicurrency_code" tabindex="-1" aria-hidden="true"&gt;&lt;option value="EUR" selected="selected"&gt;Euros (€)&lt;/option&gt;&lt;/select&gt;&lt;span class="select2 select2-container select2-container--default" dir="ltr" style="width: 85.4px;"&gt;&lt;span class="selection"&gt;&lt;span class="select2-selection select2-selection--single flat" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-multicurrency_code-container"&gt;&lt;span class="select2-selection__rendered" id="select2-multicurrency_code-container" title="Euros (€)"&gt;Euros (€)&lt;/span&gt;&lt;span class="select2-selection__arrow" role="presentation"&gt;&lt;b role="presentation"&gt;&lt;/b&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="dropdown-wrapper" aria-hidden="true"&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;!-- JS CODE TO ENABLE select2 for id = multicurrency_code --&gt;
+          &lt;script type="text/javascript"&gt;
+        	$(document).ready(function () {
+        		$('#multicurrency_code').select2({
+        		    dir: 'ltr',
+        			width: 'resolve',		/* off or resolve */
+					minimumInputLength: 0,
+					language: select2arrayoflanguage,
+    				containerCssClass: ':all:',					/* Line to add class of origin SELECT propagated to the new &amp;lt;span class="select2-selection...&amp;gt; tag */
+					templateResult: function (data, container) {	/* Format visible output into combo list */
+	 					/* Code to add class of origin OPTION propagated to the new select2 &amp;lt;li&amp;gt; tag */
+						if (data.element) { $(container).addClass($(data.element).attr("class")); }
+					    //console.log(data.html);
+						if ($(data.element).attr("data-html") != undefined) return htmlEntityDecodeJs($(data.element).attr("data-html"));		// If property html set, we decode html entities and use this
+					    return data.text;
+					},
+					templateSelection: function (selection) {		/* Format visible output of selected value */
+						return selection.text;
+					},
+					escapeMarkup: function(markup) {
+						return markup;
+					},
+					dropdownCssClass: 'ui-dialog'
+				});
+});
+&lt;/script&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class="tdtop"&gt;Note (publique)&lt;/td&gt;&lt;td valign="top" colspan="2"&gt;&lt;textarea id="note_public" name="note_public" rows="3" style="margin-top: 5px; width: 90%" class="flat"&gt;&lt;/textarea&gt;&lt;!-- Output ckeditor $disallowAnyContent=1 toolbarname=dolibarr_notes --&gt;
+&lt;script type="text/javascript"&gt;
+            			$(document).ready(function () {
+                            /* if (CKEDITOR.loadFullCore) CKEDITOR.loadFullCore(); */
+                            /* should be editor=CKEDITOR.replace but what if serveral editors ? */
+                            CKEDITOR.replace('note_public',
+            					{
+            						/* property:xxx is same than CKEDITOR.config.property = xxx */
+            						customConfig : ckeditorConfig,
+            						readOnly : false,
+                            		htmlEncodeOutput :false,
+            						allowedContent :false,
+            						extraAllowedContent : '',
+            						fullPage : false,
+                            		toolbar: 'dolibarr_notes',
+            						toolbarStartupExpanded: false,
+            						width: '',
+            						height: 80,
+                                    skin: 'moono-lisa',
+                                    language: 'fr_FR',
+                                    textDirection: 'ltr',
+                                    on :
+                                            {
+                                                instanceReady : function( ev )
+                                                {
+                                                    // Output paragraphs as &amp;lt;p&amp;gt;Text&amp;lt;/p&amp;gt;.
+                                                    this.dataProcessor.writer.setRules( 'p',
+                                                        {
+                                                            indent : false,
+                                                            breakBeforeOpen : true,
+                                                            breakAfterOpen : false,
+                                                            breakBeforeClose : false,
+                                                            breakAfterClose : true
+                                                        });
+                                                }
+                                            }	})});
+&lt;/script&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class="tdtop"&gt;Note (privée)&lt;/td&gt;&lt;td valign="top" colspan="2"&gt;&lt;textarea id="note_private" name="note_private" rows="3" style="margin-top: 5px; width: 90%" class="flat"&gt;&lt;/textarea&gt;&lt;!-- Output ckeditor $disallowAnyContent=1 toolbarname=dolibarr_notes --&gt;
+&lt;script type="text/javascript"&gt;
+            			$(document).ready(function () {
+                            /* if (CKEDITOR.loadFullCore) CKEDITOR.loadFullCore(); */
+                            /* should be editor=CKEDITOR.replace but what if serveral editors ? */
+                            CKEDITOR.replace('note_private',
+            					{
+            						/* property:xxx is same than CKEDITOR.config.property = xxx */
+            						customConfig : ckeditorConfig,
+            						readOnly : false,
+                            		htmlEncodeOutput :false,
+            						allowedContent :false,
+            						extraAllowedContent : '',
+            						fullPage : false,
+                            		toolbar: 'dolibarr_notes',
+            						toolbarStartupExpanded: false,
+            						width: '',
+            						height: 80,
+                                    skin: 'moono-lisa',
+                                    language: 'fr_FR',
+                                    textDirection: 'ltr',
+                                    on :
+                                            {
+                                                instanceReady : function( ev )
+                                                {
+                                                    // Output paragraphs as &amp;lt;p&amp;gt;Text&amp;lt;/p&amp;gt;.
+                                                    this.dataProcessor.writer.setRules( 'p',
+                                                        {
+                                                            indent : false,
+                                                            breakBeforeOpen : true,
+                                                            breakAfterOpen : false,
+                                                            breakBeforeClose : false,
+                                                            breakAfterClose : true
+                                                        });
+                                                }
+                                            }	})});
+&lt;/script&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+
+&lt;/div&gt;
+&lt;div class="center"&gt;&lt;input type="submit" class="button" name="bouton" value="Créer brouillon" /&gt;     &lt;input type="button" class="button" value="Annuler" onclick="javascript:history.go(-1)" /&gt;&lt;/div&gt;&lt;/form&gt;
+&lt;br /&gt;&lt;script type="text/javascript"&gt;
+					$(document).ready(function() {
+						var block = false
+						if (block) {
+							$.dolEventValid("","Le champ \'Client\' est obligatoire");
+						} else {
+							/* jnotify(message, preset of message type, keepmessage) */
+							$.jnotify("Le champ \'Client\' est obligatoire",
+							"error",
+							true,
+							{ remove: function (){} } );
+						}
+					});
+				&lt;/script&gt;
+
+&lt;/div&gt; &lt;!-- End div class="fiche" --&gt;
+&lt;/div&gt; &lt;!-- End div id-right --&gt;
+&lt;/div&gt; &lt;!-- End div id-container --&gt;
+
+
+&lt;!-- Common footer for private page --&gt;
+
+&lt;!-- A div to store page_y POST paramater --&gt;
+&lt;div id="page_y" style="display: none;"&gt;&lt;/div&gt;
+
+&lt;script type="text/javascript" language="javascript"&gt;
+
+/* JS CODE TO ENABLE to enable handler to switch left menu page (menuhider) */
+jQuery(".menuhider").click(function() {  console.log("We click on .menuhider");
+  $('.side-nav').toggle()
+  $('.login_block').toggle()
+});
+
+&lt;/script&gt;
+
+&lt;!-- JS CODE TO ENABLE select2 for id searchselectcombo --&gt;
+			&lt;script type="text/javascript"&gt;
+			$(document).ready(function () {
+				var data = [{"id":"searchintothirdparty","text":"&amp;lt;img src=\"\/dolibarr\/theme\/eldy\/img\/object_company.png\" alt=\"\" class=\"inline-block\"&amp;gt; Tiers","url":"\/dolibarr\/societe\/list.php"},{"id":"searchintocontact","text":"&amp;lt;img src=\"\/dolibarr\/theme\/eldy\/img\/object_contact.png\" alt=\"\" class=\"inline-block\"&amp;gt; Contacts","url":"\/dolibarr\/contact\/list.php"},{"id":"searchintoproduct","text":"&amp;lt;img src=\"\/dolibarr\/theme\/eldy\/img\/object_product.png\" alt=\"\" class=\"inline-block\"&amp;gt; Produits ou services","url":"\/dolibarr\/product\/list.php"},{"id":"searchintoprojects","text":"&amp;lt;img src=\"\/dolibarr\/theme\/eldy\/img\/object_projectpub.png\" alt=\"\" class=\"inline-block\"&amp;gt; Projets","url":"\/dolibarr\/projet\/list.php"},{"id":"searchintotasks","text":"&amp;lt;img src=\"\/dolibarr\/theme\/eldy\/img\/object_task.png\" alt=\"\" class=\"inline-block\"&amp;gt; T&amp;amp;acirc;ches","url":"\/dolibarr\/projet\/tasks\/list.php"},{"id":"searchintopropal","text":"&amp;lt;img src=\"\/dolibarr\/theme\/eldy\/img\/object_propal.png\" alt=\"\" class=\"inline-block\"&amp;gt; Propositions\/devis","url":"\/dolibarr\/comm\/propal\/list.php"},{"id":"searchintoorder","text":"&amp;lt;img src=\"\/dolibarr\/theme\/eldy\/img\/object_order.png\" alt=\"\" class=\"inline-block\"&amp;gt; Commandes clients","url":"\/dolibarr\/commande\/list.php"},{"id":"searchintoshipment","text":"&amp;lt;img src=\"\/dolibarr\/theme\/eldy\/img\/object_sending.png\" alt=\"\" class=\"inline-block\"&amp;gt; Exp&amp;amp;eacute;ditions clients","url":"\/dolibarr\/expedition\/list.php"},{"id":"searchintoinvoice","text":"&amp;lt;img src=\"\/dolibarr\/theme\/eldy\/img\/object_bill.png\" alt=\"\" class=\"inline-block\"&amp;gt; Factures clients","url":"\/dolibarr\/compta\/facture\/list.php"},{"id":"searchintouser","text":"&amp;lt;img src=\"\/dolibarr\/theme\/eldy\/img\/object_user.png\" alt=\"\" class=\"inline-block\"&amp;gt; Utilisateurs","url":"\/dolibarr\/user\/list.php"}];
+
+				var saveRemoteData = {"searchintothirdparty":{"position":10,"shortcut":"T","img":"object_company","label":"Tiers","text":"&amp;lt;img src=\"\/dolibarr\/theme\/eldy\/img\/object_company.png\" alt=\"\" class=\"inline-block\"&amp;gt; Tiers","url":"\/dolibarr\/societe\/list.php"},"searchintocontact":{"position":15,"shortcut":"A","img":"object_contact","label":"Contacts","text":"&amp;lt;img src=\"\/dolibarr\/theme\/eldy\/img\/object_contact.png\" alt=\"\" class=\"inline-block\"&amp;gt; Contacts","url":"\/dolibarr\/contact\/list.php"},"searchintoproduct":{"position":30,"shortcut":"P","img":"object_product","label":"Produits ou services","text":"&amp;lt;img src=\"\/dolibarr\/theme\/eldy\/img\/object_product.png\" alt=\"\" class=\"inline-block\"&amp;gt; Produits ou services","url":"\/dolibarr\/product\/list.php"},"searchintoprojects":{"position":40,"shortcut":"Q","img":"object_projectpub","label":"Projets","text":"&amp;lt;img src=\"\/dolibarr\/theme\/eldy\/img\/object_projectpub.png\" alt=\"\" class=\"inline-block\"&amp;gt; Projets","url":"\/dolibarr\/projet\/list.php"},"searchintotasks":{"position":45,"img":"object_task","label":"T&amp;amp;acirc;ches","text":"&amp;lt;img src=\"\/dolibarr\/theme\/eldy\/img\/object_task.png\" alt=\"\" class=\"inline-block\"&amp;gt; T&amp;amp;acirc;ches","url":"\/dolibarr\/projet\/tasks\/list.php"},"searchintopropal":{"position":60,"img":"object_propal","label":"Propositions\/devis","text":"&amp;lt;img src=\"\/dolibarr\/theme\/eldy\/img\/object_propal.png\" alt=\"\" class=\"inline-block\"&amp;gt; Propositions\/devis","url":"\/dolibarr\/comm\/propal\/list.php"},"searchintoorder":{"position":70,"img":"object_order","label":"Commandes clients","text":"&amp;lt;img src=\"\/dolibarr\/theme\/eldy\/img\/object_order.png\" alt=\"\" class=\"inline-block\"&amp;gt; Commandes clients","url":"\/dolibarr\/commande\/list.php"},"searchintoshipment":{"position":80,"img":"object_sending","label":"Exp&amp;amp;eacute;ditions clients","text":"&amp;lt;img src=\"\/dolibarr\/theme\/eldy\/img\/object_sending.png\" alt=\"\" class=\"inline-block\"&amp;gt; Exp&amp;amp;eacute;ditions clients","url":"\/dolibarr\/expedition\/list.php"},"searchintoinvoice":{"position":90,"img":"object_bill","label":"Factures clients","text":"&amp;lt;img src=\"\/dolibarr\/theme\/eldy\/img\/object_bill.png\" alt=\"\" class=\"inline-block\"&amp;gt; Factures clients","url":"\/dolibarr\/compta\/facture\/list.php"},"searchintouser":{"position":200,"shortcut":"U","img":"object_user","label":"Utilisateurs","text":"&amp;lt;img src=\"\/dolibarr\/theme\/eldy\/img\/object_user.png\" alt=\"\" class=\"inline-block\"&amp;gt; Utilisateurs","url":"\/dolibarr\/user\/list.php"}};
+
+				$(".searchselectcombo").select2({
+					data: data,
+					language: select2arrayoflanguage,
+					containerCssClass: ':all:',					/* Line to add class of origin SELECT propagated to the new &amp;lt;span class="select2-selection...&amp;gt; tag */
+					placeholder: "Rechercher",
+					escapeMarkup: function (markup) { return markup; }, 	// let our custom formatter work
+					minimumInputLength: 1,
+					formatResult: function(result, container, query, escapeMarkup) {
+						return escapeMarkup(result.text);
+					},
+					matcher: function (params, data) {
+
+						if(! data.id) return null;
+
+						var urlBase = data.url;
+						var separ = urlBase.indexOf("?") &amp;gt;= 0 ? "&amp;amp;" : "?";
+						/* console.log("params.term="+params.term); */
+						/* console.log("params.term encoded="+encodeURIComponent(params.term)); */
+						saveRemoteData[data.id].url = urlBase + separ + "sall=" + encodeURIComponent(params.term);
+
+						return data;
+					}
+				});
+
+				
+				/* Code to execute a GET when we select a value */
+				$(".searchselectcombo").change(function() {
+					var selected = $(".searchselectcombo").val();
+					console.log("We select "+selected)
+
+					$(".searchselectcombo").val("");  /* reset visible combo value */
+					$.each( saveRemoteData, function( key, value ) {
+						if (key == selected)
+						{
+							console.log("selectArrayAjax - Do a redirect to "+value.url)
+							location.assign(value.url);
+						}
+					});
+				});
+
+			});
+			&lt;/script&gt;
+&lt;!-- Includes JS Footer of Dolibarr --&gt;
+&lt;script type="text/javascript" src="/dolibarr/core/js/lib_foot.js.php?lang=fr_FR&amp;amp;layout=classic&amp;amp;version=8.0.4"&gt;&lt;/script&gt;
+
+&lt;!-- A div to allow dialog popup --&gt;
+&lt;div id="dialogforpopup" style="display: none;"&gt;&lt;/div&gt;
+
+
+&lt;div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"&gt;&lt;/div&gt;&lt;div class="jnotify-container"&gt;&lt;div class="jnotify-notification jnotify-notification-error"&gt;&lt;div class="jnotify-background"&gt;&lt;/div&gt;&lt;a class="jnotify-close"&gt;×&lt;/a&gt;&lt;div class="jnotify-message"&gt;&lt;div&gt;Le champ 'Client' est obligatoire&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"&gt;&lt;/div&gt;&lt;div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"&gt;&lt;/div&gt;&lt;div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"&gt;&lt;/div&gt;&lt;div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"&gt;&lt;/div&gt;&lt;div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"&gt;&lt;/div&gt;&lt;div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"&gt;&lt;/div&gt;&lt;div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"&gt;&lt;/div&gt;&lt;div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"&gt;&lt;/div&gt;&lt;div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"&gt;&lt;/div&gt;&lt;div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190108 09:52:17.707" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20190108 09:52:17.707" starttime="20190108 09:52:17.410"></status>
+</kw>
+<msg timestamp="20190108 09:52:17.708" level="FAIL">Page should have contained text 'Field 'Customer' is required' but did not.</msg>
+<status status="FAIL" endtime="20190108 09:52:17.708" starttime="20190108 09:52:17.346"></status>
+</kw>
+<status status="FAIL" endtime="20190108 09:52:17.709" critical="yes" starttime="20190108 09:52:12.192">Page should have contained text 'Field 'Customer' is required' but did not.</status>
+</test>
+<status status="FAIL" endtime="20190108 09:52:17.711" starttime="20190108 09:51:07.807"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="3" pass="7">Critical Tests</stat>
+<stat fail="3" pass="7">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="3" id="s1" name="4.Gestion propositions commerciales commandes factures" pass="7">4.Gestion propositions commerciales commandes factures</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
