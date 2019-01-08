@@ -64,7 +64,7 @@ Gestion de Stock
 	
 	
 	Comment 		//*[@id="mainbody"]/div[46]/div[3]/div/button[1]
-	Comment 		//*[contains(text(),'Yes')]
+	Comment 		//*[contains(text(),'Yes')] Coucou
 	
 	
 	
